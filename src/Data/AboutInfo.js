@@ -1,39 +1,38 @@
 const aboutInfo = [
     {
-        title: "Company Overview",
-        content: "RSR Aviation Services Pvt. Ltd. is a premier provider of aerospace consumables for manufacturing and maintenance in the aerospace and defense sectors. Our focus on quality and reliability positions us as a trusted partner in the industry.",
+        title: "Organization Overview",
+        content: "Pitama India is a dedicated non-profit organization committed to creating a sustainable, equitable, and compassionate India. We believe in the power of community action to drive meaningful change across environmental, social, and educational sectors.",
         img: "/About/1.png",
     },
     {
-        title: "Our Specialization",
-        content: "We specialize in high-quality consumables tailored for the aerospace industry, meeting the rigorous standards of manufacturers and maintenance teams. Our products enhance durability, performance, and safety.",
+        title: "Our Mission",
+        content: "Our mission is 'Greening India, Empowering Lives' - we work tirelessly to protect our environment, empower women and children, and ensure the welfare of animals. Every initiative we undertake is designed to create lasting positive impact.",
         img: "/About/2.png",
     },
     {
-        title: "Extensive Product Range",
-        content: "Our inventory includes lubricants, adhesives, fasteners, primers, film adhesives, paints, and electrical supplies, supporting aerospace applications from production to repair.",
+        title: "Environmental Initiatives",
+        content: "We lead extensive environmental campaigns including tree plantation drives, cleanliness programs, waste management awareness, and sustainable living workshops. Our goal is to reduce our collective carbon footprint and restore ecological balance.",
         img: "/About/3.png",
     },
     {
-        title: "Warehousing Capabilities",
-        content: "RSR Aviation's warehouse spans 4,000 sq. ft., expanding to 10,000 sq. ft. by Nov 2024. It is equipped for large inventories, including hazardous goods, showing our readiness to scale for aerospace demands.",
+        title: "Women Empowerment",
+        content: "Pitama India provides skill development training, livelihood opportunities, and educational support to rural women. Through self-help groups and vocational training, we help women become financially independent and confident leaders.",
         img: "/About/4.png",
     },
     {
-        title: "Cold Storage & Temperature",
-        content: "We have in-house cold storage (1,000 liters) for 6–8 full-size adhesive rolls. Our refrigeration system stores 1,500 liters, planned to double by Nov 2024. We ensure temperature-sensitive materials are kept in optimal conditions.",
+        title: "Animal Welfare",
+        content: "We rescue, rehabilitate, and care for stray and injured animals. Our programs include veterinary camps, adoption drives, and awareness campaigns promoting responsible pet ownership and animal rights across communities.",
         img: "/About/5.png",
     },
     {
-        title: "Vision & Values",
+        title: "Our Vision & Values",
         content: `
-  1. Global Leadership: Become the leading supplier of aerospace consumables.
-  2. Standard Setting: Set benchmarks for quality, safety, and innovation.
-  3. Industry Impact: Shape the future of aviation through superior products.
-  Quality: Ensure products meet aerospace standards.
-  Safety: Provide reliable, certified consumables.
-  Customer Focus: Offer unmatched service and support.
-  Integrity: Operate with ethics and responsibility.`,
+1. Sustainability: Create lasting environmental change through community action.
+2. Empowerment: Enable marginalized communities to thrive independently.
+3. Compassion: Extend kindness to all living beings, human and animal alike.
+Integrity: Operate with transparency and accountability.
+Community: Foster collective action for greater impact.
+Education: Empower through knowledge and skill development.`,
         img: "/About/6.png",
     },
 ];

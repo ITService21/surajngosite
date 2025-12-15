@@ -1,211 +1,211 @@
 export default [
-    // Business Setup Category
+    // Environmental Initiatives Category
     {
         id: 1,
-        title: "Complete Guide to Starting Your MSME Business in 2024",
-        excerpt: "Everything you need to know about starting and registering your MSME business with step-by-step guidance and expert tips.",
-        body: "Starting an MSME business in 2024 requires careful planning and understanding of the regulatory landscape. The Indian government has introduced several initiatives to support micro, small, and medium enterprises, making it an opportune time to launch your business venture. This comprehensive guide covers all aspects from initial planning to successful registration and beyond. We'll walk you through the entire process, including business plan development, legal requirements, registration procedures, and post-registration compliance. Whether you're a first-time entrepreneur or looking to expand your existing business, this guide provides valuable insights and practical advice to help you navigate the complex world of MSME registration and business setup.",
-        author: "Grow Startup Team",
+        title: "Complete Guide to Community Tree Plantation Drives",
+        excerpt: "Learn how to organize successful tree plantation events that engage your community and create lasting environmental impact.",
+        body: "Tree plantation is one of the most effective ways to combat climate change and restore ecological balance. At Pitama India, we've organized over 100 successful tree plantation drives across various communities. This comprehensive guide shares our experience and provides a step-by-step approach to organizing your own community tree plantation event. We cover everything from selecting appropriate tree species for your region, sourcing saplings, engaging volunteers, and ensuring long-term care for planted trees. We also discuss how to partner with local schools, corporate organizations, and government bodies to maximize impact and reach.",
+        author: "Pitama India Team",
         date: "2024-01-15",
-        category: "Business Setup",
-        tags: ["MSME", "Registration", "Business Setup", "Entrepreneurship"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+        category: "Environmental Initiatives",
+        tags: ["Tree Plantation", "Environment", "Community Action", "Climate Change"],
+        image: "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 2,
-        title: "MSME Registration Process: Step-by-Step Guide for 2024",
-        excerpt: "Detailed walkthrough of the MSME registration process including Udyam registration, documentation, and compliance requirements.",
-        body: "The MSME registration process has been streamlined with the introduction of Udyam registration. This digital platform has made it easier for businesses to register and access various government benefits. In this detailed guide, we'll cover the complete registration process, from preparing your documents to receiving your Udyam certificate. We'll also discuss the benefits of MSME registration, including access to government schemes, preferential treatment in government tenders, and various financial incentives. Additionally, we'll provide tips for maintaining compliance and renewing your registration when necessary.",
-        author: "Registration Expert",
+        title: "Waste Management: A Community Approach to Cleaner Neighborhoods",
+        excerpt: "Discover effective waste management strategies that communities can implement to reduce pollution and promote sustainability.",
+        body: "Waste management is a critical challenge facing India today. Improper disposal of waste leads to pollution, health hazards, and environmental degradation. At Pitama India, we've developed community-based waste management programs that have transformed neighborhoods. This guide covers segregation techniques, composting methods, recycling best practices, and how to reduce single-use plastic. We also discuss how to organize neighborhood clean-up drives, engage local authorities, and create sustainable waste management systems. Additionally, we share success stories from communities that have achieved zero-waste goals through collective action.",
+        author: "Environmental Expert",
         date: "2024-01-12",
-        category: "Business Setup",
-        tags: ["MSME", "Udyam", "Registration", "Compliance"],
-        image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+        category: "Environmental Initiatives",
+        tags: ["Waste Management", "Recycling", "Community", "Sustainability"],
+        image: "https://images.pexels.com/photos/802221/pexels-photo-802221.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 3,
-        title: "Business Plan Development for MSMEs: A Comprehensive Approach",
-        excerpt: "Learn how to create a compelling business plan that attracts investors and guides your MSME towards success.",
-        body: "A well-crafted business plan is the foundation of any successful MSME. It serves as a roadmap for your business operations and is essential when seeking funding or partnerships. This comprehensive guide covers all aspects of business plan development, from market analysis to financial projections. We'll discuss the key components of a business plan, including executive summary, company description, market analysis, organization structure, product or service line, marketing strategy, and financial projections. We'll also provide templates and examples to help you create a professional business plan that stands out to potential investors and stakeholders.",
-        author: "Business Strategy Expert",
+        title: "Water Conservation: Simple Steps for Every Household",
+        excerpt: "Practical water conservation techniques that every household can implement to protect this precious resource.",
+        body: "Water scarcity is an increasing concern across India, affecting millions of people. Conservation at the household level can make a significant difference in addressing this crisis. This comprehensive guide covers practical water conservation techniques including rainwater harvesting, greywater recycling, efficient irrigation methods, and water-saving fixtures. We discuss the importance of groundwater recharge and how communities can work together to restore local water bodies. We also provide tips for reducing water waste in daily activities and measuring your household's water footprint. Join us in the mission to ensure water security for future generations.",
+        author: "Water Conservation Specialist",
         date: "2024-01-08",
-        category: "Business Setup",
-        tags: ["Business Plan", "Strategy", "Planning", "MSME"],
-        image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+        category: "Environmental Initiatives",
+        tags: ["Water Conservation", "Rainwater Harvesting", "Sustainability", "Environment"],
+        image: "https://images.pexels.com/photos/2889685/pexels-photo-2889685.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
 
-    // Funding Category
+    // Women Empowerment Category
     {
         id: 4,
-        title: "Complete Guide to Funding Options for Indian Startups and MSMEs",
-        excerpt: "Explore all available funding avenues including government schemes, venture capital, angel investors, and traditional loans.",
-        body: "Securing funding is one of the biggest challenges faced by startups and MSMEs in India. However, with the right knowledge and approach, there are numerous funding options available. This comprehensive guide covers all major funding sources, including government schemes like Startup India, MUDRA loans, and various state-level initiatives. We'll also discuss private funding options such as venture capital, angel investors, crowdfunding, and traditional bank loans. Each funding option comes with its own set of requirements, benefits, and challenges, which we'll explore in detail. Additionally, we'll provide tips on how to prepare for funding applications and increase your chances of success.",
-        author: "Finance Expert",
+        title: "Skill Development Programs: Transforming Lives of Rural Women",
+        excerpt: "Explore how skill development initiatives are helping rural women achieve financial independence and self-reliance.",
+        body: "Women empowerment begins with economic independence. At Pitama India, our skill development programs have helped thousands of rural women learn vocational skills that enable them to earn a livelihood. This article details our various training programs including tailoring and stitching, handicrafts, digital literacy, food processing, and beauty services. We share success stories of women who have started their own micro-enterprises after completing our training. We also discuss how self-help groups (SHGs) provide a platform for women to support each other, access credit, and grow together. Learn how you can support or volunteer with our women empowerment initiatives.",
+        author: "Women Empowerment Lead",
         date: "2024-01-10",
-        category: "Funding",
-        tags: ["Funding", "Startups", "Investment", "Loans"],
+        category: "Women Empowerment",
+        tags: ["Skill Development", "Women Empowerment", "Rural Women", "Livelihood"],
         image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 5,
-        title: "Government Funding Schemes for MSMEs: Complete List 2024",
-        excerpt: "Comprehensive list of all government funding schemes available for MSMEs including eligibility criteria and application process.",
-        body: "The Indian government offers numerous funding schemes specifically designed to support MSMEs. These schemes provide financial assistance, subsidies, and other benefits to help businesses grow and expand. In this detailed guide, we'll cover all major government funding schemes, including Startup India Seed Fund Scheme, MUDRA loans, Stand-Up India, Credit Guarantee Fund Scheme, and various state-level initiatives. For each scheme, we'll provide information about eligibility criteria, funding amounts, application process, and required documentation. We'll also share success stories and tips from businesses that have successfully secured government funding.",
-        author: "Government Relations Expert",
+        title: "Self-Help Groups: The Power of Collective Action for Women",
+        excerpt: "Understanding how Self-Help Groups create opportunities for women to save, access credit, and build enterprises together.",
+        body: "Self-Help Groups (SHGs) have revolutionized rural women's access to financial services and opportunities. These groups of 10-20 women come together to save regularly, access collective credit, and support each other's entrepreneurial ventures. This detailed guide explains how SHGs work, the benefits they provide, and how Pitama India facilitates the formation and growth of SHGs. We discuss the NABARD linkage program, government schemes available for SHGs, and how women can leverage these opportunities. We also share inspiring stories of SHGs that have grown into successful cooperative enterprises, creating employment and prosperity in their communities.",
+        author: "SHG Program Coordinator",
         date: "2024-01-05",
-        category: "Funding",
-        tags: ["Government", "Funding", "Schemes", "MSME"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1582213782179-e0d53f98f2ca?w=800&h=400&fit=crop"
+        category: "Women Empowerment",
+        tags: ["Self-Help Groups", "Women", "Financial Inclusion", "Empowerment"],
+        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 6,
-        title: "Venture Capital and Angel Investment: A Guide for Indian Startups",
-        excerpt: "Everything you need to know about securing venture capital and angel investment for your startup in India.",
-        body: "Venture capital and angel investment have become increasingly important sources of funding for Indian startups. These investors not only provide capital but also bring valuable expertise, networks, and mentorship. This comprehensive guide covers the venture capital and angel investment landscape in India, including key players, investment trends, and what investors look for in startups. We'll discuss the investment process, from initial pitch to due diligence and closing the deal. We'll also provide tips on how to prepare for investor meetings, create compelling pitch decks, and negotiate favorable terms. Additionally, we'll cover the legal and regulatory aspects of raising venture capital in India.",
-        author: "Investment Advisor",
+        title: "Health and Hygiene Awareness for Women: Breaking Taboos",
+        excerpt: "How our health awareness programs are addressing menstrual hygiene, nutrition, and women's health in rural areas.",
+        body: "Women's health, particularly menstrual hygiene, remains a taboo topic in many rural areas of India. This silence leads to poor health practices, discomfort, and even health complications. Pitama India's health awareness programs aim to break these taboos through education and open discussions. This article covers our menstrual hygiene management workshops, sanitary pad distribution programs, and nutrition awareness sessions. We discuss the importance of addressing women's health holistically, including reproductive health, mental health, and nutrition. We also share resources for women seeking more information and how volunteers can help spread awareness in their communities.",
+        author: "Health Program Coordinator",
         date: "2024-01-03",
-        category: "Funding",
-        tags: ["Venture Capital", "Angel Investment", "Startups", "Funding"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+        category: "Women Empowerment",
+        tags: ["Health", "Hygiene", "Women Health", "Awareness"],
+        image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
 
-    // Marketing Category
+    // Animal Welfare Category
     {
         id: 7,
-        title: "Digital Marketing Strategies for MSMEs: Complete Guide 2024",
-        excerpt: "Comprehensive digital marketing strategies tailored specifically for MSMEs to boost online presence and drive growth.",
-        body: "Digital marketing has become essential for MSMEs to compete in today's market. With the right strategies, even small businesses can reach a global audience and compete with larger companies. This comprehensive guide covers all aspects of digital marketing for MSMEs, including search engine optimization (SEO), social media marketing, content marketing, email marketing, and paid advertising. We'll discuss budget-friendly strategies that provide maximum ROI, tools and platforms that are most effective for MSMEs, and how to measure and optimize your marketing efforts. We'll also provide case studies of successful MSMEs that have leveraged digital marketing to achieve significant growth.",
-        author: "Digital Marketing Expert",
+        title: "Complete Guide to Rescuing and Rehabilitating Stray Animals",
+        excerpt: "Step-by-step guide on how to safely rescue stray animals and provide them with proper care and rehabilitation.",
+        body: "Every year, thousands of stray animals suffer from injuries, illness, and neglect on our streets. Pitama India's animal welfare program works tirelessly to rescue and rehabilitate these animals. This comprehensive guide covers everything from identifying animals in distress, safe rescue techniques, immediate first aid, and long-term rehabilitation. We discuss how to work with local veterinarians, animal shelters, and authorities. We also cover the legal aspects of animal rescue and the responsibilities involved. Whether you want to volunteer with our rescue team or help animals independently, this guide provides essential knowledge and resources.",
+        author: "Animal Welfare Expert",
         date: "2024-01-20",
-        category: "Marketing",
-        tags: ["Digital Marketing", "SEO", "Social Media", "MSME"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1460925895917-afdab827c52f?w=800&h=400&fit=crop"
+        category: "Animal Welfare",
+        tags: ["Animal Rescue", "Stray Animals", "Rehabilitation", "Animal Care"],
+        image: "https://images.pexels.com/photos/1378849/pexels-photo-1378849.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 8,
-        title: "Social Media Marketing for Small Businesses: Best Practices",
-        excerpt: "Learn how to effectively use social media platforms to promote your MSME and engage with customers.",
-        body: "Social media marketing offers MSMEs an affordable way to reach and engage with their target audience. With billions of users across various platforms, social media provides unprecedented opportunities for small businesses to build brand awareness and drive sales. This detailed guide covers social media marketing strategies for MSMEs, including platform selection, content creation, community building, and advertising. We'll discuss the unique features and best practices for each major platform, including Facebook, Instagram, LinkedIn, Twitter, and YouTube. We'll also provide tips on creating engaging content, building a loyal following, and measuring social media ROI.",
-        author: "Social Media Specialist",
+        title: "Adopting a Street Animal: A Rewarding Journey",
+        excerpt: "Everything you need to know about adopting street animals and giving them a loving forever home.",
+        body: "Adopting a street animal is one of the most rewarding experiences you can have. These animals, often overlooked, make loyal, loving companions when given a chance. This detailed guide covers the adoption process, from finding the right animal to bringing them home and helping them adjust. We discuss the medical care street animals typically need, including vaccinations, sterilization, and treatment for common ailments. We also cover behavioral considerations and how to help a street animal transition to home life. Pitama India's adoption drives have helped hundreds of animals find loving homes, and we share some of these heartwarming stories to inspire potential adopters.",
+        author: "Adoption Coordinator",
         date: "2024-01-18",
-        category: "Marketing",
-        tags: ["Social Media", "Marketing", "Content", "Engagement"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1611224923853-80b023f02d71?w=800&h=400&fit=crop"
+        category: "Animal Welfare",
+        tags: ["Adoption", "Street Animals", "Pet Care", "Animal Welfare"],
+        image: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 9,
-        title: "Content Marketing Strategy for MSMEs: Building Authority and Trust",
-        excerpt: "Develop a content marketing strategy that positions your MSME as an industry authority and builds customer trust.",
-        body: "Content marketing is a powerful strategy for MSMEs to build brand authority, attract customers, and establish long-term relationships. By creating valuable, relevant content, businesses can educate their audience, showcase their expertise, and drive organic traffic to their website. This comprehensive guide covers content marketing strategies specifically designed for MSMEs, including content planning, creation, distribution, and measurement. We'll discuss different types of content, from blog posts and videos to infographics and podcasts, and how to choose the right content mix for your business. We'll also provide tips on content optimization, SEO integration, and building a content calendar that supports your business goals.",
-        author: "Content Marketing Expert",
+        title: "Community Animal Welfare: Creating a Compassionate Neighborhood",
+        excerpt: "How communities can work together to ensure the welfare of street animals in their area.",
+        body: "Animal welfare is a community responsibility. When neighborhoods work together, they can create a safe, healthy environment for street animals while addressing concerns of all residents. This guide covers community-based animal welfare strategies including feeding programs, sterilization drives, vaccination campaigns, and conflict resolution. We discuss how to form neighborhood animal welfare committees, work with local authorities, and access resources from animal welfare organizations. We also address common concerns about street animals and provide practical solutions. Pitama India's community animal welfare program has successfully transformed many neighborhoods, and we share these models for others to replicate.",
+        author: "Community Outreach Lead",
         date: "2024-01-16",
-        category: "Marketing",
-        tags: ["Content Marketing", "Strategy", "Authority", "Trust"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1552664730-d307ca884978?w=800&h=400&fit=crop"
+        category: "Animal Welfare",
+        tags: ["Community", "Street Animals", "Neighborhood", "Welfare"],
+        image: "https://images.pexels.com/photos/1174081/pexels-photo-1174081.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
 
-    // Legal Category
+    // Child Education Category
     {
         id: 10,
-        title: "Legal Compliance for MSMEs: Essential Requirements and Best Practices",
-        excerpt: "Complete guide to legal compliance requirements for MSMEs including registration, licensing, and ongoing obligations.",
-        body: "Legal compliance is crucial for MSMEs to operate smoothly and avoid penalties. Understanding and meeting all legal requirements can be challenging, but it's essential for business success. This comprehensive guide covers all major legal compliance requirements for MSMEs, including business registration, licensing, tax compliance, labor laws, and industry-specific regulations. We'll discuss the consequences of non-compliance and provide practical tips for maintaining compliance. We'll also cover recent changes in regulations and how they affect MSMEs. Additionally, we'll provide checklists and templates to help you stay organized and ensure you don't miss any important deadlines or requirements.",
-        author: "Legal Compliance Expert",
+        title: "Bridging the Education Gap: Reaching Out-of-School Children",
+        excerpt: "Strategies and programs to identify, enroll, and support children who are not receiving formal education.",
+        body: "Millions of children in India remain out of school due to poverty, social barriers, or lack of access. Pitama India's education program works to identify these children and bring them into the education system. This comprehensive guide covers strategies for reaching out-of-school children, overcoming barriers to enrollment, and providing ongoing support to ensure retention. We discuss our bridge education programs that help children catch up to their age-appropriate grade levels. We also cover the role of community engagement, parent counseling, and government schemes that support child education. Join us in ensuring every child has the opportunity to learn.",
+        author: "Education Program Director",
         date: "2024-01-14",
-        category: "Legal",
-        tags: ["Legal", "Compliance", "Regulations", "MSME"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1589829545856-d10d557cf95f?w=800&h=400&fit=crop"
+        category: "Child Education",
+        tags: ["Education", "Out-of-School Children", "Enrollment", "Support"],
+        image: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 11,
-        title: "Intellectual Property Protection for Startups and MSMEs",
-        excerpt: "Learn how to protect your intellectual property including trademarks, patents, copyrights, and trade secrets.",
-        body: "Intellectual property (IP) protection is often overlooked by startups and MSMEs, but it's crucial for long-term success and competitive advantage. Your IP assets, including trademarks, patents, copyrights, and trade secrets, can be valuable business assets that need proper protection. This detailed guide covers all aspects of IP protection for startups and MSMEs, including the different types of IP, registration processes, costs, and timelines. We'll discuss the importance of IP protection, common mistakes to avoid, and how to develop an IP strategy that aligns with your business goals. We'll also provide case studies of businesses that have successfully protected their IP and the benefits they've gained.",
-        author: "IP Law Expert",
+        title: "Digital Literacy for Children: Preparing for the Future",
+        excerpt: "How our digital literacy programs are equipping children from underprivileged backgrounds with essential tech skills.",
+        body: "In today's digital world, computer literacy is no longer optional—it's essential. Yet millions of children in India lack access to digital education due to poverty and lack of infrastructure. Pitama India's digital literacy program aims to bridge this divide by providing computer training to children from underprivileged backgrounds. This article covers our curriculum, which includes basic computer operations, internet safety, digital content creation, and coding basics. We discuss our partnerships with schools, the role of volunteer teachers, and how we source and maintain computing equipment. We also share success stories of children who have excelled after participating in our digital literacy programs.",
+        author: "Digital Education Lead",
         date: "2024-01-11",
-        category: "Legal",
-        tags: ["Intellectual Property", "Trademarks", "Patents", "Copyright"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1582213782179-e0d53f98f2ca?w=800&h=400&fit=crop"
+        category: "Child Education",
+        tags: ["Digital Literacy", "Technology", "Children", "Education"],
+        image: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 12,
-        title: "Contract Management for MSMEs: Best Practices and Common Pitfalls",
-        excerpt: "Essential guide to contract management including drafting, negotiation, and enforcement for small businesses.",
-        body: "Effective contract management is essential for MSMEs to protect their interests and maintain healthy business relationships. Poor contract management can lead to disputes, financial losses, and damaged relationships. This comprehensive guide covers all aspects of contract management for MSMEs, including contract drafting, negotiation, execution, and enforcement. We'll discuss different types of contracts commonly used by MSMEs, key terms and clauses to include, and how to negotiate favorable terms. We'll also cover common contract pitfalls and how to avoid them, as well as best practices for contract storage and management. Additionally, we'll provide templates and checklists to help you manage your contracts effectively.",
-        author: "Contract Law Expert",
+        title: "Creative Learning: The Power of Art and Play in Education",
+        excerpt: "Exploring how creative approaches to learning enhance children's education and development.",
+        body: "Traditional rote learning often fails to engage children or develop their full potential. At Pitama India, we believe in the power of creative learning to spark curiosity, develop critical thinking, and make education enjoyable. This guide covers our creative learning methodology, which incorporates art, music, storytelling, drama, and play into education. We discuss how these approaches help children retain information better, express themselves, and develop social skills. We also cover our after-school creative workshops and how they supplement formal education. Whether you're a teacher, parent, or volunteer, this guide provides practical ideas for incorporating creative learning into children's education.",
+        author: "Creative Learning Coordinator",
         date: "2024-01-09",
-        category: "Legal",
-        tags: ["Contracts", "Management", "Negotiation", "Legal"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1589829545856-d10d557cf95f?w=800&h=400&fit=crop"
+        category: "Child Education",
+        tags: ["Creative Learning", "Art", "Play", "Child Development"],
+        image: "https://images.pexels.com/photos/8363104/pexels-photo-8363104.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
 
-    // Technology Category
+    // Volunteering Category
     {
         id: 13,
-        title: "Digital Transformation for MSMEs: Technology Adoption Guide",
-        excerpt: "Complete guide to digital transformation for MSMEs including technology selection, implementation, and ROI measurement.",
-        body: "Digital transformation is no longer optional for MSMEs; it's essential for survival and growth in today's competitive market. However, many small businesses struggle with where to start and how to implement technology effectively. This comprehensive guide covers all aspects of digital transformation for MSMEs, including technology assessment, selection, implementation, and measurement. We'll discuss various technologies that can benefit MSMEs, from cloud computing and CRM systems to automation tools and e-commerce platforms. We'll also provide a step-by-step approach to digital transformation, including budgeting, timeline planning, and change management. Additionally, we'll share success stories and lessons learned from MSMEs that have successfully transformed their operations.",
-        author: "Technology Consultant",
+        title: "Becoming a Change-Maker: A Guide to Volunteering with NGOs",
+        excerpt: "Everything you need to know about volunteering with NGOs and making a meaningful contribution to social causes.",
+        body: "Volunteering is a powerful way to contribute to social change while gaining valuable experiences and skills. At Pitama India, our volunteers are the backbone of our programs, contributing their time, skills, and passion to create impact. This comprehensive guide covers how to find volunteer opportunities that match your interests and skills, what to expect when volunteering with NGOs, and how to maximize your contribution. We discuss different types of volunteering—from field work to virtual volunteering, one-time events to long-term commitments. We also share stories from our volunteers about how their experience has enriched their lives while helping communities.",
+        author: "Volunteer Coordinator",
         date: "2024-01-07",
-        category: "Technology",
-        tags: ["Digital Transformation", "Technology", "Automation", "MSME"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1518709268805-4e9042af2176?w=800&h=400&fit=crop"
+        category: "Volunteering",
+        tags: ["Volunteering", "NGO", "Social Impact", "Change-Makers"],
+        image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 14,
-        title: "E-commerce Setup for MSMEs: From Planning to Launch",
-        excerpt: "Step-by-step guide to setting up an e-commerce presence for your MSME including platform selection and optimization.",
-        body: "E-commerce has become a crucial channel for MSMEs to reach customers and increase sales. With the right approach, even small businesses can compete effectively in the online marketplace. This detailed guide covers all aspects of e-commerce setup for MSMEs, including market research, platform selection, website development, payment integration, and marketing. We'll discuss different e-commerce platforms and their pros and cons, helping you choose the right solution for your business. We'll also cover essential features like mobile optimization, SEO, and customer service. Additionally, we'll provide tips on inventory management, order fulfillment, and scaling your e-commerce operations as your business grows.",
-        author: "E-commerce Expert",
+        title: "Corporate Volunteering: Aligning Business with Social Good",
+        excerpt: "How companies can create meaningful corporate volunteering programs that benefit employees and communities alike.",
+        body: "Corporate volunteering programs offer a win-win opportunity for businesses to contribute to social causes while engaging employees and building team spirit. At Pitama India, we partner with numerous companies to design and implement impactful corporate volunteering initiatives. This guide covers how companies can create effective volunteer programs, choose causes that align with their values, and measure the impact of their contributions. We discuss different models of corporate volunteering, from employee volunteer days to skills-based volunteering and long-term partnerships. We also share case studies of successful corporate partnerships and the benefits they've brought to all stakeholders.",
+        author: "Corporate Partnership Manager",
         date: "2024-01-04",
-        category: "Technology",
-        tags: ["E-commerce", "Online Business", "Platform", "Digital"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1556742049-0cfed4f6a45d?w=800&h=400&fit=crop"
+        category: "Volunteering",
+        tags: ["Corporate Volunteering", "CSR", "Business", "Social Good"],
+        image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 15,
-        title: "Cybersecurity for Small Businesses: Essential Protection Strategies",
-        excerpt: "Comprehensive cybersecurity guide for MSMEs including threat assessment, protection measures, and incident response.",
-        body: "Cybersecurity is a growing concern for MSMEs, as small businesses are increasingly targeted by cybercriminals. Many small businesses assume they're too small to be targeted, but this misconception can lead to devastating consequences. This comprehensive guide covers all aspects of cybersecurity for MSMEs, including common threats, protection measures, and incident response. We'll discuss essential security practices, from password management and software updates to backup strategies and employee training. We'll also cover compliance requirements and how to develop a cybersecurity policy. Additionally, we'll provide cost-effective security solutions and tools that are suitable for small businesses with limited budgets.",
-        author: "Cybersecurity Expert",
+        title: "Student Volunteering: Making a Difference While Learning",
+        excerpt: "How students can volunteer with NGOs to gain experience, develop skills, and contribute to social causes.",
+        body: "Student volunteering offers young people an opportunity to give back to society while gaining valuable experiences and skills. At Pitama India, we welcome students for internships, summer programs, and ongoing volunteering opportunities. This guide covers how students can find meaningful volunteer opportunities, balance volunteering with academic commitments, and make the most of their experience. We discuss the skills students can develop through volunteering, including leadership, communication, problem-solving, and teamwork. We also provide information about our student volunteer programs and how schools and colleges can partner with us for social impact initiatives.",
+        author: "Student Programs Coordinator",
         date: "2024-01-02",
-        category: "Technology",
-        tags: ["Cybersecurity", "Protection", "Security", "MSME"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop1563013544-824ae1b704d3?w=800&h=400&fit=crop"
+        category: "Volunteering",
+        tags: ["Student Volunteering", "Internships", "Youth", "Learning"],
+        image: "https://images.pexels.com/photos/6646852/pexels-photo-6646852.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
 
-    // Growth Category
+    // Community Development Category
     {
         id: 16,
-        title: "Scaling Your MSME: Growth Strategies and Best Practices",
-        excerpt: "Comprehensive guide to scaling your MSME including growth planning, resource management, and market expansion.",
-        body: "Scaling an MSME requires careful planning and execution to ensure sustainable growth without compromising quality or customer service. Many businesses struggle with scaling because they don't have the right strategies and systems in place. This comprehensive guide covers all aspects of scaling MSMEs, including growth planning, resource management, market expansion, and operational efficiency. We'll discuss different growth strategies, from organic growth to partnerships and acquisitions. We'll also cover the challenges of scaling and how to overcome them, including cash flow management, talent acquisition, and maintaining company culture. Additionally, we'll provide frameworks and tools to help you plan and execute your scaling strategy effectively.",
-        author: "Growth Strategy Expert",
+        title: "Building Resilient Communities Through Collective Action",
+        excerpt: "How communities can organize and work together to address local challenges and create sustainable solutions.",
+        body: "Strong communities are the foundation of a healthy society. When people work together, they can address local challenges more effectively than individuals alone. This comprehensive guide covers community organizing strategies, including how to identify common issues, build consensus, mobilize resources, and implement solutions. We discuss Pitama India's community development model, which empowers local leaders and creates sustainable structures for ongoing improvement. We also cover case studies of communities that have transformed through collective action, addressing issues from sanitation and healthcare to education and livelihood. Learn how you can help build a more resilient community.",
+        author: "Community Development Lead",
         date: "2024-01-01",
-        category: "Growth",
-        tags: ["Scaling", "Growth", "Strategy", "MSME"],
-        image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+        category: "Community Development",
+        tags: ["Community", "Collective Action", "Resilience", "Development"],
+        image: "https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 17,
-        title: "Export Opportunities for Indian MSMEs: Global Market Entry Guide",
-        excerpt: "Complete guide to exporting for Indian MSMEs including market research, documentation, and government support.",
-        body: "Exporting offers significant growth opportunities for Indian MSMEs, allowing them to access larger markets and increase revenue. However, entering international markets requires careful planning and understanding of various requirements and challenges. This detailed guide covers all aspects of exporting for Indian MSMEs, including market research, product adaptation, documentation, logistics, and government support. We'll discuss different export strategies, from direct exports to partnerships and joint ventures. We'll also cover essential requirements like export licenses, quality certifications, and compliance with international standards. Additionally, we'll provide information about government schemes and incentives available for exporters.",
-        author: "Export Specialist",
+        title: "Health Camps: Bringing Healthcare to Underserved Communities",
+        excerpt: "How health camps bridge the healthcare gap and provide essential medical services to those who need them most.",
+        body: "Access to healthcare remains a significant challenge for many communities in India, particularly in rural and underserved areas. Pitama India organizes regular health camps to bring free medical services to those who need them most. This guide covers how health camps are organized, the services typically provided, and how you can help. We discuss our partnerships with hospitals, doctors, and healthcare volunteers who make these camps possible. We also cover follow-up care and how we help patients access ongoing treatment when needed. Whether you're a healthcare professional looking to volunteer or someone who wants to support our health initiatives, this guide provides all the information you need.",
+        author: "Health Programs Coordinator",
         date: "2023-12-30",
-        category: "Growth",
-        tags: ["Export", "International", "Global", "MSME"],
-        image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+        category: "Community Development",
+        tags: ["Health Camps", "Healthcare", "Underserved Communities", "Medical"],
+        image: "https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
         id: 18,
-        title: "Innovation and R&D for MSMEs: Driving Competitive Advantage",
-        excerpt: "Learn how to implement innovation and R&D strategies in your MSME to stay competitive and drive growth.",
-        body: "Innovation and research & development (R&D) are crucial for MSMEs to stay competitive and drive growth. However, many small businesses struggle with implementing effective innovation strategies due to limited resources and expertise. This comprehensive guide covers all aspects of innovation and R&D for MSMEs, including innovation planning, R&D management, and intellectual property protection. We'll discuss different types of innovation, from product innovation to process improvement and business model innovation. We'll also cover how to build an innovation culture, manage R&D projects, and measure innovation ROI. Additionally, we'll provide information about government support and funding available for R&D activities.",
-        author: "Innovation Expert",
+        title: "Disaster Relief and Preparedness: Community Resilience in Crisis",
+        excerpt: "How communities can prepare for disasters and how NGOs respond when crisis strikes.",
+        body: "Natural disasters can devastate communities, leaving people without homes, food, or essential services. Pitama India's disaster relief program responds quickly to provide immediate assistance and supports long-term recovery. This guide covers both disaster preparedness and response. We discuss how communities can prepare for common disasters like floods, cyclones, and droughts through early warning systems, emergency planning, and resource stockpiling. We also cover our disaster response protocols, including needs assessment, resource mobilization, distribution of relief materials, and coordination with government and other agencies. Learn how you can help communities become more resilient and support our disaster relief efforts.",
+        author: "Disaster Relief Coordinator",
         date: "2023-12-28",
-        category: "Growth",
-        tags: ["Innovation", "R&D", "Competitive", "Growth"],
-        image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+        category: "Community Development",
+        tags: ["Disaster Relief", "Preparedness", "Community Resilience", "Emergency"],
+        image: "https://images.pexels.com/photos/5029859/pexels-photo-5029859.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     }
 ];

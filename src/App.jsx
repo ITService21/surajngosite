@@ -6,16 +6,20 @@ import ScrollToTop from "./Components/ScrollToTop";
 import { ModalProvider, useModal } from "./Context/ModalContext";
 import AutoPopupModal from "./Components/AutoPopupModal";
 import FormModal from "./Components/FormModal";
-//About Us
 
+// Pages
 import AnimatedBanner from "./Binner/Binner";
 import ContactUs from "./Pages/Contact";
-// import CompanyVisionMission from "./Pages/MissionAndMission";
 import CompanyOverview from "./Pages/CompanyOverview";
-import SimpleTeamPage from "./Pages/WorkerTeam";
-import Certifications from "./Pages/Certifications";
 import ServicesPage from "./Pages/Services";
 import BlogPage from "./Pages/Blog";
+
+// About Us Pages
+import Mission from "./Pages/AboutUs/Mission";
+import Vision from "./Pages/AboutUs/Vision";
+import OurTeam from "./Pages/AboutUs/OurTeam";
+import TermsOfAgreement from "./Pages/AboutUs/TermsOfAgreement";
+import Donation from "./Pages/AboutUs/Donation";
 
 // Service Pages
 import AllServices from "./Pages/Services/AllServices";
@@ -24,14 +28,10 @@ import CertificateConsultant from "./Pages/Services/CertificateConsultant";
 import MarketingServices from "./Pages/Services/MarketingServices";
 import LegalServices from "./Pages/Services/LegalServices";
 
-// About Us Pages
-import Partners from "./Pages/Partners";
-
 // Gallery Pages
 import Albums from "./Pages/Gallery/Albums";
 import Videos from "./Pages/Gallery/Videos";
 import { useEffect } from "react";
-
 
 
 // Inner component to access modal context
@@ -49,19 +49,30 @@ function AppContent() {
             <Route path="/" element={<AnimatedBanner />} />
             <Route path="/home" element={<AnimatedBanner />} />
             <Route path="/contact-us" element={<ContactUs />} />
-            {/* <Route path="/about-us/mission-vision" element={<CompanyVisionMission />} /> */}
+            
+            {/* About Us Routes */}
             <Route path="/about-us/overview" element={<CompanyOverview />} />
-            <Route path="/about-us/ourteam" element={<SimpleTeamPage />} />
-            <Route path="/about-us/certifications" element={<Certifications />} />
-            <Route path="/about-us/partners" element={<Partners />} />
+            <Route path="/about-us/mission" element={<Mission />} />
+            <Route path="/about-us/vision" element={<Vision />} />
+            <Route path="/about-us/team" element={<OurTeam />} />
+            <Route path="/about-us/terms" element={<TermsOfAgreement />} />
+            
+            {/* Donation Route */}
+            <Route path="/donate" element={<Donation />} />
+            
+            {/* Services Routes */}
             <Route path="/service" element={<ServicesPage />} />
             <Route path="/services/all" element={<AllServices />} />
             <Route path="/services/funding" element={<FundingConsultant />} />
             <Route path="/services/certificate" element={<CertificateConsultant />} />
             <Route path="/services/marketing" element={<MarketingServices />} />
-            <Route path="/services/legal" element={<LegalServices />} />
+            <Route path="/services/education" element={<LegalServices />} />
+            
+            {/* Gallery Routes */}
             <Route path="/gallery/albums" element={<Albums />} />
             <Route path="/gallery/videos" element={<Videos />} />
+            
+            {/* Blog Route */}
             <Route path="/blog" element={<BlogPage />} />
           </Routes>
         </main>

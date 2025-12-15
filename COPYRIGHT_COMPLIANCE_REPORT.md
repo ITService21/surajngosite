@@ -161,8 +161,6 @@ All icons are from open-source libraries with commercial use permissions.
 1. **Always use copyright-free sources** for future images:
    - Pexels.com
    - Pixabay.com
-   - Unsplash.com
-   - Freepik.com (with attribution)
 
 2. **Keep records** of all asset sources
 3. **Update this report** when adding new assets

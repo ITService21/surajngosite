@@ -161,28 +161,28 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
                                     <p className="text-lg font-semibold text-green-600">{service.processingTime}</p>
                                 </div>
                                 {service.interestRate ? (
-                                    <div className="bg-orange-50 p-4 rounded-lg">
+                                    <div className="bg-pitama-green-50 p-4 rounded-lg">
                                         <div className="flex items-center gap-2 mb-2">
-                                            <FaCheckCircle className="text-orange-600" />
+                                            <FaCheckCircle className="text-pitama-green-600" />
                                             <span className="font-semibold text-gray-900">Interest Rate</span>
                                         </div>
-                                        <p className="text-lg font-semibold text-orange-600">{service.interestRate}</p>
+                                        <p className="text-lg font-semibold text-pitama-green-600">{service.interestRate}</p>
                                     </div>
                                 ) : service.validity ? (
-                                    <div className="bg-orange-50 p-4 rounded-lg">
+                                    <div className="bg-pitama-green-50 p-4 rounded-lg">
                                         <div className="flex items-center gap-2 mb-2">
-                                            <FaCheckCircle className="text-orange-600" />
+                                            <FaCheckCircle className="text-pitama-green-600" />
                                             <span className="font-semibold text-gray-900">Validity</span>
                                         </div>
-                                        <p className="text-lg font-semibold text-orange-600">{service.validity}</p>
+                                        <p className="text-lg font-semibold text-pitama-green-600">{service.validity}</p>
                                     </div>
                                 ) : (
-                                    <div className="bg-orange-50 p-4 rounded-lg">
+                                    <div className="bg-pitama-green-50 p-4 rounded-lg">
                                         <div className="flex items-center gap-2 mb-2">
-                                            <FaCheckCircle className="text-orange-600" />
+                                            <FaCheckCircle className="text-pitama-green-600" />
                                             <span className="font-semibold text-gray-900">Type</span>
                                         </div>
-                                        <p className="text-lg font-semibold text-orange-600">Registration</p>
+                                        <p className="text-lg font-semibold text-pitama-green-600">Registration</p>
                                     </div>
                                 )}
                             </div>
@@ -239,10 +239,10 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
                             </div>
 
                             {/* Eligibility Checker Button */}
-                            <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl border-2 border-orange-200">
+                            <div className="bg-gradient-to-r from-pitama-green-50 to-pitama-teal-50 p-6 rounded-xl border-2 border-pitama-green-200">
                                 <div className="text-center">
                                     <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
-                                        <FaCalculator className="text-orange-600" />
+                                        <FaCalculator className="text-pitama-green-600" />
                                         Check Your Eligibility
                                     </h3>
                                     <p className="text-gray-600 mb-6">
@@ -250,7 +250,7 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
                                     </p>
                                     <button
                                         onClick={() => setShowEligibilityChecker(true)}
-                                        className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto"
+                                        className="bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-pitama-green-600 hover:to-pitama-teal-600 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto"
                                     >
                                         <FaCalculator />
                                         Check Eligibility
@@ -311,7 +311,7 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
                             <div className="text-center pt-6 border-t border-gray-200">
                                 <button
                                     onClick={() => setShowBookConsultant(true)}
-                                    className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto"
+                                    className="bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-pitama-green-600 hover:to-pitama-teal-600 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto"
                                 >
                                     <FaHandshake />
                                     Book Free Consultation

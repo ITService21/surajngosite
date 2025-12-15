@@ -3,150 +3,144 @@ import PropTypes from "prop-types";
 import { useCTAModal } from "../../hooks/useCTAModal";
 import { useModal } from "../../Context/ModalContext";
 
-// Legal services data
-const legalServices = [
+// Child Education programs data
+const educationPrograms = [
     {
-        title: "Business Registration & Incorporation",
-        description: "Complete business registration and incorporation services for all types of business entities",
+        title: "School Enrollment Drives",
+        description: "Identifying and enrolling out-of-school children in formal education to ensure every child has access to learning",
         features: [
-            "Private Limited Company Registration",
-            "LLP (Limited Liability Partnership)",
-            "Partnership Firm Registration",
-            "Sole Proprietorship Setup",
-            "One Person Company (OPC)",
-            "Section 8 Company Registration"
+            "Door-to-door surveys to identify out-of-school children",
+            "Parent counseling and awareness sessions",
+            "Documentation assistance for admissions",
+            "Uniform and supplies distribution",
+            "Regular follow-up for retention",
+            "Bridge education for dropouts"
         ],
-        icon: "🏢",
-        duration: "7-15 days",
-        // price: "₹12,000"
+        icon: "🏫",
+        impact: "5,000+ children enrolled",
     },
     {
-        title: "Legal Documentation & Contracts",
-        description: "Comprehensive legal documentation and contract drafting services for business operations",
+        title: "After-School Tutoring",
+        description: "Daily homework help and academic support to improve learning outcomes for underprivileged children",
         features: [
-            "Employment Contracts & Agreements",
-            "Vendor & Supplier Agreements",
-            "Non-Disclosure Agreements (NDA)",
-            "Service Level Agreements (SLA)",
-            "Partnership Agreements",
-            "Franchise Agreements"
+            "Daily homework assistance",
+            "Subject-specific tutoring",
+            "Exam preparation support",
+            "Reading and literacy programs",
+            "Remedial classes for weak students",
+            "Peer learning groups"
         ],
-        icon: "📋",
-        duration: "3-7 days",
-        // price: "₹8,000"
+        icon: "✏️",
+        impact: "8,000+ children supported",
     },
     {
-        title: "Intellectual Property Protection",
-        description: "Protect your business ideas, innovations, and brand with comprehensive IP services",
+        title: "Digital Literacy Program",
+        description: "Teaching computer skills and internet safety to prepare children for the digital age",
         features: [
-            "Trademark Registration",
-            "Copyright Protection",
-            "Patent Filing & Registration",
-            "Design Registration",
-            "IP Portfolio Management",
-            "IP Infringement Protection"
+            "Basic computer operations",
+            "Internet usage and safety",
+            "Educational software training",
+            "Coding fundamentals",
+            "Digital content creation",
+            "Online learning resources access"
         ],
-        icon: "🛡️",
-        duration: "15-30 days",
-        // price: "₹15,000"
+        icon: "💻",
+        impact: "3,000+ children trained",
     },
     {
-        title: "Compliance & Regulatory Services",
-        description: "Ensure your business meets all legal and regulatory requirements",
+        title: "Scholarship Programs",
+        description: "Financial support for meritorious students from economically weaker sections to continue their education",
         features: [
-            "GST Registration & Compliance",
-            "Labor Law Compliance",
-            "Environmental Compliance",
-            "Industry-Specific Regulations",
-            "Annual Compliance Filings",
-            "Regulatory Advisory Services"
+            "Merit-based scholarships",
+            "Need-based financial aid",
+            "Higher education support",
+            "Skill development sponsorship",
+            "Exam fee assistance",
+            "Career counseling"
         ],
-        icon: "⚖️",
-        duration: "5-10 days",
-        // price: "₹10,000"
+        icon: "🎓",
+        impact: "1,000+ scholarships awarded",
     },
     {
-        title: "Dispute Resolution & Litigation",
-        description: "Expert legal representation and dispute resolution services",
+        title: "Creative Learning Workshops",
+        description: "Engaging children through art, music, and storytelling to foster creativity and holistic development",
         features: [
-            "Commercial Dispute Resolution",
-            "Arbitration & Mediation",
-            "Court Representation",
-            "Legal Notice Drafting",
-            "Settlement Negotiations",
-            "Recovery Proceedings"
+            "Art and craft sessions",
+            "Music and dance classes",
+            "Storytelling and drama",
+            "Science experiments",
+            "Environmental awareness activities",
+            "Cultural programs"
         ],
-        icon: "⚔️",
-        duration: "Varies",
-        // price: "₹20,000"
+        icon: "🎨",
+        impact: "200+ workshops conducted",
     },
     {
-        title: "Legal Audit & Risk Assessment",
-        description: "Comprehensive legal audit and risk assessment for business operations",
+        title: "Learning Resource Distribution",
+        description: "Providing books, stationery, and educational materials to students who cannot afford them",
         features: [
-            "Legal Due Diligence",
-            "Contract Review & Analysis",
-            "Compliance Audit",
-            "Risk Assessment Report",
-            "Legal Opinion & Advisory",
-            "Remedial Action Planning"
+            "Textbook distribution",
+            "Stationery kits",
+            "Educational toys and games",
+            "Library setup in communities",
+            "E-learning devices",
+            "Science lab materials"
         ],
-        icon: "🔍",
-        duration: "10-20 days",
-        // price: "₹25,000"
+        icon: "📚",
+        impact: "50,000+ items distributed",
     }
 ];
 
-// Legal expertise areas
-const expertiseAreas = [
+// Focus areas
+const focusAreas = [
     {
-        icon: "🏭",
-        title: "Corporate Law",
-        description: "Complete corporate legal services for businesses of all sizes"
+        icon: "👶",
+        title: "Early Childhood",
+        description: "Pre-school education and early development programs"
     },
     {
-        icon: "💼",
-        title: "Commercial Law",
-        description: "Commercial transactions, contracts, and business agreements"
+        icon: "📖",
+        title: "Primary Education",
+        description: "Foundational literacy and numeracy for classes 1-5"
     },
     {
-        icon: "👥",
-        title: "Labor Law",
-        description: "Employment law, HR compliance, and labor relations"
+        icon: "🔬",
+        title: "STEM Education",
+        description: "Science, technology, engineering, and math focus"
     },
     {
-        icon: "🏛️",
-        title: "Regulatory Law",
-        description: "Government regulations, compliance, and regulatory affairs"
+        icon: "🌟",
+        title: "Life Skills",
+        description: "Soft skills, values education, and personality development"
     }
 ];
 
-// Process steps
+// Impact process
 const processSteps = [
     {
         step: "01",
-        title: "Consultation",
-        description: "Initial consultation to understand your legal requirements"
+        title: "Identify",
+        description: "Survey communities to find children needing educational support"
     },
     {
         step: "02",
-        title: "Documentation",
-        description: "Collection and preparation of all necessary documents"
+        title: "Enroll",
+        description: "Facilitate admission in schools with required documentation"
     },
     {
         step: "03",
-        title: "Filing",
-        description: "Submission of applications and legal filings"
+        title: "Support",
+        description: "Provide academic assistance, materials, and mentorship"
     },
     {
         step: "04",
-        title: "Follow-up",
-        description: "Tracking progress and handling queries from authorities"
+        title: "Monitor",
+        description: "Track progress and attendance to prevent dropouts"
     },
     {
         step: "05",
-        title: "Completion",
-        description: "Final delivery and ongoing legal support"
+        title: "Empower",
+        description: "Enable children to become confident, educated individuals"
     }
 ];
 
@@ -159,39 +153,34 @@ export default function LegalServices({ className = "" }) {
             className={`mt-[40px] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative overflow-hidden ${className}`} 
             style={{ backgroundColor: '#FFFFFF' }}
         >
-            {/* Enhanced Animated Background with Orange Geometric Objects */}
-            <div className="absolute inset-0 overflow-hidden"></div>
+            {/* Enhanced Animated Background with Green Geometric Objects */}
+            <div className="absolute inset-0 overflow-hidden">
                 {/* Animated Mesh Background */}
                 <motion.div 
                     className="absolute inset-0 opacity-30"
                     animate={{
                         background: [
-                            "radial-gradient(circle at 20% 50%, rgba(253,87,16,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,107,53,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(253,87,16,0.15) 0%, transparent 50%)",
-                            "radial-gradient(circle at 80% 20%, rgba(255,107,53,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(253,87,16,0.15) 0%, transparent 50%), radial-gradient(circle at 20% 50%, rgba(253,87,16,0.15) 0%, transparent 50%)",
-                            "radial-gradient(circle at 20% 50%, rgba(253,87,16,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,107,53,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(253,87,16,0.15) 0%, transparent 50%)"
+                            "radial-gradient(circle at 20% 50%, rgba(34,197,94,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(34,197,94,0.15) 0%, transparent 50%)",
+                            "radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(34,197,94,0.15) 0%, transparent 50%), radial-gradient(circle at 20% 50%, rgba(34,197,94,0.15) 0%, transparent 50%)",
+                            "radial-gradient(circle at 20% 50%, rgba(34,197,94,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(34,197,94,0.15) 0%, transparent 50%)"
                         ]
                     }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                 />
                 
-                {/* Orange Geometric Objects - Scattered Across Page */}
+                {/* Green Geometric Objects - Scattered Across Page */}
                 {[...Array(12)].map((_, i) => {
                     const shapes = [
-                        // Circles
                         "w-16 h-16 sm:w-20 sm:h-20 rounded-full",
                         "w-12 h-12 sm:w-16 sm:h-16 rounded-full",
                         "w-20 h-20 sm:w-24 sm:h-24 rounded-full",
-                        // Squares
                         "w-14 h-14 sm:w-18 sm:h-18 rounded-lg",
                         "w-10 h-10 sm:w-14 sm:h-14 rounded-lg",
                         "w-16 h-16 sm:w-20 sm:h-20 rounded-lg",
-                        // Triangles (using clip-path)
-                        "w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-orange-400/30",
-                        "w-0 h-0 border-l-[16px] border-r-[16px] border-b-[28px] border-l-transparent border-r-transparent border-b-orange-400/30",
-                        // Diamonds
+                        "w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-emerald-400/30",
+                        "w-0 h-0 border-l-[16px] border-r-[16px] border-b-[28px] border-l-transparent border-r-transparent border-b-emerald-400/30",
                         "w-12 h-12 sm:w-16 sm:h-16 transform rotate-45",
                         "w-8 h-8 sm:w-12 sm:h-12 transform rotate-45",
-                        // Hexagons (approximated with rounded corners)
                         "w-14 h-14 sm:w-18 sm:h-18 rounded-lg transform rotate-12",
                         "w-10 h-10 sm:w-14 sm:h-14 rounded-lg transform -rotate-12"
                     ];
@@ -199,7 +188,7 @@ export default function LegalServices({ className = "" }) {
                     return (
                         <motion.div
                             key={i}
-                            className={`absolute ${shapes[i % shapes.length]} bg-gradient-to-r from-orange-400/25 to-red-400/25`}
+                            className={`absolute ${shapes[i % shapes.length]} bg-gradient-to-r from-emerald-400/25 to-teal-400/25`}
                             animate={{
                                 x: [0, 150, -80, 0],
                                 y: [0, -120, 60, 0],
@@ -220,125 +209,31 @@ export default function LegalServices({ className = "" }) {
                     );
                 })}
                 
-                {/* Additional Orange Objects - Scattered Randomly */}
-                {[...Array(15)].map((_, i) => {
-                    const objectTypes = [
-                        // Small circles
-                        "w-6 h-6 sm:w-8 sm:h-8 rounded-full",
-                        "w-4 h-4 sm:w-6 sm:h-6 rounded-full",
-                        // Small squares
-                        "w-5 h-5 sm:w-7 sm:h-7 rounded",
-                        "w-3 h-3 sm:w-5 sm:h-5 rounded",
-                        // Small triangles
-                        "w-0 h-0 border-l-[8px] border-r-[8px] border-b-[14px] border-l-transparent border-r-transparent border-b-orange-400/20",
-                        "w-0 h-0 border-l-[6px] border-r-[6px] border-b-[10px] border-l-transparent border-r-transparent border-b-orange-400/20",
-                        // Small diamonds
-                        "w-4 h-4 sm:w-6 sm:h-6 transform rotate-45",
-                        "w-3 h-3 sm:w-5 sm:h-5 transform rotate-45",
-                        // Small rectangles
-                        "w-8 h-4 sm:w-10 sm:h-5 rounded",
-                        "w-6 h-3 sm:w-8 sm:h-4 rounded",
-                        // Small ovals
-                        "w-10 h-6 sm:w-12 sm:h-8 rounded-full",
-                        "w-8 h-5 sm:w-10 sm:h-6 rounded-full",
-                        // Small stars (approximated)
-                        "w-6 h-6 sm:w-8 sm:h-8 transform rotate-45",
-                        "w-4 h-4 sm:w-6 sm:h-6 transform rotate-45",
-                        // Small hexagons
-                        "w-6 h-6 sm:w-8 sm:h-8 rounded-lg transform rotate-30"
-                    ];
-                    
-                    return (
-                        <motion.div
-                            key={`small-${i}`}
-                            className={`absolute ${objectTypes[i % objectTypes.length]} bg-gradient-to-r from-orange-300/20 to-red-300/20`}
-                            animate={{
-                                x: [0, 100, -50, 0],
-                                y: [0, -80, 40, 0],
-                                rotate: [0, 360, -360, 0],
-                                scale: [0.5, 1.2, 0.8, 0.5],
-                            }}
-                            transition={{
-                                duration: 15 + i * 1,
-                                repeat: Infinity,
-                                ease: "easeInOut",
-                                delay: i * 0.8,
-                            }}
-                            style={{
-                                left: `${Math.random() * 90}%`,
-                                top: `${Math.random() * 80}%`,
-                            }}
-                        />
-                    );
-                })}
-                
-                {/* Orange Animated Lines - Scattered */}
-                {[...Array(8)].map((_, i) => (
+                {/* Floating education icons */}
+                {['📚', '✏️', '🎓', '💡', '🌟', '📖'].map((emoji, i) => (
                     <motion.div
-                        key={`line-${i}`}
-                        className="absolute h-1 sm:h-2 bg-gradient-to-r from-orange-400/40 to-red-400/40"
+                        key={`emoji-${i}`}
+                        className="absolute text-2xl sm:text-3xl opacity-20"
                         animate={{
-                            scaleX: [0, 1, 0],
-                            opacity: [0, 0.6, 0],
+                            y: [0, -30, 0],
+                            rotate: [0, 10, -10, 0],
+                            scale: [1, 1.2, 1],
                         }}
                         transition={{
-                            duration: 3 + i * 0.5,
+                            duration: 6 + i * 1,
                             repeat: Infinity,
                             ease: "easeInOut",
-                            delay: i * 0.6,
+                            delay: i * 1.5,
                         }}
                         style={{
-                            width: `${200 + i * 50}px`,
-                            left: `${Math.random() * 80}%`,
-                            top: `${Math.random() * 70}%`,
-                            transform: `rotate(${Math.random() * 360}deg)`,
+                            left: `${15 + i * 15}%`,
+                            top: `${20 + i * 12}%`,
                         }}
-                    />
+                    >
+                        {emoji}
+                    </motion.div>
                 ))}
-                
-                {/* Orange Floating Objects - Various Shapes */}
-                {[...Array(10)].map((_, i) => {
-                    const shapes = [
-                        // Large circles
-                        "w-14 h-14 sm:w-18 sm:h-18 rounded-full",
-                        "w-10 h-10 sm:w-14 sm:h-14 rounded-full",
-                        // Large squares
-                        "w-12 h-12 sm:w-16 sm:h-16 rounded-lg",
-                        "w-8 h-8 sm:w-12 sm:h-12 rounded-lg",
-                        // Large triangles
-                        "w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-orange-400/25",
-                        "w-0 h-0 border-l-[12px] border-r-[12px] border-b-[20px] border-l-transparent border-r-transparent border-b-orange-400/25",
-                        // Large diamonds
-                        "w-10 h-10 sm:w-14 sm:h-14 transform rotate-45",
-                        "w-8 h-8 sm:w-12 sm:h-12 transform rotate-45",
-                        // Large rectangles
-                        "w-16 h-8 sm:w-20 sm:h-10 rounded-lg",
-                        "w-12 h-6 sm:w-16 sm:h-8 rounded-lg"
-                    ];
-                    
-                    return (
-                        <motion.div
-                            key={`floating-${i}`}
-                            className={`absolute ${shapes[i % shapes.length]} bg-gradient-to-r from-orange-400/30 to-red-400/30`}
-                            animate={{
-                                x: [0, 120, -60, 0],
-                                y: [0, -100, 50, 0],
-                                rotate: [0, 180, -180, 0],
-                                scale: [0.6, 1.3, 0.9, 0.6],
-                            }}
-                            transition={{
-                                duration: 18 + i * 1.5,
-                                repeat: Infinity,
-                                ease: "easeInOut",
-                                delay: i * 1.8,
-                            }}
-                            style={{
-                                left: `${Math.random() * 85}%`,
-                                top: `${Math.random() * 75}%`,
-                            }}
-                        />
-                    );
-                })}
+            </div>
 
             {/* Header Section */}
             <motion.div 
@@ -366,7 +261,7 @@ export default function LegalServices({ className = "" }) {
                             scale: [1, 1.05, 1]
                         }}
                     >
-                        ⚖️
+                        📚
                     </motion.div>
                     
                     <motion.h1 
@@ -383,16 +278,16 @@ export default function LegalServices({ className = "" }) {
                             transition={{ duration: 0.2002, delay: 0.5 }}
                             viewport={{ once: false, amount: 0.3 }}
                         >
-                            Legal &amp;
+                            Child
                         </motion.span>
                         <motion.span 
-                            className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent"
+                            className="bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 bg-clip-text text-transparent"
                             initial={{ opacity: 0, x: 60 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.2002, delay: 0.6 }}
                             viewport={{ once: false, amount: 0.3 }}
                         >
-                            {" "}Compliance
+                            {" "}Education
                         </motion.span>
                         <br />
                         <motion.span 
@@ -402,7 +297,7 @@ export default function LegalServices({ className = "" }) {
                             transition={{ duration: 0.2002, delay: 0.7 }}
                             viewport={{ once: false, amount: 0.3 }}
                         >
-                            Support
+                            Initiative
                         </motion.span>
                     </motion.h1>
                     
@@ -413,12 +308,12 @@ export default function LegalServices({ className = "" }) {
                         transition={{ duration: 0.2002, delay: 0.8 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        Navigate complex legal requirements with confidence. Our expert legal team provides comprehensive support for business registration, compliance, contracts, and ongoing legal guidance.
+                        Lighting the path for millions of children struggling for quality education. Every child deserves the chance to learn, grow, and achieve their dreams.
                     </motion.p>
                 </motion.div>
             </motion.div>
 
-            {/* Services Grid */}
+            {/* Programs Grid */}
             <motion.div 
                 className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
                 initial={{ opacity: 0 }}
@@ -426,7 +321,7 @@ export default function LegalServices({ className = "" }) {
                 transition={{ duration: 0.2002, delay: 0.1 }}
                 viewport={{ once: false, amount: 0.15 }}
             >
-                {legalServices.map((service, index) => {
+                {educationPrograms.map((program, index) => {
                     const isEven = index % 2 === 0;
                     return (
                         <motion.div
@@ -443,42 +338,38 @@ export default function LegalServices({ className = "" }) {
                             }}
                         >
                         <div className="relative z-10">
-                            {/* Service Icon */}
-                            <div className="text-4xl mb-4">{service.icon}</div>
+                            {/* Program Icon */}
+                            <div className="text-4xl mb-4">{program.icon}</div>
                             
-                            {/* Service Title */}
+                            {/* Program Title */}
                             <h3 className="text-xl font-bold text-gray-800 mb-3">
-                                {service.title}
+                                {program.title}
                             </h3>
                             
-                            {/* Service Description */}
+                            {/* Program Description */}
                             <p className="text-gray-600 leading-relaxed mb-4 text-sm">
-                                {service.description}
+                                {program.description}
                             </p>
                             
                             {/* Features List */}
                             <div className="space-y-2 mb-4">
-                                {service.features.slice(0, 3).map((feature, featureIndex) => (
+                                {program.features.slice(0, 3).map((feature, featureIndex) => (
                                     <div
                                         key={featureIndex}
                                         className="flex items-center gap-2 text-xs text-gray-700"
                                     >
-                                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
                                         {feature}
                                     </div>
                                 ))}
                             </div>
                             
-                            {/* Stats */}
-                            <div className="flex gap-2 w-[150px]">
-                                <div className="bg-gradient-to-r from-orange-50 to-red-50 p-2 rounded-lg border border-orange-100 flex-1">
-                                    <div className="text-xs font-semibold text-orange-600">Duration</div>
-                                    <div className="text-sm font-bold text-gray-800">{service.duration}</div>
+                            {/* Impact Stats */}
+                            <div className="flex gap-2">
+                                <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-2 rounded-lg border border-emerald-100 flex-1">
+                                    <div className="text-xs font-semibold text-emerald-600">Impact</div>
+                                    <div className="text-sm font-bold text-gray-800">{program.impact}</div>
                                 </div>
-                                {/* <div className="bg-gradient-to-r from-orange-50 to-red-50 p-2 rounded-lg border border-orange-100 flex-1">
-                                    <div className="text-xs font-semibold text-orange-600">Price</div>
-                                    <div className="text-sm font-bold text-gray-800">{service.price}</div>
-                                </div> */}
                             </div>
                         </div>
                     </motion.div>
@@ -486,7 +377,7 @@ export default function LegalServices({ className = "" }) {
                 })}
             </motion.div>
 
-            {/* Expertise Areas Section */}
+            {/* Focus Areas Section */}
             <motion.div 
                 className="relative z-10 mb-16"
                 initial={{ opacity: 0 }}
@@ -508,7 +399,7 @@ export default function LegalServices({ className = "" }) {
                         transition={{ duration: 0.2002, delay: 0.3 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        Our Legal Expertise
+                        Our Focus Areas
                     </motion.h2>
                     <motion.p 
                         className="text-lg text-gray-600 max-w-3xl mx-auto"
@@ -517,7 +408,7 @@ export default function LegalServices({ className = "" }) {
                         transition={{ duration: 0.2002, delay: 0.4 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        Comprehensive legal services across multiple practice areas
+                        Comprehensive educational support across different stages and aspects of learning
                     </motion.p>
                 </motion.div>
 
@@ -528,7 +419,7 @@ export default function LegalServices({ className = "" }) {
                     transition={{ duration: 0.2002, delay: 0.3 }}
                     viewport={{ once: false, amount: 0.15 }}
                 >
-                    {expertiseAreas.map((area, index) => {
+                    {focusAreas.map((area, index) => {
                         const isEven = index % 2 === 0;
                         return (
                             <motion.div
@@ -537,7 +428,7 @@ export default function LegalServices({ className = "" }) {
                                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                                 transition={{ duration: 0.2001, delay: 0.4 + index * 0.1, ease: [0.05001, 0.46, 0.45, 0.94] }}
                                 viewport={{ once: false, amount: 0.2 }}
-                                className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl border border-orange-100"
+                                className="text-center p-6 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl border border-emerald-100"
                                 whileHover={{ 
                                     scale: 1.02, 
                                     y: -3,
@@ -575,7 +466,7 @@ export default function LegalServices({ className = "" }) {
                         transition={{ duration: 0.2002, delay: 0.3 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        Our Legal Process
+                        How We Create Impact
                     </motion.h2>
                     <motion.p 
                         className="text-lg text-gray-600 max-w-3xl mx-auto"
@@ -584,7 +475,7 @@ export default function LegalServices({ className = "" }) {
                         transition={{ duration: 0.2002, delay: 0.4 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        A systematic approach to handling your legal requirements efficiently
+                        Our systematic approach to ensuring every child receives quality education
                     </motion.p>
                 </motion.div>
 
@@ -611,7 +502,7 @@ export default function LegalServices({ className = "" }) {
                                     transition: { duration: 0.2003 }
                                 }}
                             >
-                                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-xl font-bold">
+                                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-xl font-bold">
                                     {step.step}
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-800 mb-2">{step.title}</h3>
@@ -629,7 +520,7 @@ export default function LegalServices({ className = "" }) {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.2004, delay: 0.2 }}
                 viewport={{ once: false, amount: 0.2 }}
-                className="relative bg-gradient-to-r from-orange-500 via-red-500 to-orange-500 rounded-3xl p-12 text-center text-white overflow-hidden"
+                className="relative bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-500 rounded-3xl p-12 text-center text-white overflow-hidden"
             >
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0">
@@ -665,7 +556,7 @@ export default function LegalServices({ className = "" }) {
                         transition={{ duration: 0.2001, delay: 0.3 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        Need Legal Support?
+                        Support a Child&apos;s Education
                     </motion.h2>
                     <motion.p 
                         className="text-xl mb-8 opacity-90 max-w-3xl mx-auto"
@@ -674,7 +565,7 @@ export default function LegalServices({ className = "" }) {
                         transition={{ duration: 0.2001, delay: 0.4 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        Get expert legal guidance and support for all your business needs. Our experienced legal team is here to help you navigate complex legal requirements with confidence.
+                        Your contribution can transform a child&apos;s life. Sponsor a child&apos;s education, volunteer as a tutor, or donate learning materials. Every little effort counts!
                     </motion.p>
                     <motion.div 
                         className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -685,19 +576,21 @@ export default function LegalServices({ className = "" }) {
                     >
                         <motion.button
                             onClick={() => { if (!isAnyModalOpen) { openFormModal(); } }}
-                            className="px-10 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg"
+                            className="px-10 py-4 bg-white text-emerald-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg"
                             whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255,255,255,0.3)" }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Get Legal Consultation
+                            Sponsor a Child 💚
                         </motion.button>
                         <motion.a
-                            href="tel:+917383930301"
-                            className="px-10 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-orange-600 transition-all duration-300"
-                            whileHover={{ scale: 1.05, backgroundColor: "white", color: "#F85710" }}
+                            href="https://wa.me/917065999599"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-10 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-emerald-600 transition-all duration-300"
+                            whileHover={{ scale: 1.05, backgroundColor: "white", color: "#10b981" }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Call Now: +91 7383930301
+                            WhatsApp: +91 7065999599
                         </motion.a>
                     </motion.div>
                 </div>

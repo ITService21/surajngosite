@@ -7,13 +7,13 @@ export default function Partners({ className = "" }) {
             className={`w-full min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative overflow-hidden ${className}`} 
         >
             {/* Enhanced Background with Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-red-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-pitama-green-50 via-white to-pitama-teal-50"></div>
             
             {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {/* Floating Orbs */}
                 <motion.div 
-                    className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-orange-200 to-orange-300 rounded-full blur-3xl opacity-20"
+                    className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-pitama-green-200 to-pitama-green-300 rounded-full blur-3xl opacity-20"
                     animate={{
                         scale: [1, 1.3, 1],
                         x: [0, 50, 0],
@@ -42,7 +42,7 @@ export default function Partners({ className = "" }) {
                     }}
                 />
                 <motion.div 
-                    className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-br from-yellow-200 to-orange-300 rounded-full blur-3xl opacity-15"
+                    className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-br from-yellow-200 to-pitama-green-300 rounded-full blur-3xl opacity-15"
                     animate={{
                         scale: [1, 1.4, 1],
                         x: [0, -50, 0],
@@ -61,7 +61,7 @@ export default function Partners({ className = "" }) {
                 {[...Array(8)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="absolute w-2 h-2 bg-gradient-to-br from-orange-400 to-red-400 rounded-full"
+                        className="absolute w-2 h-2 bg-gradient-to-br from-pitama-green-400 to-pitama-teal-400 rounded-full"
                         animate={{
                             y: [0, -100, 0],
                             x: [0, Math.random() * 100 - 50, 0],
@@ -98,7 +98,7 @@ export default function Partners({ className = "" }) {
                     viewport={{ once: false, amount: 0.3 }}
                 >
                     {/* Card Background Decoration */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-transparent to-red-50/50 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-pitama-green-50/50 via-transparent to-pitama-teal-50/50 pointer-events-none"></div>
                     
                     {/* Icon with enhanced design */}
                     <motion.div 
@@ -110,7 +110,7 @@ export default function Partners({ className = "" }) {
                     >
                         {/* Animated ring */}
                         <motion.div 
-                            className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-full"
+                            className="absolute inset-0 bg-gradient-to-br from-pitama-green-400 to-pitama-teal-500 rounded-full"
                             animate={{
                                 scale: [1, 1.1, 1],
                                 rotate: [0, 180, 360]
@@ -123,7 +123,7 @@ export default function Partners({ className = "" }) {
                         />
                         <div className="absolute inset-2 bg-white rounded-full"></div>
                         <motion.div 
-                            className="relative z-10 bg-gradient-to-br from-orange-100 via-orange-50 to-red-100 rounded-full w-32 h-32 flex items-center justify-center"
+                            className="relative z-10 bg-gradient-to-br from-pitama-green-100 via-pitama-green-50 to-pitama-teal-100 rounded-full w-32 h-32 flex items-center justify-center"
                             animate={{
                                 boxShadow: [
                                     "0 0 20px rgba(251, 146, 60, 0.3)",
@@ -158,7 +158,7 @@ export default function Partners({ className = "" }) {
                         <span className="bg-gradient-to-r from-gray-700 via-gray-500 to-gray-600 bg-clip-text text-transparent relative">
                             Building Our Partner Network
                             <motion.span 
-                                className="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 bg-clip-text text-transparent opacity-0"
+                                className="absolute inset-0 bg-gradient-to-r from-pitama-green-400 via-red-400 to-pitama-green-400 bg-clip-text text-transparent opacity-0"
                                 animate={{ opacity: [0, 0.3, 0] }}
                                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                             >
@@ -170,19 +170,19 @@ export default function Partners({ className = "" }) {
                     {/* Animated decorative lines */}
                     <div className="flex items-center justify-center gap-3 mb-8">
                         <motion.div 
-                            className="h-1 bg-gradient-to-r from-transparent via-orange-400 to-orange-500 rounded-full"
+                            className="h-1 bg-gradient-to-r from-transparent via-pitama-green-400 to-pitama-green-500 rounded-full"
                             initial={{ width: 0 }}
                             whileInView={{ width: 60 }}
                             transition={{ duration: 1, delay: 0.6 }}
                             viewport={{ once: false, amount: 0.3 }}
                         />
                         <motion.div 
-                            className="w-3 h-3 bg-gradient-to-br from-orange-400 to-red-500 rounded-full"
+                            className="w-3 h-3 bg-gradient-to-br from-pitama-green-400 to-pitama-teal-500 rounded-full"
                             animate={{ scale: [1, 1.5, 1], rotate: [0, 180, 360] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                         />
                         <motion.div 
-                            className="h-1 bg-gradient-to-l from-transparent via-red-400 to-red-500 rounded-full"
+                            className="h-1 bg-gradient-to-l from-transparent via-red-400 to-pitama-teal-500 rounded-full"
                             initial={{ width: 0 }}
                             whileInView={{ width: 60 }}
                             transition={{ duration: 1, delay: 0.6 }}
@@ -203,7 +203,7 @@ export default function Partners({ className = "" }) {
 
                     {/* Enhanced Coming Soon Badge */}
                     <motion.div 
-                        className="mt-10 inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-100 via-orange-50 to-red-100 border-2 border-orange-300 rounded-full shadow-lg relative overflow-hidden"
+                        className="mt-10 inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-pitama-green-100 via-pitama-green-50 to-pitama-teal-100 border-2 border-pitama-green-300 rounded-full shadow-lg relative overflow-hidden"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.2004, delay: 0.8 }}
@@ -227,7 +227,7 @@ export default function Partners({ className = "" }) {
                         >
                             ⏳
                         </motion.span>
-                        <span className="text-base font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent relative z-10">
+                        <span className="text-base font-bold bg-gradient-to-r from-pitama-green-600 to-pitama-teal-600 bg-clip-text text-transparent relative z-10">
                             Coming Soon
                         </span>
                     </motion.div>

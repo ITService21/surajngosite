@@ -1,5 +1,5 @@
-// import { text } from "framer-motion/client"
+// Scrolling text for Pitama India NGO
 
-const text="Empowering MSMEs • Helping You Register • Avail Government Subsidies • Grow with Expert Advice"
+const text = "Greening India • Empowering Lives • Protecting Animals • Educating Children • Supporting Women • Building Communities • Volunteer Today"
 
 export default text;

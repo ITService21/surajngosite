@@ -7,77 +7,75 @@ const FAQ = () => {
   const navigate = useNavigate();
   const faqData = [
     {
-      question: "What services do you offer for MSMEs and startups?",
+      question: "What is Pitama India and what do you do?",
       answer:
-        "We provide comprehensive business solutions including business registration, funding assistance, MSME certification, compliance management, digital marketing, and strategic business growth consulting. Our services cover everything from startup inception to business expansion.",
+        "Pitama India is a non-profit organization dedicated to creating a sustainable, compassionate, and equitable India. We work on four key pillars: Environmental Conservation (tree plantation, cleanliness drives), Animal Welfare (rescue and rehabilitation), Women Empowerment (skill development and livelihood training), and Education for underprivileged children.",
     },
     {
-      question: "How long does it take to get MSME certification?",
+      question: "How can I volunteer with Pitama India?",
       answer:
-        "MSME certification typically takes 7-15 working days from the date of application submission, provided all required documents are complete and accurate. We ensure a smooth and fast process for our clients.",
+        "We welcome volunteers from all walks of life! You can join our initiatives by filling out the volunteer form on our website. Based on your interests and availability, we'll connect you with suitable programs. Whether it's tree plantation drives, animal rescue, teaching, or event organization - there's something for everyone.",
     },
     {
-      question: "What funding options are available for startups?",
+      question: "Can I donate to support your initiatives?",
       answer:
-        "We assist with various funding options including government grants, equity-based funding, NBFC business loans, Startup India scheme benefits, angel investments, and venture capital connections. We help you identify the best funding route for your business.",
+        "Yes! Your donations directly support our programs. You can donate online through our website or contact us for bank transfer details. All donations are eligible for tax exemption under Section 80G. We maintain complete transparency and regularly share impact reports with our donors.",
     },
     {
-      question: "Do you provide business registration services?",
+      question: "Do you work with corporate partners for CSR?",
       answer:
-        "Yes, we offer complete business registration services including Private Limited Company, LLP, Partnership Firm, One Person Company, and Sole Proprietorship registration. We handle all legal formalities and documentation.",
+        "Absolutely! We partner with companies for CSR initiatives aligned with their values. Our programs in environmental conservation, education, and community development make excellent CSR projects. We provide comprehensive impact reports and can customize programs to meet your organization's goals.",
     },
     {
-      question: "What is the cost of your consultation services?",
+      question: "How do you ensure transparency and accountability?",
       answer:
-        "Our consultation fees vary based on the services required. We offer free initial consultation to understand your needs. Our pricing is competitive and transparent, with no hidden charges. Contact us for a detailed quote.",
+        "Transparency is core to our values. We publish annual reports, maintain audited financial statements, and regularly share updates on our website and social media. Donors receive detailed reports on how their contributions are utilized. We're registered as a Section 8 company with all necessary government certifications.",
     },
     {
-      question: "Can you help with digital marketing for my business?",
+      question: "What is your animal welfare program about?",
       answer:
-        "Absolutely! We provide comprehensive digital marketing services including SEO, social media marketing, Google Ads, content marketing, email marketing, and website development to help your business grow online.",
+        "Our animal welfare program focuses on rescue, treatment, and rehabilitation of stray and injured animals. We operate 24/7 rescue helplines, organize vaccination and sterilization camps, run shelter homes, and facilitate adoptions. We also conduct awareness campaigns about animal rights and compassion.",
     },
     {
-      question: "What documents are required for business registration?",
+      question: "How does your women empowerment program work?",
       answer:
-        "Required documents include PAN card, Aadhaar card, address proof, bank statements, business plan, and identity verification documents. The exact requirements may vary based on the type of business registration you choose.",
+        "We provide skill development training in tailoring, handicrafts, and other vocations. We help women form self-help groups, provide financial literacy education, and support them in starting small businesses. Our goal is to help rural women achieve financial independence and dignity.",
     },
     {
-      question: "Do you offer compliance and legal support?",
+      question: "Can schools and colleges partner with you?",
       answer:
-        "Yes, we provide ongoing compliance management including GST registration, tax filing, labor law compliance, and annual returns. Our legal experts ensure your business stays compliant with all regulations.",
+        "Yes! We love partnering with educational institutions. We conduct tree plantation drives, environmental awareness workshops, and volunteer programs at schools and colleges. Students can earn community service hours while making real impact. Contact us to organize an event at your institution.",
     },
     {
-      question: "How can I get ZED certification for my business?",
+      question: "Where are you currently operating?",
       answer:
-        "ZED (Zero Defect Zero Effect) certification helps improve product quality and environmental impact. We guide you through the entire process, from application to certification, including quality improvement strategies.",
+        "We're headquartered in New Delhi and have active programs across multiple states in India. Our initiatives span urban and rural areas. We're constantly expanding our reach and welcome volunteers and partners from all regions who want to create change in their communities.",
     },
     {
-      question: "What makes your consultancy different from others?",
+      question: "How can I stay updated on your activities?",
       answer:
-        "We offer end-to-end business solutions with 24/7 support, experienced team of experts, customized strategies, proven track record, and commitment to client success. We're based in Gandhinagar and understand the local business ecosystem.",
+        "Follow us on social media (Facebook, Instagram, Twitter, YouTube) for regular updates, photos, and stories from our programs. You can also subscribe to our newsletter for monthly updates. We share impact stories, upcoming events, and volunteer opportunities regularly.",
     },
     {
-      question: "Do you provide support after business setup?",
+      question: "Do you organize events I can participate in?",
       answer:
-        "Yes, we provide ongoing support including business growth strategies, compliance management, funding assistance, and strategic guidance. We're committed to your long-term success and growth.",
+        "Yes! We regularly organize tree plantation drives, cleanliness campaigns, blood donation camps, awareness walks, and community events. These are open to public participation. Check our website and social media for upcoming events in your area.",
     },
     {
-      question: "How can I contact your team for consultation?",
+      question: "How can I contact Pitama India?",
       answer:
-        "You can reach us through our contact form, email, phone, or visit our office in Gandhinagar. We offer free initial consultation and respond to all inquiries within 2 hours during business hours.",
+        "You can reach us through our website contact form, email us at info@pitamaindia.org, or call us at +91 98765 43210. For animal rescue emergencies, we have a dedicated helpline. You can also visit our office in New Delhi. We respond to all inquiries within 24-48 hours.",
     },
   ];
 
-  // Removed heavy animation variants for better mobile performance
-  
   const questionVariants = {
     closed: {
       rotate: 0,
-      transition: { duration: 0.2003 },
+      transition: { duration: 0.3 },
     },
     open: {
       rotate: 45,
-      transition: { duration: 0.2003 },
+      transition: { duration: 0.3 },
     },
   };
 
@@ -86,16 +84,16 @@ const FAQ = () => {
       className="relative py-20 px-4 overflow-hidden"
       style={{ backgroundColor: "#FFFFFF" }}
     >
-      {/* Beautiful Animated Background from Contact */}
+      {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Animated Mesh Background */}
         <motion.div
           className="absolute inset-0 opacity-8"
           animate={{
             background: [
-              'radial-gradient(circle at 25% 25%, rgba(253, 87, 16, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 107, 53, 0.06) 0%, transparent 50%)',
-              'radial-gradient(circle at 75% 25%, rgba(255, 107, 53, 0.08) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(253, 87, 16, 0.06) 0%, transparent 50%)',
-              'radial-gradient(circle at 25% 25%, rgba(253, 87, 16, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 107, 53, 0.06) 0%, transparent 50%)'
+              'radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.06) 0%, transparent 50%)',
+              'radial-gradient(circle at 75% 25%, rgba(20, 184, 166, 0.08) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(34, 197, 94, 0.06) 0%, transparent 50%)',
+              'radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.06) 0%, transparent 50%)'
             ]
           }}
           transition={{
@@ -105,7 +103,7 @@ const FAQ = () => {
           }}
         />
 
-        {/* Floating Triangles */}
+        {/* Floating Leaves */}
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
@@ -113,8 +111,8 @@ const FAQ = () => {
             style={{
               width: `${30 + i * 8}px`,
               height: `${30 + i * 8}px`,
-              background: `linear-gradient(45deg, #F85710, #FF6B35)`,
-              clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+              background: `linear-gradient(45deg, #22C55E, #14B8A6)`,
+              clipPath: 'ellipse(50% 30% at 50% 50%)',
               left: `${8 + i * 11}%`,
               top: `${15 + i * 8}%`,
             }}
@@ -146,22 +144,21 @@ const FAQ = () => {
             ease: "linear"
           }}
           style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(253, 87, 16, 0.3) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(34, 197, 94, 0.3) 1px, transparent 0)`,
             backgroundSize: '50px 50px'
           }}
         />
 
-        {/* Floating Squares with Bounce */}
-        {[...Array(15)].map((_, i) => (
+        {/* Floating Hearts */}
+        {[...Array(10)].map((_, i) => (
           <motion.div
-            key={i}
-            className="absolute w-3 h-3 bg-gradient-to-r from-orange-400 to-red-400 opacity-40"
+            key={`heart-${i}`}
+            className="absolute text-lg opacity-15"
             animate={{
               y: [0, -40, 0],
               x: [0, 20, -10, 0],
               scale: [0.8, 1.2, 0.9, 1.1, 0.8],
-              opacity: [0.4, 0.7, 0.2, 0.5, 0.4],
-              rotate: [0, 90, 180, 270, 360]
+              opacity: [0.1, 0.2, 0.1, 0.15, 0.1],
             }}
             transition={{
               duration: 4 + i * 0.5,
@@ -170,90 +167,68 @@ const FAQ = () => {
               ease: "easeInOut"
             }}
             style={{
-              left: `${2 + i * 6}%`,
-              top: `${10 + i * 5}%`,
+              left: `${2 + i * 10}%`,
+              top: `${10 + i * 8}%`,
             }}
-          />
-        ))}
-
-        {/* Animated Zigzag Lines */}
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={`zigzag-${i}`}
-            className="absolute w-32 h-1 bg-gradient-to-r from-orange-400/20 to-red-400/20 opacity-0"
-            animate={{
-              opacity: [0, 0.6, 0],
-              scaleX: [0, 1, 0],
-              rotate: [0, 5, -5, 0]
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              delay: i * 0.8,
-              ease: "easeInOut"
-            }}
-            style={{
-              left: `${15 + i * 20}%`,
-              top: `${20 + i * 15}%`,
-              transformOrigin: 'left center'
-            }}
-          />
+          >
+            💚
+          </motion.div>
         ))}
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
-        {/* Fast Header Section */}
+        {/* Header Section */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.2001, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: false, amount: 0.2 }}
         >
           <h2
             className="gap-2 text-4xl md:text-5xl lg:text-6xl font-black mb-6"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
+            style={{ fontFamily: "Quicksand, sans-serif" }}
           >
             <div className="text-center flex flex-col gap-2 md:gap-4">
               <motion.span 
                 className="text-gray-800"
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.2002, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: false, amount: 0.3 }}
               >
                 Frequently Asked
               </motion.span>
               <motion.span 
-                className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 bg-clip-text text-transparent"
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.2002, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: false, amount: 0.3 }}
               >
-                Questions
+                Questions 💚
               </motion.span>
             </div>
           </h2>
 
           <motion.p
             className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-            style={{ fontFamily: "Inter, sans-serif" }}
+            style={{ fontFamily: "Nunito, sans-serif" }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2002, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            Find answers to common questions about our MSME and startup services
+            Find answers to common questions about our initiatives and how you can help
           </motion.p>
         </motion.div>
 
-        {/* Fast FAQ Items */}
+        {/* FAQ Items */}
         <motion.div
           className="space-y-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2002, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: false, amount: 0.15 }}
         >
           {faqData.map((faq, index) => {
@@ -263,9 +238,9 @@ const FAQ = () => {
                 key={index}
                 initial={{ opacity: 0, x: isEven ? -120 : 120, y: 30 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 0.2001, delay: index * 0.1, ease: [0.05001, 0.46, 0.45, 0.94] }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.05, 0.46, 0.45, 0.94] }}
                 viewport={{ once: false, amount: 0.2 }}
-                whileHover={{ scale: 1.01, y: -3, transition: { duration: 0.2003 } }}
+                whileHover={{ scale: 1.01, y: -3, transition: { duration: 0.3 } }}
                 className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300"
               >
               <motion.button
@@ -276,12 +251,12 @@ const FAQ = () => {
               >
                 <h3
                   className="text-lg md:text-xl font-bold text-gray-800 pr-4"
-                  style={{ fontFamily: "Outfit, sans-serif" }}
+                  style={{ fontFamily: "Quicksand, sans-serif" }}
                 >
                   {faq.question}
                 </h3>
                 <motion.div
-                  className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white"
+                  className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white"
                   variants={questionVariants}
                   animate={openIndex === index ? "open" : "closed"}
                 >
@@ -295,7 +270,7 @@ const FAQ = () => {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2003, ease: "easeInOut" }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-6">
@@ -303,11 +278,11 @@ const FAQ = () => {
                         className="border-t border-gray-100 pt-4"
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.2003, delay: 0.1 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
                       >
                         <p
                           className="text-gray-600 leading-relaxed"
-                          style={{ fontFamily: "Inter, sans-serif" }}
+                          style={{ fontFamily: "Nunito, sans-serif" }}
                         >
                           {faq.answer}
                         </p>
@@ -321,55 +296,54 @@ const FAQ = () => {
           })}
         </motion.div>
 
-        {/* Fast Bottom CTA */}
+        {/* Bottom CTA */}
         <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 60, scale: 0.95 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.2001, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: false, amount: 0.2 }}
         >
           <motion.div
-            className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100"
+            className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 border border-emerald-100"
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.2002, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: false, amount: 0.3 }}
-            whileHover={{ scale: 1.02, y: -3, transition: { duration: 0.2003 } }}
+            whileHover={{ scale: 1.02, y: -3, transition: { duration: 0.3 } }}
           >
             <motion.h3
               className="text-2xl md:text-3xl font-bold text-gray-800 mb-4"
-              style={{ fontFamily: "Outfit, sans-serif" }}
+              style={{ fontFamily: "Quicksand, sans-serif" }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2002, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: false, amount: 0.3 }}
             >
-              Still have questions?
+              Still have questions? 💚
             </motion.h3>
             <motion.p
               className="text-gray-600 mb-6"
-              style={{ fontFamily: "Inter, sans-serif" }}
+              style={{ fontFamily: "Nunito, sans-serif" }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2002, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: false, amount: 0.3 }}
             >
-              Our expert team is here to help you with any queries about our
-              services
+              Our team is here to help you with any queries about our initiatives and how you can contribute
             </motion.p>
             <motion.button
-              className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              style={{ fontFamily: "Inter, sans-serif" }}
+              className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              style={{ fontFamily: "Nunito, sans-serif" }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2002, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: false, amount: 0.3 }}
-              whileHover={{ scale: 1.02, y: -2, transition: { duration: 0.2003 } }}
+              whileHover={{ scale: 1.02, y: -2, transition: { duration: 0.3 } }}
               whileTap={{ scale: 0.98 }}
               onClick={() => navigate('/contact-us')}
             >
-              Contact Us Now
+              🌱 Contact Us Now
             </motion.button>
           </motion.div>
         </motion.div>

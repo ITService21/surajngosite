@@ -84,32 +84,29 @@ export default function BlogPage({ initialPosts = null }) {
         }
     };
 
-    // animations
-    // const cardAnim = { hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } };
-
     return (
-        <div style={{ backgroundColor: '#FFFFFF' }} className="min-h-screen pt-[75px]">
-            {/* Enhanced Animated Background with Orange Geometric Objects */}
+        <div className="min-h-screen pt-[75px] bg-gradient-to-br from-emerald-50 via-white to-teal-50">
+            {/* Enhanced Animated Background with Green Geometric Objects */}
             <div className="absolute inset-0 overflow-hidden">
                 {/* Animated Mesh Background */}
                 <motion.div 
                     className="absolute inset-0 opacity-30"
                     animate={{
                         background: [
-                            "radial-gradient(circle at 20% 50%, rgba(253,87,16,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,107,53,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(253,87,16,0.15) 0%, transparent 50%)",
-                            "radial-gradient(circle at 80% 20%, rgba(255,107,53,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(253,87,16,0.15) 0%, transparent 50%), radial-gradient(circle at 20% 50%, rgba(253,87,16,0.15) 0%, transparent 50%)",
-                            "radial-gradient(circle at 20% 50%, rgba(253,87,16,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,107,53,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(253,87,16,0.15) 0%, transparent 50%)"
+                            "radial-gradient(circle at 20% 50%, rgba(34,197,94,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(34,197,94,0.15) 0%, transparent 50%)",
+                            "radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(34,197,94,0.15) 0%, transparent 50%), radial-gradient(circle at 20% 50%, rgba(34,197,94,0.15) 0%, transparent 50%)",
+                            "radial-gradient(circle at 20% 50%, rgba(34,197,94,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(34,197,94,0.15) 0%, transparent 50%)"
                         ]
                     }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                 />
                 
-                {/* Light Orange Geometric Objects - Reduced for Performance */}
+                {/* Green Geometric Objects - Reduced for Performance */}
                 {[...Array(6)].map((_, i) => {
                     const shapes = [
                         "w-12 h-12 sm:w-16 sm:h-16 rounded-full",
                         "w-10 h-10 sm:w-14 sm:h-14 rounded-lg",
-                        "w-0 h-0 border-l-[12px] border-r-[12px] border-b-[20px] border-l-transparent border-r-transparent border-b-orange-400/20",
+                        "w-0 h-0 border-l-[12px] border-r-[12px] border-b-[20px] border-l-transparent border-r-transparent border-b-emerald-400/20",
                         "w-8 h-8 sm:w-12 sm:h-12 transform rotate-45",
                         "w-14 h-14 sm:w-18 sm:h-18 rounded-lg transform rotate-12",
                         "w-6 h-6 sm:w-8 sm:h-8 rounded-full"
@@ -118,7 +115,7 @@ export default function BlogPage({ initialPosts = null }) {
                     return (
                         <motion.div
                             key={i}
-                            className={`absolute ${shapes[i % shapes.length]} bg-gradient-to-r from-orange-400/15 to-red-400/15`}
+                            className={`absolute ${shapes[i % shapes.length]} bg-gradient-to-r from-emerald-400/15 to-teal-400/15`}
                             animate={{
                                 x: [0, 80, -40, 0],
                                 y: [0, -60, 30, 0],
@@ -139,11 +136,11 @@ export default function BlogPage({ initialPosts = null }) {
                     );
                 })}
                 
-                {/* Light Animated Lines - Reduced */}
+                {/* Animated Lines - Green Theme */}
                 {[...Array(3)].map((_, i) => (
                     <motion.div
                         key={`line-${i}`}
-                        className="absolute h-1 sm:h-2 bg-gradient-to-r from-orange-400/20 to-red-400/20"
+                        className="absolute h-1 sm:h-2 bg-gradient-to-r from-emerald-400/20 to-teal-400/20"
                         animate={{
                             scaleX: [0, 1, 0],
                             opacity: [0, 0.4, 0],
@@ -181,7 +178,7 @@ export default function BlogPage({ initialPosts = null }) {
                         }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     >
-                        📚
+                        📖
                     </motion.div>
                     <motion.h1 
                         className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6"
@@ -197,16 +194,16 @@ export default function BlogPage({ initialPosts = null }) {
                             transition={{ duration: 0.2002, delay: 0.3 }}
                             viewport={{ once: false, amount: 0.3 }}
                         >
-                            Insights &
+                            Stories of
                         </motion.span>
                         <motion.span 
-                            className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent"
+                            className="bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 bg-clip-text text-transparent"
                             initial={{ opacity: 0, x: 60 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.2002, delay: 0.4 }}
                             viewport={{ once: false, amount: 0.3 }}
                         >
-                            {" "}Resources
+                            {" "}Impact
                         </motion.span>
                     </motion.h1>
                     <motion.p 
@@ -216,7 +213,7 @@ export default function BlogPage({ initialPosts = null }) {
                         transition={{ duration: 0.2002, delay: 0.5 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        Comprehensive articles, guides, and best practices for startups and growing businesses. Stay updated with the latest trends and expert insights.
+                        Inspiring articles, guides, and stories about environmental conservation, community development, and empowerment initiatives across India.
                     </motion.p>
 
                     {/* Search Bar */}
@@ -241,11 +238,11 @@ export default function BlogPage({ initialPosts = null }) {
                                         }
                                     }}
                                     placeholder="Search articles, authors, keywords..."
-                                    className="w-full rounded-2xl border-2 border-gray-300 px-6 py-4 pr-12 text-lg focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all duration-300 shadow-lg"
+                                    className="w-full rounded-2xl border-2 border-gray-300 px-6 py-4 pr-12 text-lg focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all duration-300 shadow-lg"
                                     whileFocus={{ scale: 1.02 }}
                                 />
                                 <motion.div 
-                                    className="absolute right-4 top-0 bottom-0 flex items-center justify-center text-gray-400 text-xl cursor-pointer hover:text-orange-500 transition-colors"
+                                    className="absolute right-4 top-0 bottom-0 flex items-center justify-center text-gray-400 text-xl cursor-pointer hover:text-emerald-500 transition-colors"
                                     animate={{ 
                                         scale: query ? [1, 1.2, 1] : 1,
                                         rotate: query ? [0, 10, -10, 0] : 0
@@ -268,13 +265,10 @@ export default function BlogPage({ initialPosts = null }) {
                                     exit={{ opacity: 0, y: -10 }}
                                 >
                                     <div className="flex items-center justify-center gap-3">
-                                        {/* <span className="text-sm text-orange-600 font-medium">
-                                            🔍 Searching for &quot;{query}&quot;... {filtered.length} results found
-                                        </span> */}
                                         {filtered.length > 0 && (
                                             <motion.button
                                                 onClick={scrollToResults}
-                                                className="text-xs px-3 py-1 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors"
+                                                className="text-xs px-3 py-1 bg-emerald-500 text-white rounded-full hover:bg-emerald-600 transition-colors"
                                                 whileHover={{ scale: 1.05 }}
                                                 whileTap={{ scale: 0.95 }}
                                             >
@@ -304,8 +298,8 @@ export default function BlogPage({ initialPosts = null }) {
                                 }}
                                 className={`text-sm px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                                     activeCategory === c 
-                                        ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg" 
-                                        : "bg-white text-gray-700 border-2 border-gray-300 hover:border-orange-300 hover:shadow-md"
+                                        ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg" 
+                                        : "bg-white text-gray-700 border-2 border-gray-300 hover:border-emerald-300 hover:shadow-md"
                                 }`}
                                 initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -340,14 +334,14 @@ export default function BlogPage({ initialPosts = null }) {
                             <div className="relative overflow-hidden">
                                 <img src={featured.image} alt={featured.title} className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute top-4 left-4">
-                                    <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
+                                    <span className="px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold rounded-full">
                                         Featured
                                     </span>
                                 </div>
                             </div>
                             <div className="p-8">
                                 <div className="flex items-center justify-between gap-4 mb-4">
-                                    <span className="px-3 py-1 bg-gradient-to-r from-orange-100 to-red-100 text-orange-700 text-sm font-semibold rounded-full">
+                                    <span className="px-3 py-1 bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 text-sm font-semibold rounded-full">
                                         {featured.category}
                                     </span>
                                     <div className="text-sm text-gray-500">{formatDate(featured.date)} • {featured.author}</div>
@@ -359,7 +353,7 @@ export default function BlogPage({ initialPosts = null }) {
                                 <div className="flex items-center justify-between">
                                     <motion.button
                                         onClick={() => setSelectedPost(featured)}
-                                        className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
+                                        className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -399,11 +393,11 @@ export default function BlogPage({ initialPosts = null }) {
                                     >
                                         <img src={p.image} alt={p.title} className="w-20 h-16 object-cover rounded-xl flex-shrink-0" />
                                         <div className="flex-1">
-                                            <h4 className="text-sm font-semibold text-gray-900 hover:text-orange-600 transition-colors line-clamp-2">
+                                            <h4 className="text-sm font-semibold text-gray-900 hover:text-emerald-600 transition-colors line-clamp-2">
                                                 {p.title}
                                             </h4>
                                             <div className="text-xs text-gray-500 mt-1">{formatDate(p.date)}</div>
-                                            <div className="text-xs text-orange-600 font-medium mt-1">{p.category}</div>
+                                            <div className="text-xs text-emerald-600 font-medium mt-1">{p.category}</div>
                                         </div>
                                     </motion.li>
                                 ))}
@@ -424,8 +418,8 @@ export default function BlogPage({ initialPosts = null }) {
                         onClick={() => setActiveTag("")}
                         className={`text-sm px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                             activeTag === "" 
-                                ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg" 
-                                : "bg-white text-gray-700 border-2 border-gray-300 hover:border-orange-300 hover:shadow-md"
+                                ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg" 
+                                : "bg-white text-gray-700 border-2 border-gray-300 hover:border-emerald-300 hover:shadow-md"
                         }`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -438,8 +432,8 @@ export default function BlogPage({ initialPosts = null }) {
                             onClick={() => setActiveTag((s) => (s === t ? "" : t))}
                             className={`text-sm px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                                 activeTag === t 
-                                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg" 
-                                    : "bg-white text-gray-700 border-2 border-gray-300 hover:border-orange-300 hover:shadow-md"
+                                    ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg" 
+                                    : "bg-white text-gray-700 border-2 border-gray-300 hover:border-emerald-300 hover:shadow-md"
                             }`}
                             initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -477,7 +471,7 @@ export default function BlogPage({ initialPosts = null }) {
                             <div className="relative overflow-hidden">
                                 <img src={p.image} alt={p.title} className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute top-4 left-4">
-                                    <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-semibold rounded-full">
+                                    <span className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-semibold rounded-full">
                                         {p.category}
                                     </span>
                                 </div>
@@ -487,7 +481,7 @@ export default function BlogPage({ initialPosts = null }) {
                                     <div className="font-medium">{p.author}</div>
                                     <div>{formatDate(p.date)}</div>
                                 </div>
-                                <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                                <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-emerald-600 transition-colors">
                                     {p.title}
                                 </h4>
                                 <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-3">
@@ -504,7 +498,7 @@ export default function BlogPage({ initialPosts = null }) {
                                     </div>
 
                                     <motion.button 
-                                        className="text-sm text-orange-600 font-semibold hover:text-orange-700 transition-colors"
+                                        className="text-sm text-emerald-600 font-semibold hover:text-emerald-700 transition-colors"
                                         whileHover={{ x: 5 }}
                                     >
                                         Read More →
@@ -540,8 +534,8 @@ export default function BlogPage({ initialPosts = null }) {
                     >
                         <motion.button
                             onClick={() => setVisibleCount((c) => c + 6)}
-                            className="px-10 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
-                            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 87, 16, 0.3)" }}
+                            className="px-10 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
+                            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(34, 197, 94, 0.3)" }}
                             whileTap={{ scale: 0.95 }}
                         >
                             Load More Articles
@@ -572,7 +566,7 @@ export default function BlogPage({ initialPosts = null }) {
                         >
                             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between rounded-t-3xl">
                                 <div className="flex items-center gap-4">
-                                    <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
+                                    <span className="px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold rounded-full">
                                         {selectedPost.category}
                                     </span>
                                     <h2 className="text-2xl font-bold text-gray-900">{selectedPost.title}</h2>
@@ -622,7 +616,7 @@ export default function BlogPage({ initialPosts = null }) {
                                     <h3 className="text-lg font-semibold text-gray-900 mb-4">Tags</h3>
                                     <div className="flex gap-3 flex-wrap">
                                         {(selectedPost.tags || []).map((t) => (
-                                            <span key={t} className="px-4 py-2 bg-gradient-to-r from-orange-100 to-red-100 text-orange-700 rounded-full text-sm font-medium">
+                                            <span key={t} className="px-4 py-2 bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 rounded-full text-sm font-medium">
                                                 #{t}
                                             </span>
                                         ))}

@@ -139,7 +139,7 @@ export default function Albums({ className = "" }) {
                 {[...Array(6)].map((_, i) => (
                     <motion.div
                         key={`line-${i}`}
-                        className="absolute h-1 bg-gradient-to-r from-orange-300/40 to-red-300/40"
+                        className="absolute h-1 bg-gradient-to-r from-pitama-green-300/40 to-pitama-teal-300/40"
                         animate={{
                             scaleX: [0, 1, 0],
                             opacity: [0, 1, 0],
@@ -189,7 +189,7 @@ export default function Albums({ className = "" }) {
                         viewport={{ once: true, amount: 0.1 }}
                     >
                         <span className="text-gray-900">Photo</span>
-                        <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent"> Albums</span>
+                        <span className="bg-gradient-to-r from-pitama-green-500 via-pitama-teal-500 to-pitama-green-500 bg-clip-text text-transparent"> Albums</span>
                     </motion.h1>
                     
                     <motion.p 
@@ -237,7 +237,7 @@ export default function Albums({ className = "" }) {
                             {/* Featured Badge */}
                             {album.featured && (
                                 <div className="absolute top-4 left-4">
-                                    <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
+                                    <span className="px-3 py-1 bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 text-white text-sm font-semibold rounded-full">
                                         Featured
                                     </span>
                                 </div>
@@ -260,7 +260,7 @@ export default function Albums({ className = "" }) {
                         
                         {/* Album Info */}
                         <div className="p-6">
-                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-pitama-green-600 transition-colors">
                                 {album.title}
                             </h3>
                             <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">

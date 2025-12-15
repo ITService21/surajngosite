@@ -204,7 +204,7 @@ export default function PartnerModal({ open, onClose }) {
                     {/* Header */}
                     <div className="p-6 border-b border-gray-200">
                         <div className="flex items-center gap-3 mb-2">
-                            <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                            <div className="w-12 h-12 bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 rounded-full flex items-center justify-center">
                                 <FaHandshake className="text-white text-xl" />
                             </div>
                             <div>
@@ -223,7 +223,7 @@ export default function PartnerModal({ open, onClose }) {
                         {/* Company Information */}
                         <div className="space-y-4">
                             <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-                                <FaBuilding className="text-orange-500" />
+                                <FaBuilding className="text-pitama-green-500" />
                                 Company Information
                             </h3>
                             
@@ -238,7 +238,7 @@ export default function PartnerModal({ open, onClose }) {
                                         value={formData.companyName}
                                         onChange={handleInputChange}
                                         required
-                                        className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-sm"
+                                        className="w-full px-3 py-2 rounded-lg border border-pitama-green-300 focus:border-pitama-green-500 text-sm"
                                         placeholder="Your Company Name"
                                     />
                                 </div>
@@ -252,7 +252,7 @@ export default function PartnerModal({ open, onClose }) {
                                         value={formData.contactPerson}
                                         onChange={handleInputChange}
                                         required
-                                        className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-sm"
+                                        className="w-full px-3 py-2 rounded-lg border border-pitama-green-300 focus:border-pitama-green-500 text-sm"
                                         placeholder="Your Name"
                                     />
                                 </div>
@@ -269,7 +269,7 @@ export default function PartnerModal({ open, onClose }) {
                                         value={formData.email}
                                         onChange={handleInputChange}
                                         required
-                                        className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-sm"
+                                        className="w-full px-3 py-2 rounded-lg border border-pitama-green-300 focus:border-pitama-green-500 text-sm"
                                         placeholder="your@company.com"
                                     />
                                 </div>
@@ -285,7 +285,7 @@ export default function PartnerModal({ open, onClose }) {
                                         required
                                         maxLength="10"
                                         className={`w-full px-3 py-2 rounded-lg border text-sm ${
-                                            phoneError ? 'border-red-500 focus:border-red-500' : 'border-orange-300 focus:border-orange-500'
+                                            phoneError ? 'border-red-500 focus:border-red-500' : 'border-pitama-green-300 focus:border-pitama-green-500'
                                         }`}
                                         placeholder="10 digit mobile number"
                                     />
@@ -305,7 +305,7 @@ export default function PartnerModal({ open, onClose }) {
                                         name="website"
                                         value={formData.website}
                                         onChange={handleInputChange}
-                                        className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-sm"
+                                        className="w-full px-3 py-2 rounded-lg border border-pitama-green-300 focus:border-pitama-green-500 text-sm"
                                         placeholder="https://yourcompany.com"
                                     />
                                 </div>
@@ -365,7 +365,7 @@ export default function PartnerModal({ open, onClose }) {
                                     name="location"
                                     value={formData.location}
                                     onChange={handleInputChange}
-                                    className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-sm"
+                                    className="w-full px-3 py-2 rounded-lg border border-pitama-green-300 focus:border-pitama-green-500 text-sm"
                                     placeholder="City, State, Country"
                                 />
                             </div>
@@ -374,7 +374,7 @@ export default function PartnerModal({ open, onClose }) {
                         {/* Partnership Details */}
                         <div className="space-y-4">
                             <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-                                <FaHandshake className="text-orange-500" />
+                                <FaHandshake className="text-pitama-green-500" />
                                 Partnership Details
                             </h3>
 
@@ -389,8 +389,8 @@ export default function PartnerModal({ open, onClose }) {
                                             key={type}
                                             className={`px-3 py-2 rounded-full border-2 font-semibold text-sm transition-all duration-200 ${
                                                 formData.partnershipType === type
-                                                    ? 'bg-orange-500 text-white border-orange-500'
-                                                    : 'bg-white text-orange-700 border-orange-300 hover:bg-orange-50'
+                                                    ? 'bg-pitama-green-500 text-white border-pitama-green-500'
+                                                    : 'bg-white text-pitama-green-700 border-pitama-green-300 hover:bg-pitama-green-50'
                                             }`}
                                             onClick={() => handlePartnershipTypeSelect(type)}
                                         >
@@ -411,8 +411,8 @@ export default function PartnerModal({ open, onClose }) {
                                             key={category}
                                             className={`px-3 py-2 rounded-full border-2 font-semibold text-sm transition-all duration-200 ${
                                                 formData.businessCategory === category
-                                                    ? 'bg-orange-500 text-white border-orange-500'
-                                                    : 'bg-white text-orange-700 border-orange-300 hover:bg-orange-50'
+                                                    ? 'bg-pitama-green-500 text-white border-pitama-green-500'
+                                                    : 'bg-white text-pitama-green-700 border-pitama-green-300 hover:bg-pitama-green-50'
                                             }`}
                                             onClick={() => handleBusinessCategorySelect(category)}
                                         >
@@ -431,7 +431,7 @@ export default function PartnerModal({ open, onClose }) {
                                     value={formData.description}
                                     onChange={handleInputChange}
                                     rows={3}
-                                    className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-sm resize-none"
+                                    className="w-full px-3 py-2 rounded-lg border border-pitama-green-300 focus:border-pitama-green-500 text-sm resize-none"
                                     placeholder="Tell us about your company..."
                                 />
                             </div>
@@ -445,7 +445,7 @@ export default function PartnerModal({ open, onClose }) {
                                     value={formData.expectations}
                                     onChange={handleInputChange}
                                     rows={3}
-                                    className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-sm resize-none"
+                                    className="w-full px-3 py-2 rounded-lg border border-pitama-green-300 focus:border-pitama-green-500 text-sm resize-none"
                                     placeholder="What do you expect from this partnership?"
                                 />
                             </div>
@@ -460,7 +460,7 @@ export default function PartnerModal({ open, onClose }) {
                                     onChange={handleInputChange}
                                     required
                                     rows={4}
-                                    className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-sm resize-none"
+                                    className="w-full px-3 py-2 rounded-lg border border-pitama-green-300 focus:border-pitama-green-500 text-sm resize-none"
                                     placeholder="Any additional information or questions..."
                                 />
                             </div>
@@ -470,7 +470,7 @@ export default function PartnerModal({ open, onClose }) {
                         <motion.button
                             type="submit"
                             disabled={sending}
-                            className="my-[300px] w-full py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-lg shadow hover:scale-105 transition-all duration-200 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="my-[300px] w-full py-3 bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 text-white font-bold rounded-lg shadow hover:scale-105 transition-all duration-200 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                             whileHover={{ scale: sending ? 1 : 1.03 }}
                             whileTap={{ scale: sending ? 1 : 0.97 }}
                         >

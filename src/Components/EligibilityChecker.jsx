@@ -307,7 +307,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
           {!eligibilityResults ? (
             <div className="space-y-6">
               {/* Funding Type Selection */}
-              <div className="pb-[20px] mb-[30px] bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border-2 border-orange-200">
+              <div className="pb-[20px] mb-[30px] bg-gradient-to-r from-pitama-green-50 to-pitama-teal-50 p-6 rounded-lg border-2 border-pitama-green-200">
                 <h3 className="text-lg font-semibold mb-3 text-gray-800">Select Funding Type</h3>
                 <Select
                   value={FUNDING_TYPE_OPTIONS.find(opt => opt.value === fundingType)}
@@ -337,7 +337,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                       type="number"
                       value={formData.age}
                       onChange={(e) => handleInputChange('age', parseInt(e.target.value))}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pitama-green-500"
                       placeholder="Enter your age"
                     />
                   </div>
@@ -395,7 +395,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                         type="date"
                         value={formData.registrationDate}
                         onChange={(e) => handleInputChange('registrationDate', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pitama-green-500"
                       />
                       <p className="text-xs text-gray-500 mt-1">Required for Startup India Seed Fund</p>
                     </div>
@@ -406,7 +406,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                       type="text"
                       value={formatNumberWithCommas(formData.annualTurnover)}
                       onChange={(e) => handleAmountChange('annualTurnover', e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pitama-green-500"
                       placeholder="e.g., 50,00,000"
                     />
                   </div>
@@ -416,7 +416,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                       type="text"
                       value={formatNumberWithCommas(formData.projectCost)}
                       onChange={(e) => handleAmountChange('projectCost', e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pitama-green-500"
                       placeholder="e.g., 50,00,000"
                     />
                   </div>
@@ -427,7 +427,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                         type="number"
                         value={formData.employment}
                         onChange={(e) => handleInputChange('employment', parseInt(e.target.value))}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pitama-green-500"
                         placeholder="Number of jobs to be created"
                       />
                     </div>
@@ -446,7 +446,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                         type="number"
                         value={formData.creditScore}
                         onChange={(e) => handleInputChange('creditScore', parseInt(e.target.value))}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pitama-green-500"
                         placeholder="Credit score (300-900)"
                       />
                       <p className="text-xs text-gray-500 mt-1">Required for MUDRA Loan (650+)</p>
@@ -466,7 +466,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                         id="hasInnovativeIdea"
                         checked={formData.hasInnovativeIdea}
                         onChange={(e) => handleInputChange('hasInnovativeIdea', e.target.checked)}
-                        className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
+                        className="w-4 h-4 text-pitama-green-600 border-gray-300 rounded focus:ring-pitama-green-500"
                       />
                       <label htmlFor="hasInnovativeIdea" className="text-sm font-medium text-gray-700">
                         Innovative Business Idea or Starting Business with New Ways
@@ -481,7 +481,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                 <button
                   onClick={checkEligibility}
                   disabled={isChecking}
-                  className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-8 py-3 bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 text-white font-semibold rounded-lg hover:from-pitama-green-600 hover:to-pitama-teal-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isChecking ? 'Checking Eligibility...' : 'Check Eligibility'}
                 </button>
@@ -557,7 +557,7 @@ const EligibilityChecker = ({ isOpen, onClose }) => {
                 </button>
                 <button
                   onClick={onClose}
-                  className="px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300"
+                  className="px-6 py-2 bg-pitama-green-500 text-white font-semibold rounded-lg hover:bg-pitama-green-600 transition-all duration-300"
                 >
                   Close
                 </button>

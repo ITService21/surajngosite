@@ -1,301 +1,264 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaTimes, FaLeaf, FaPaw, FaUsers, FaGraduationCap } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { FaPhoneAlt } from "react-icons/fa";
-import PropTypes from "prop-types";
-import { useModal } from "../Context/ModalContext";
 import { API_ENDPOINTS } from "../config/api";
+import PropTypes from "prop-types";
 
-const SERVICE_SCHEMES = [
-    "ARTHA", "SURAKSHA", "NISHTHA", "UTTHAN", "PRAGATI", "DISHA"
+const INITIATIVE_OPTIONS = [
+  { name: "Environmental Conservation", icon: FaLeaf },
+  { name: "Animal Welfare", icon: FaPaw },
+  { name: "Women Empowerment", icon: FaUsers },
+  { name: "Education", icon: FaGraduationCap },
 ];
 
-export default function FormModal({ open, onClose, onDismissPermanently }) {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        serviceScheme: '',
-        message: ''
-    });
-    const [sending, setSending] = useState(false);
-    const [phoneError, setPhoneError] = useState('');
-    const { closeModal } = useModal();
+export default function FormModal({ open, onClose }) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    initiative: "",
+    message: "",
+  });
+  const [sending, setSending] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        
-        // Validate phone number
-        if (name === 'phone') {
-            // Allow only digits
-            const phoneValue = value.replace(/\D/g, '');
-            setFormData({
-                ...formData,
-                phone: phoneValue
-            });
-            
-            // Validate length
-            if (phoneValue.length > 0 && phoneValue.length !== 10) {
-                setPhoneError('Phone number must be exactly 10 digits');
-            } else {
-                setPhoneError('');
-            }
-        } else {
-            setFormData({
-                ...formData,
-                [name]: value
-            });
-        }
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      localStorage.setItem("isAnyModalOpen", "true");
+    } else {
+      document.body.style.overflow = "unset";
+      localStorage.setItem("isAnyModalOpen", "false");
+    }
+    return () => {
+      document.body.style.overflow = "unset";
     };
+  }, [open]);
 
-    const handleSchemeSelect = (scheme) => {
-        setFormData({
-            ...formData,
-            serviceScheme: scheme
-        });
-    };
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    
+    if (name === "phone") {
+      const phoneValue = value.replace(/\D/g, "");
+      setFormData({ ...formData, phone: phoneValue });
+      
+      if (phoneValue.length > 0 && phoneValue.length !== 10) {
+        setPhoneError("Phone number must be exactly 10 digits");
+      } else {
+        setPhoneError("");
+      }
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
 
-    const isValid = () =>
-        formData.name.trim() &&
-        formData.email.trim() &&
-        formData.phone.trim() &&
-        formData.phone.length === 10 &&
-        formData.message.trim();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+    
+    if (formData.phone.length !== 10) {
+      toast.error("Phone number must be exactly 10 digits");
+      return;
+    }
+    
+    setSending(true);
+    try {
+      const res = await fetch(API_ENDPOINTS.SEND_FORM_MAIL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: "info@pitamaindia.org",
+          subject: "New Volunteer/Contact Inquiry",
+          fields: {
+            Name: formData.name,
+            Phone: formData.phone,
+            Email: formData.email,
+            "Area of Interest": formData.initiative || "Not specified",
+            Message: formData.message || "No message",
+          },
+        }),
+      });
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (!isValid()) {
-            if (formData.phone.length !== 10) {
-                toast.error('Phone number must be exactly 10 digits');
-            } else {
-                toast.error('Please fill all required fields.');
-            }
-            return;
-        }
-        setSending(true);
-        try {
-            const res = await fetch(API_ENDPOINTS.SEND_FORM_MAIL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    to: "info@growstartup.in",
-                    subject: "Consultant Booking Request",
-                    fields: {
-                        Name: formData.name,
-                        Phone: formData.phone,
-                        Email: formData.email,
-                        Company: formData.company,
-                        "Service Scheme": formData.serviceScheme,
-                        Message: formData.message
-                    }
-                })
-            });
-            if (res.ok) {
-                toast.success('Request sent! We will contact you soon.');
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    company: '',
-                    serviceScheme: '',
-                    message: ''
-                });
-                // Close modal after successful submission
-                setTimeout(() => {
-                    closeModal();
-                    onClose();
-                }, 2000);
-            } else { 
-                toast.error('Failed to send request. Please try again.');
-            }
-        } catch {
-            toast.error('Failed to send request. Please try again.');
-        }
-        setSending(false);
-    };
+      if (res.ok) {
+        toast.success("Thank you for reaching out! We'll contact you soon. 💚");
+        setFormData({ name: "", email: "", phone: "", initiative: "", message: "" });
+        setTimeout(() => onClose(), 2000);
+      } else {
+        toast.error("Failed to send. Please try again.");
+      }
+    } catch {
+      toast.error("Failed to send. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  };
 
-    // Modal animation
-    const modalVariants = {
-        hidden: { opacity: 0, y: -40, scale: 0.95 },
-        visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.2003 } },
-        exit: { opacity: 0, y: 40, scale: 0.95, transition: { duration: 0.2 } }
-    };
+  return (
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          {/* Backdrop */}
+          <motion.div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
 
-    if (!open) return null;
+          {/* Modal */}
+          <motion.div
+            className="relative bg-white rounded-3xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto"
+            initial={{ scale: 0.8, opacity: 0, y: 50 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0.8, opacity: 0, y: 50 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+          >
+            {/* Header */}
+            <div className="sticky top-0 bg-gradient-to-r from-emerald-600 to-teal-600 p-6 rounded-t-3xl">
+              <button
+                onClick={onClose}
+                className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+              >
+                <FaTimes className="text-xl" />
+              </button>
+              <h2 className="text-2xl font-bold text-white" style={{ fontFamily: "Quicksand, sans-serif" }}>
+                🌱 Join Our Movement
+              </h2>
+              <p className="text-emerald-100 text-sm mt-1" style={{ fontFamily: "Nunito, sans-serif" }}>
+                Become a part of the change!
+              </p>
+            </div>
 
-    return (
-        <AnimatePresence>
-            <motion.div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40"
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                variants={modalVariants}
-            >
-                <motion.div
-                    className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative"
-                    initial={{ scale: 0.95, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.95, opacity: 0 }}
-                    transition={{ duration: 0.2003 }}
-                    style={{ border: "2px solid #F85710" }}
-                >
-                    {/* Close Button */}
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="p-6 space-y-4">
+              {/* Name */}
+              <div>
+                <label className="block text-gray-700 text-sm font-semibold mb-2" style={{ fontFamily: "Nunito, sans-serif" }}>
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Enter your full name"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-emerald-200 focus:border-emerald-500 focus:outline-none transition-all duration-300"
+                  required
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-gray-700 text-sm font-semibold mb-2" style={{ fontFamily: "Nunito, sans-serif" }}>
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-emerald-200 focus:border-emerald-500 focus:outline-none transition-all duration-300"
+                  required
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label className="block text-gray-700 text-sm font-semibold mb-2" style={{ fontFamily: "Nunito, sans-serif" }}>
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="10 digit mobile number"
+                  maxLength="10"
+                  className={`w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition-all duration-300 ${
+                    phoneError ? "border-red-500" : "border-emerald-200 focus:border-emerald-500"
+                  }`}
+                  required
+                />
+                {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
+              </div>
+
+              {/* Initiative Selection */}
+              <div>
+                <label className="block text-gray-700 text-sm font-semibold mb-2" style={{ fontFamily: "Nunito, sans-serif" }}>
+                  Area of Interest
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {INITIATIVE_OPTIONS.map((option) => (
                     <button
-                        onClick={() => {
-                            closeModal();
-                            onClose();
-                        }}
-                        className="absolute top-3 right-3 text-gray-400 hover:text-red-500 text-xl font-bold"
-                        aria-label="Close"
+                      key={option.name}
+                      type="button"
+                      onClick={() => setFormData({ ...formData, initiative: option.name })}
+                      className={`flex items-center gap-2 px-3 py-2 rounded-lg border-2 text-sm font-medium transition-all duration-200 ${
+                        formData.initiative === option.name
+                          ? "bg-emerald-500 text-white border-emerald-500"
+                          : "bg-white text-gray-700 border-emerald-200 hover:border-emerald-400"
+                      }`}
                     >
-                        ×
+                      <option.icon className="text-sm" />
+                      <span className="text-xs">{option.name}</span>
                     </button>
-                    
-                    {/* Don't Show Again Button - Only for auto popup */}
-                    {onDismissPermanently && (
-                        <button
-                            onClick={onDismissPermanently}
-                            className="absolute top-3 left-3 text-xs text-gray-400 hover:text-orange-500 underline"
-                            aria-label="Don't show again"
-                        >
-                            Don&apos;t show again
-                        </button>
-                    )}
-                    <h2 className="text-2xl font-bold mb-2 text-gray-800 text-center" style={{ color: "#F85710" }}>
-                        Book a Consultant
-                    </h2>
-                    <p className="text-xs text-gray-500 text-center mb-4">
-                        Fill the form or call us directly for instant support.
-                    </p>
-                    {/* Direct Call Option */}
-                    <div className="flex items-center justify-center mb-4">
-                        <a
-                            href="tel:+917383930301"
-                            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-semibold text-sm shadow hover:scale-105 transition"
-                        >
-                            <FaPhoneAlt /> Call Now: +91 7383930301
-                        </a>
-                    </div>
-                    {/* Form */}
-                    <form className="space-y-4" onSubmit={handleSubmit}>
-                        <div>
-                            <label className="block text-xs font-semibold text-gray-700 mb-1">
-                                Name <span className="text-red-500">*</span>
-                            </label>
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleInputChange}
-                                required
-                                className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-xs"
-                                placeholder="Your Name"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-xs font-semibold text-gray-700 mb-1">
-                                Email <span className="text-red-500">*</span>
-                            </label>
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                required
-                                className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-xs"
-                                placeholder="Your Email"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-xs font-semibold text-gray-700 mb-1">
-                                Phone <span className="text-red-500">*</span>
-                            </label>
-                            <input
-                                type="tel"
-                                name="phone"
-                                value={formData.phone}
-                                onChange={handleInputChange}
-                                required
-                                maxLength="10"
-                                className={`w-full px-3 py-2 rounded-lg border text-xs ${
-                                    phoneError ? 'border-red-500 focus:border-red-500' : 'border-orange-300 focus:border-orange-500'
-                                }`}
-                                placeholder="10 digit mobile number"
-                            />
-                            {phoneError && (
-                                <p className="text-red-500 text-xs mt-1">{phoneError}</p>
-                            )}
-                        </div>                        {/* <div>
-                            <label className="block text-xs font-semibold text-gray-700 mb-1">
-                                Company <span className="text-gray-400">(optional)</span>
-                            </label>
-                            <input
-                                type="text"
-                                name="company"
-                                value={formData.company}
-                                onChange={handleInputChange}
-                                className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-xs"
-                                placeholder="Company Name"
-                            />
-                        </div> */}
-                        <div>
-                            <label className="block text-xs font-semibold text-gray-700 mb-1">
-                                Service Scheme <span className="text-gray-400">(optional)</span>
-                            </label>
-                            <div className="flex flex-wrap gap-2">
-                                {SERVICE_SCHEMES.map(scheme => (
-                                    <button
-                                        type="button"
-                                        key={scheme}
-                                        className={`px-2 py-1 rounded-full border-2 font-semibold text-xs transition-all duration-200 ${
-                                            formData.serviceScheme === scheme
-                                                ? 'bg-orange-500 text-white border-orange-500'
-                                                : 'bg-white text-orange-700 border-orange-300 hover:bg-orange-50'
-                                        }`}
-                                        onClick={() => handleSchemeSelect(scheme)}
-                                    >
-                                        {scheme}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                        <div>
-                            <label className="block text-xs font-semibold text-gray-700 mb-1">
-                                Message <span className="text-red-500">*</span>
-                            </label>
-                            <textarea
-                                name="message"
-                                value={formData.message}
-                                onChange={handleInputChange}
-                                required
-                                rows={3}
-                                className="w-full px-3 py-2 rounded-lg border border-orange-300 focus:border-orange-500 text-xs resize-none"
-                                placeholder="Your Message"
-                            />
-                        </div>
-                        <motion.button
-                            type="submit"
-                            disabled={sending}
-                            className="w-full py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-lg shadow hover:scale-105 transition-all duration-200 text-sm"
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                        >
-                            {sending ? "Sending..." : "Send Request"}
-                        </motion.button>
-                    </form>
-                    <ToastContainer position="top-right" autoClose={3000} />
-                </motion.div>
-            </motion.div>
-        </AnimatePresence>
-    );
+                  ))}
+                </div>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-gray-700 text-sm font-semibold mb-2" style={{ fontFamily: "Nunito, sans-serif" }}>
+                  Message (Optional)
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Tell us how you'd like to contribute..."
+                  rows="3"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-emerald-200 focus:border-emerald-500 focus:outline-none transition-all duration-300 resize-none"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <motion.button
+                type="submit"
+                disabled={sending}
+                className="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold rounded-xl shadow-lg transition-all duration-300 disabled:opacity-50"
+                whileHover={{ scale: sending ? 1 : 1.02 }}
+                whileTap={{ scale: sending ? 1 : 0.98 }}
+                style={{ fontFamily: "Nunito, sans-serif" }}
+              >
+                {sending ? "Sending..." : "🌱 Join the Movement"}
+              </motion.button>
+            </form>
+          </motion.div>
+
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            style={{ zIndex: 99999 }}
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
 }
 
-// PropTypes
 FormModal.propTypes = {
-    open: PropTypes.bool.isRequired,
-    onClose: PropTypes.func.isRequired,
-    onDismissPermanently: PropTypes.func
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
 };

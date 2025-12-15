@@ -2,12 +2,13 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 const Overview = () => {
   const [counts, setCounts] = useState({
-    clients: 0,
-    experience: 0,
-    projects: 0,
-    certifications: 0
+    trees: 0,
+    animals: 0,
+    women: 0,
+    volunteers: 0
   });
   const navigate = useNavigate();
   const statsRef = useRef(null);
@@ -32,37 +33,37 @@ const Overview = () => {
         }, stepDuration);
       };
 
-      animateCount(500, 'clients');
-      animateCount(5, 'experience');
-      animateCount(1000, 'projects');
-      animateCount(50, 'certifications');
+      animateCount(10000, 'trees');
+      animateCount(5000, 'animals');
+      animateCount(2000, 'women');
+      animateCount(500, 'volunteers');
     }
   }, [isInView]);
 
-  const services = [
+  const initiatives = [
     {
-      icon: "🚀",
-      title: "Business Incorporation & Registration",
-      description: "Transform your vision into reality with seamless company formation and legal compliance",
-      link: "/services/all"
-    },
-    {
-      icon: "💰",
-      title: "Seed Funding & Loan Assistance",
-      description: "Unlock financial opportunities and secure the capital your business needs to thrive",
+      icon: "🌳",
+      title: "Environmental Conservation",
+      description: "Tree plantation drives, cleanliness campaigns, and green initiatives for a sustainable India",
       link: "/services/funding"
     },
     {
-      icon: "🏆",
-      title: "Startup India & MSME Certification",
-      description: "Achieve government recognition and unlock exclusive benefits for your enterprise",
+      icon: "🐾",
+      title: "Animal Welfare & Rescue",
+      description: "Rescue, rehabilitation, and care for stray animals with compassion and dignity",
       link: "/services/certificate"
     },
     {
-      icon: "📈",
-      title: "Business Growth Strategy",
-      description: "Accelerate your success with proven strategies and expert guidance for scaling",
+      icon: "👩",
+      title: "Women Empowerment",
+      description: "Skill development and livelihood training programs for rural women's financial independence",
       link: "/services/marketing"
+    },
+    {
+      icon: "📚",
+      title: "Education for All",
+      description: "Quality education access for underprivileged children, lighting the path to a brighter future",
+      link: "/services/education"
     }
   ];
 
@@ -77,11 +78,11 @@ const Overview = () => {
             className="absolute inset-0"
             style={{
               background: `linear-gradient(45deg, 
-                rgba(253, 87, 16, 0.1) 0%, 
+                rgba(34, 197, 94, 0.1) 0%, 
                 rgba(255, 255, 255, 0.05) 25%, 
-                rgba(253, 87, 16, 0.1) 50%, 
+                rgba(34, 197, 94, 0.1) 50%, 
                 rgba(255, 255, 255, 0.05) 75%, 
-                rgba(253, 87, 16, 0.1) 100%)`,
+                rgba(34, 197, 94, 0.1) 100%)`,
               backgroundSize: '400% 400%'
             }}
             animate={{
@@ -95,14 +96,14 @@ const Overview = () => {
           />
         </div>
         
-        {/* Floating Hexagons */}
+        {/* Floating Leaves */}
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-16 h-16 opacity-20"
             style={{
-              background: `linear-gradient(45deg, #F85710, #FF6B35)`,
-              clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)',
+              background: `linear-gradient(45deg, #22C55E, #14B8A6)`,
+              clipPath: 'ellipse(50% 30% at 50% 50%)',
               left: `${15 + i * 15}%`,
               top: `${10 + i * 12}%`
             }}
@@ -126,7 +127,7 @@ const Overview = () => {
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-orange-500 rounded-full"
+              className="absolute w-1 h-1 bg-emerald-500 rounded-full"
               animate={{
                 scale: [0, 1, 0],
                 opacity: [0, 1, 0]
@@ -152,29 +153,29 @@ const Overview = () => {
           className="text-center mb-16 relative"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.2001, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: false, amount: 0.2 }}
         >
           {/* Decorative Elements */}
-          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent rounded-full"></div>
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-emerald-500 to-transparent rounded-full"></div>
           
           <motion.div
             className="relative inline-block"
             whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2003 }}
+            transition={{ duration: 0.3 }}
           >
-            <h2 className="text-5xl flex gap-[10px] md:gap-[14px] lg:gap-[18px] text-normal md:text-6xl lg:text-7xl font-black mb-6 relative" style={{fontFamily: 'Montserrat, sans-serif'}}>
+            <h2 className="text-5xl flex gap-[10px] md:gap-[14px] lg:gap-[18px] text-normal md:text-6xl lg:text-7xl font-black mb-6 relative" style={{fontFamily: 'Quicksand, sans-serif'}}>
               <motion.span 
                 className="text-gray-800 block"
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.2002, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: false, amount: 0.3 }}
               >
                 About
               </motion.span>
               <motion.span 
-                className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent block"
+                className="bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 bg-clip-text text-transparent block"
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ 
                   opacity: 1, 
@@ -182,7 +183,7 @@ const Overview = () => {
                   scale: [1, 1.1, 1, 1.05, 1]
                 }}
                 transition={{ 
-                  duration: 0.2002, 
+                  duration: 0.6, 
                   delay: 0.3,
                   scale: {
                     duration: 2,
@@ -206,26 +207,26 @@ const Overview = () => {
             className="max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2002, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <p className="text-2xl md:text-3xl text-gray-800 leading-relaxed mb-6 font-bold" style={{fontFamily: 'Inter, sans-serif'}}>
+            <p className="text-2xl md:text-3xl text-gray-800 leading-relaxed mb-6 font-bold" style={{fontFamily: 'Nunito, sans-serif'}}>
               <span className="relative">
-                We are an 
+                We are{" "}
                 <motion.span 
-                  className="text-orange-600 font-black mx-2"
+                  className="text-emerald-600 font-black mx-2"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ 
                     opacity: 1,
                     scale: 1,
                     textShadow: [
-                      '0 0 0px rgba(253, 87, 16, 0)',
-                      '0 0 20px rgba(253, 87, 16, 0.5)',
-                      '0 0 0px rgba(253, 87, 16, 0)'
+                      '0 0 0px rgba(34, 197, 94, 0)',
+                      '0 0 20px rgba(34, 197, 94, 0.5)',
+                      '0 0 0px rgba(34, 197, 94, 0)'
                     ]
                   }}
                   transition={{ 
-                    duration: 0.2003,
+                    duration: 0.6,
                     delay: 0.4,
                     textShadow: {
                       duration: 2,
@@ -235,40 +236,40 @@ const Overview = () => {
                   }}
                   viewport={{ once: false, amount: 0.3 }}
                 >
-                  Gandhinagar
+                  Pitama India
                 </motion.span>
-                based consultancy
+                💚
               </span>
             </p>
             
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-medium" style={{fontFamily: 'Inter, sans-serif'}}>
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-medium" style={{fontFamily: 'Nunito, sans-serif'}}>
               <span className="bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                Committed to growth and essential business services
+                Greening India, Empowering Lives
               </span>
             </p>
             
             <motion.p 
               className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-normal" 
-              style={{fontFamily: 'Inter, sans-serif'}}
+              style={{fontFamily: 'Nunito, sans-serif'}}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2002, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: false, amount: 0.3 }}
             >
-              From launching startups to scaling established businesses, we serve entrepreneurs at every stage.
+              When communities grow, nature heals. When women rise, families rise. When animals are protected, society becomes humane.
             </motion.p>
           </motion.div>
         </motion.div>
 
-        {/* Services Grid with Scroll Animation */}
+        {/* Initiatives Grid with Scroll Animation */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2002, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: false, amount: 0.15 }}
         >
-          {services.map((service, index) => {
+          {initiatives.map((initiative, index) => {
             const isEven = index % 2 === 0;
             return (
               <motion.div
@@ -284,15 +285,15 @@ const Overview = () => {
                   y: 0
                 }}
                 transition={{ 
-                  duration: 0.2001, 
+                  duration: 0.6, 
                   delay: index * 0.1,
-                  ease: [0.05001, 0.46, 0.45, 0.94]
+                  ease: [0.05, 0.46, 0.45, 0.94]
                 }}
                 viewport={{ once: false, amount: 0.2 }}
                 whileHover={{ 
                   scale: 1.05,
                   y: -10,
-                  transition: { duration: 0.2003, ease: "easeOut" }
+                  transition: { duration: 0.3, ease: "easeOut" }
                 }}
                 className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-3xl transition-all duration-500 group relative overflow-hidden cursor-pointer"
               >
@@ -304,9 +305,9 @@ const Overview = () => {
                 }}
                 whileHover={{ 
                   background: [
-                    'linear-gradient(135deg, rgba(253,87,16,0.05) 0%, rgba(255,107,53,0.03) 50%, rgba(255,255,255,1) 100%)',
-                    'linear-gradient(135deg, rgba(255,107,53,0.05) 0%, rgba(253,87,16,0.03) 50%, rgba(255,255,255,1) 100%)',
-                    'linear-gradient(135deg, rgba(253,87,16,0.05) 0%, rgba(255,107,53,0.03) 50%, rgba(255,255,255,1) 100%)'
+                    'linear-gradient(135deg, rgba(34,197,94,0.05) 0%, rgba(20,184,166,0.03) 50%, rgba(255,255,255,1) 100%)',
+                    'linear-gradient(135deg, rgba(20,184,166,0.05) 0%, rgba(34,197,94,0.03) 50%, rgba(255,255,255,1) 100%)',
+                    'linear-gradient(135deg, rgba(34,197,94,0.05) 0%, rgba(20,184,166,0.03) 50%, rgba(255,255,255,1) 100%)'
                   ]
                 }}
                 transition={{
@@ -324,9 +325,9 @@ const Overview = () => {
                 }}
                 whileHover={{ 
                   background: [
-                    'linear-gradient(white, white) padding-box, linear-gradient(45deg, rgba(253,87,16,0.3), rgba(255,107,53,0.3)) border-box',
-                    'linear-gradient(white, white) padding-box, linear-gradient(45deg, rgba(255,107,53,0.3), rgba(253,87,16,0.3)) border-box',
-                    'linear-gradient(white, white) padding-box, linear-gradient(45deg, rgba(253,87,16,0.3), rgba(255,107,53,0.3)) border-box'
+                    'linear-gradient(white, white) padding-box, linear-gradient(45deg, rgba(34,197,94,0.3), rgba(20,184,166,0.3)) border-box',
+                    'linear-gradient(white, white) padding-box, linear-gradient(45deg, rgba(20,184,166,0.3), rgba(34,197,94,0.3)) border-box',
+                    'linear-gradient(white, white) padding-box, linear-gradient(45deg, rgba(34,197,94,0.3), rgba(20,184,166,0.3)) border-box'
                   ]
                 }}
                 transition={{
@@ -336,10 +337,10 @@ const Overview = () => {
                 }}
               />
               
-              <div className="relative z-10" onClick={() => navigate(service.link)}>
-                {/* Icon - No Color Change on Hover */}
+              <div className="relative z-10" onClick={() => navigate(initiative.link)}>
+                {/* Icon */}
                 <motion.div 
-                  className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl flex items-center justify-center text-white text-3xl mb-6 shadow-2xl relative"
+                  className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl flex items-center justify-center text-white text-3xl mb-6 shadow-2xl relative"
                   animate={{ 
                     rotate: [0, 5, -5, 0],
                     scale: [1, 1.05, 1]
@@ -350,31 +351,28 @@ const Overview = () => {
                     delay: index * 0.5
                   }}
                 >
-                  {service.icon}
+                  {initiative.icon}
                 </motion.div>
                 
-                {/* Content - No Color Change on Hover */}
+                {/* Content */}
                 <h3 
                   className="text-xl font-black mb-4 leading-tight" 
-                  style={{color: '#000000', fontFamily: 'Outfit, sans-serif'}}
+                  style={{color: '#000000', fontFamily: 'Quicksand, sans-serif'}}
                 >
-                  {service.title}
-                  {/* <Link to={service.link}>
-                    {service.title}
-                  </Link> */}
+                  {initiative.title}
                 </h3>
                 
                 <p 
                   className="text-gray-600 leading-relaxed text-sm" 
-                  style={{fontFamily: 'Inter, sans-serif'}}
+                  style={{fontFamily: 'Nunito, sans-serif'}}
                 >
-                  {service.description}
+                  {initiative.description}
                 </p>
               </div>
               
-              {/* Animated Decorative Elements - Only Background Effects */}
+              {/* Animated Decorative Elements */}
               <motion.div 
-                className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-r from-orange-400 to-red-400 rounded-full opacity-0 group-hover:opacity-100"
+                className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full opacity-0 group-hover:opacity-100"
                 animate={{
                   scale: [0, 1, 0],
                   opacity: [0, 1, 0]
@@ -386,7 +384,7 @@ const Overview = () => {
                 }}
               />
               <motion.div 
-                className="absolute bottom-6 left-6 w-2 h-2 bg-gradient-to-r from-orange-400 to-red-400 rounded-full opacity-0 group-hover:opacity-100"
+                className="absolute bottom-6 left-6 w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full opacity-0 group-hover:opacity-100"
                 animate={{
                   scale: [0, 1, 0],
                   opacity: [0, 1, 0]
@@ -406,27 +404,9 @@ const Overview = () => {
                 }}
                 whileHover={{ 
                   background: [
-                    'linear-gradient(135deg, rgba(253,87,16,0.1) 0%, transparent 100%)',
-                    'linear-gradient(135deg, rgba(255,107,53,0.1) 0%, transparent 100%)',
-                    'linear-gradient(135deg, rgba(253,87,16,0.1) 0%, transparent 100%)'
-                  ]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              <motion.div 
-                className="absolute bottom-0 left-0 w-16 h-16 rounded-tr-3xl"
-                initial={{ 
-                  background: 'linear-gradient(315deg, transparent 0%, transparent 100%)'
-                }}
-                whileHover={{ 
-                  background: [
-                    'linear-gradient(315deg, rgba(255,107,53,0.1) 0%, transparent 100%)',
-                    'linear-gradient(315deg, rgba(253,87,16,0.1) 0%, transparent 100%)',
-                    'linear-gradient(315deg, rgba(255,107,53,0.1) 0%, transparent 100%)'
+                    'linear-gradient(135deg, rgba(34,197,94,0.1) 0%, transparent 100%)',
+                    'linear-gradient(135deg, rgba(20,184,166,0.1) 0%, transparent 100%)',
+                    'linear-gradient(135deg, rgba(34,197,94,0.1) 0%, transparent 100%)'
                   ]
                 }}
                 transition={{
@@ -444,42 +424,41 @@ const Overview = () => {
         <motion.div 
           ref={statsRef}
           className="mt-16 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
-          style={{backgroundColor: '#111827'}}
+          style={{backgroundColor: '#14532d'}}
           initial={{ opacity: 0, y: 60, scale: 0.95 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.2004, delay: 0.1, ease: [0.05001, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.05, 0.46, 0.45, 0.94] }}
           viewport={{ once: false, amount: 0.2 }}
          >
           {/* Enhanced Background Effects */}
-          <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-2xl animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-2xl animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-xl animate-pulse"></div>
           
           <div className="relative z-10">
             <h3 
               className="text-4xl md:text-5xl font-black text-white mb-6" 
-              style={{fontFamily: 'Montserrat, sans-serif'}}
+              style={{fontFamily: 'Quicksand, sans-serif'}}
             >
-              <span className="bg-gradient-to-r from-white via-orange-200 to-white bg-clip-text text-transparent">
-              Gandhinagar&apos;s Premier MSME Consultancy
+              <span className="bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent">
+                Our Impact So Far 💚
               </span>
             </h3>
             
             <p 
               className="text-gray-300 text-xl mb-12 max-w-3xl mx-auto font-medium" 
-              style={{fontFamily: 'Inter, sans-serif'}}
+              style={{fontFamily: 'Nunito, sans-serif'}}
             >
-              Based in Gandhinagar, we&apos;re your trusted partner for business growth and success
+              Together, we&apos;re building a greener, kinder, and more equitable India
             </p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { key: 'clients', number: 500, suffix: '+', label: "Happy Clients" },
-                { key: 'experience', number: 5, suffix: '+', label: "Years Experience" },
-                { key: 'projects', number: 1000, suffix: '+', label: "Projects Completed" },
-                { key: 'certifications', number: 50, suffix: '+', label: "Certifications" }
+                { key: 'trees', number: 10000, suffix: '+', label: "Trees Planted", icon: "🌳" },
+                { key: 'animals', number: 5000, suffix: '+', label: "Animals Rescued", icon: "🐾" },
+                { key: 'women', number: 2000, suffix: '+', label: "Women Empowered", icon: "👩" },
+                { key: 'volunteers', number: 500, suffix: '+', label: "Active Volunteers", icon: "🤝" }
               ].map((stat, index) => {
-                const isEven = index % 2 === 0;
                 return (
                   <div
                     key={index}
@@ -487,13 +466,13 @@ const Overview = () => {
                   >
                   <motion.div 
                     className="text-4xl md:text-5xl font-black mb-3 relative" 
-                    style={{color: '#F85710', fontFamily: 'Montserrat, sans-serif'}}
+                    style={{color: '#22C55E', fontFamily: 'Quicksand, sans-serif'}}
                     animate={{
                       textShadow: isInView ? [
-                        '0 0 0px rgba(253, 87, 16, 0)',
-                        '0 0 20px rgba(253, 87, 16, 0.5)',
-                        '0 0 0px rgba(253, 87, 16, 0)'
-                      ] : '0 0 0px rgba(253, 87, 16, 0)'
+                        '0 0 0px rgba(34, 197, 94, 0)',
+                        '0 0 20px rgba(34, 197, 94, 0.5)',
+                        '0 0 0px rgba(34, 197, 94, 0)'
+                      ] : '0 0 0px rgba(34, 197, 94, 0)'
                     }}
                     transition={{
                       duration: 2,
@@ -501,19 +480,20 @@ const Overview = () => {
                       delay: index * 0.5
                     }}
                   >
+                    <span className="text-2xl mr-2">{stat.icon}</span>
                     {counts[stat.key]}{stat.suffix}
                   </motion.div>
                   
                   <div 
                     className="text-gray-300 text-sm font-medium uppercase tracking-wider" 
-                    style={{fontFamily: 'Inter, sans-serif'}}
+                    style={{fontFamily: 'Nunito, sans-serif'}}
                   >
                     {stat.label}
                   </div>
                   
                   {/* Static Underline */}
                   <div 
-                    className="w-0 h-0.5 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-2 group-hover:w-full transition-all duration-500"
+                    className="w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto mt-2 group-hover:w-full transition-all duration-500"
                   />
                 </div>
                 );

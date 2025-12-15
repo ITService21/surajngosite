@@ -216,7 +216,7 @@ export default function Videos({ className = "" }) {
                 {[...Array(6)].map((_, i) => (
                     <motion.div
                         key={`line-${i}`}
-                        className="absolute h-1 bg-gradient-to-r from-orange-300/40 to-red-300/40"
+                        className="absolute h-1 bg-gradient-to-r from-pitama-green-300/40 to-pitama-teal-300/40"
                         animate={{
                             scaleX: [0, 1, 0],
                             opacity: [0, 1, 0],
@@ -266,7 +266,7 @@ export default function Videos({ className = "" }) {
                         viewport={{ once: true, amount: 0.1 }}
                     >
                         <span className="text-gray-900">Video</span>
-                        <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent"> Gallery</span>
+                        <span className="bg-gradient-to-r from-pitama-green-500 via-pitama-teal-500 to-pitama-green-500 bg-clip-text text-transparent"> Gallery</span>
                     </motion.h1>
                     
                     <motion.p 
@@ -294,8 +294,8 @@ export default function Videos({ className = "" }) {
                         onClick={() => setSelectedCategory(category)}
                         className={`text-sm px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                             selectedCategory === category 
-                                ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg" 
-                                : "bg-white text-gray-700 border-2 border-gray-300 hover:border-orange-300 hover:shadow-md"
+                                ? "bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 text-white shadow-lg" 
+                                : "bg-white text-gray-700 border-2 border-gray-300 hover:border-pitama-green-300 hover:shadow-md"
                         }`}
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -343,7 +343,7 @@ export default function Videos({ className = "" }) {
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.9 }}
                                         >
-                                            <div className="w-0 h-0 border-l-[12px] border-l-orange-500 border-y-[8px] border-y-transparent ml-1" />
+                                            <div className="w-0 h-0 border-l-[12px] border-l-pitama-green-500 border-y-[8px] border-y-transparent ml-1" />
                                         </motion.div>
                                     </div>
                                     
@@ -356,14 +356,14 @@ export default function Videos({ className = "" }) {
                                     
                                     {/* Featured Badge */}
                                     <div className="absolute top-4 left-4">
-                                        <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
+                                        <span className="px-3 py-1 bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 text-white text-sm font-semibold rounded-full">
                                             Featured
                                         </span>
                                     </div>
                                 </div>
                                 
                                 <div className="p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-pitama-green-600 transition-colors">
                                         {video.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
@@ -422,7 +422,7 @@ export default function Videos({ className = "" }) {
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
-                                    <div className="w-0 h-0 border-l-[10px] border-l-orange-500 border-y-[6px] border-y-transparent ml-1" />
+                                    <div className="w-0 h-0 border-l-[10px] border-l-pitama-green-500 border-y-[6px] border-y-transparent ml-1" />
                                 </motion.div>
                             </div>
                             
@@ -443,7 +443,7 @@ export default function Videos({ className = "" }) {
                         
                         {/* Video Info */}
                         <div className="p-6">
-                            <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
+                            <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-pitama-green-600 transition-colors line-clamp-2">
                                 {video.title}
                             </h3>
                             <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
@@ -539,7 +539,7 @@ export default function Videos({ className = "" }) {
                                 {/* Tags */}
                                 <div className="flex gap-3 flex-wrap">
                                     {selectedVideo.tags.map((tag) => (
-                                        <span key={tag} className="px-3 py-1 bg-gradient-to-r from-orange-100 to-red-100 text-orange-700 rounded-full text-sm font-medium">
+                                        <span key={tag} className="px-3 py-1 bg-gradient-to-r from-pitama-green-100 to-pitama-teal-100 text-pitama-green-700 rounded-full text-sm font-medium">
                                             #{tag}
                                         </span>
                                     ))}

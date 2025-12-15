@@ -45,7 +45,7 @@ export const MenuLinks = ({ menuLinks }) => {
           >
             <div
               className={`relative flex items-center px-4 py-3 text-sm font-semibold text-white transition-all duration-200 rounded-lg cursor-pointer ${
-                activeDropdown === index ? 'text-orange-300 bg-white/10' : 'group-hover:text-orange-300'
+                activeDropdown === index ? 'text-pitama-green-300 bg-white/10' : 'group-hover:text-pitama-green-300'
               } ${menuLink?.link ? 'hover:bg-white/10' : ''}`}
               onClick={() => {
                 if (Array.isArray(menuLink?.subLinks) && menuLink?.subLinks?.length > 0) {
@@ -59,7 +59,7 @@ export const MenuLinks = ({ menuLinks }) => {
             >
               {/* Animated Background */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg"
+                className="absolute inset-0 bg-gradient-to-r from-pitama-green-500/20 to-pitama-teal-500/20 rounded-lg"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ 
                   scale: activeDropdown === index ? 1 : 0.8, 
@@ -86,7 +86,7 @@ export const MenuLinks = ({ menuLinks }) => {
               
               {/* Animated Underline */}
               <motion.div
-                className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-orange-500 to-red-500"
+                className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500"
                 initial={{ width: 0 }}
                 animate={{ width: activeDropdown === index ? "100%" : 0 }}
                 whileHover={{ width: "100%" }}

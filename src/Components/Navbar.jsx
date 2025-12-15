@@ -27,14 +27,14 @@ function Navbar() {
         transition={{ duration: 0.2001 }}
       >
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900" />
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900" />
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(3)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-32 h-32 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-full blur-xl"
+              className="absolute w-32 h-32 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-xl"
               animate={{
                 x: [0, 100, -50, 0],
                 y: [0, -30, 20, 0],
@@ -55,12 +55,12 @@ function Navbar() {
         </div>
         
         {/* Solid Background Overlay */}
-        <div className="absolute inset-0 bg-gray-900" />
+        <div className="absolute inset-0 bg-emerald-900" />
       </motion.div>
 
       {/* Main Navbar */}
       <motion.nav 
-        className="fixed top-0 left-0 w-full z-50 bg-gray-900 shadow-2xl border-b border-white/10 transition-all duration-300"
+        className="fixed top-0 left-0 w-full z-50 bg-emerald-900 shadow-2xl border-b border-white/10 transition-all duration-300"
         initial={{ y: 0 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.2004, ease: [0.68, -0.55, 0.265, 1.55] }}
@@ -97,14 +97,14 @@ function Navbar() {
                     openFormModal();
                   }
                 }}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-semibold rounded-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-semibold rounded-full text-white bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(253, 87, 16, 0.3)"
+                  boxShadow: "0 20px 40px rgba(34, 197, 94, 0.3)"
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Get Started
+                🌱 Join Us
               </motion.button>
             </motion.div>
 

@@ -24,7 +24,7 @@ export const MobileMenu = ({ menuLinks, onClose, onGetStarted }) => {
       transition={{ duration: 0.2003, ease: [0.68, -0.55, 0.265, 1.55] }}
     >
       {/* Header */}
-      <div className="px-6 py-4 bg-gradient-to-r from-orange-500/10 to-red-500/10 border-b border-gray-200/50">
+      <div className="px-6 py-4 bg-gradient-to-r from-pitama-green-500/10 to-pitama-teal-500/10 border-b border-gray-200/50">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800">Menu</h3>
           <motion.button
@@ -58,25 +58,25 @@ export const MobileMenu = ({ menuLinks, onClose, onGetStarted }) => {
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div
-                    className="p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-50 hover:to-red-50"
+                    className="p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-gradient-to-r hover:from-pitama-green-50 hover:to-pitama-teal-50"
                     onClick={() => hasSubLinks && onMenuItemClick(index)}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         {Icon1 && (
                           <motion.div
-                            className="w-8 h-8 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center"
+                            className="w-8 h-8 bg-gradient-to-r from-pitama-green-500/20 to-pitama-teal-500/20 rounded-lg flex items-center justify-center"
                             whileHover={{ scale: 1.1, rotate: 5 }}
                             transition={{ duration: 0.2 }}
                           >
-                            <Icon1 className="w-5 h-5 text-orange-600" />
+                            <Icon1 className="w-5 h-5 text-pitama-green-600" />
                           </motion.div>
                         )}
                         
                         {record?.link ? (
                           <Link
                             to={record?.link}
-                            className="text-gray-800 font-semibold hover:text-orange-600 transition-colors"
+                            className="text-gray-800 font-semibold hover:text-pitama-green-600 transition-colors"
                             onClick={() => {
                               window.scrollTo({ top: 0, behavior: 'smooth' });
                               onClose();
@@ -124,7 +124,7 @@ export const MobileMenu = ({ menuLinks, onClose, onGetStarted }) => {
                               >
                                 <Link
                                   to={subLink?.link}
-                                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gradient-to-r hover:from-orange-50 hover:to-red-50 transition-all duration-300 group"
+                                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gradient-to-r hover:from-pitama-green-50 hover:to-pitama-teal-50 transition-all duration-300 group"
                                   onClick={() => {
                                     window.scrollTo({ top: 0, behavior: 'smooth' });
                                     onClose();
@@ -132,14 +132,14 @@ export const MobileMenu = ({ menuLinks, onClose, onGetStarted }) => {
                                 >
                                   {Icon2 && (
                                     <motion.div
-                                      className="w-6 h-6 bg-gray-100 group-hover:bg-orange-100 rounded-md flex items-center justify-center transition-colors"
+                                      className="w-6 h-6 bg-gray-100 group-hover:bg-pitama-green-100 rounded-md flex items-center justify-center transition-colors"
                                       whileHover={{ scale: 1.1 }}
                                       transition={{ duration: 0.2 }}
                                     >
-                                      <Icon2 className="w-4 h-4 text-gray-600 group-hover:text-orange-600" />
+                                      <Icon2 className="w-4 h-4 text-gray-600 group-hover:text-pitama-green-600" />
                                     </motion.div>
                                   )}
-                                  <span className="text-sm font-medium text-gray-700 group-hover:text-orange-600 transition-colors">
+                                  <span className="text-sm font-medium text-gray-700 group-hover:text-pitama-green-600 transition-colors">
                                     {subLink?.name}
                                   </span>
                                 </Link>
@@ -158,7 +158,7 @@ export const MobileMenu = ({ menuLinks, onClose, onGetStarted }) => {
       </div>
 
       {/* Footer CTA */}
-      <div className="px-6 py-4 bg-gradient-to-r from-orange-500/10 to-red-500/10 border-t border-gray-200/50">
+      <div className="px-6 py-4 bg-gradient-to-r from-pitama-green-500/10 to-pitama-teal-500/10 border-t border-gray-200/50">
         <motion.button
           onClick={() => {
             // Close mobile menu first
@@ -170,11 +170,11 @@ export const MobileMenu = ({ menuLinks, onClose, onGetStarted }) => {
               }, 200);
             }
           }}
-          className="block w-full text-center py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+          className="block w-full text-center py-3 bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 text-white font-semibold rounded-xl hover:from-pitama-green-600 hover:to-pitama-teal-600 transition-all duration-300"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          Get Started
+          🌱 Join Us
         </motion.button>
       </div>
 

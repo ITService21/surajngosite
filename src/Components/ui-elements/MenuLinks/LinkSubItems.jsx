@@ -24,7 +24,7 @@ export const SubLinksBox = ({ subLinks, onLinkClick }) => {
       transition={{ duration: 0.15 }}
     >
       {/* Header */}
-      <div className="px-6 py-4 bg-gradient-to-r from-orange-500/10 to-red-500/10 border-b border-gray-200/50">
+      <div className="px-6 py-4 bg-gradient-to-r from-pitama-green-500/10 to-pitama-teal-500/10 border-b border-gray-200/50">
         <h3 className="text-sm font-semibold text-gray-700">Quick Links</h3>
       </div>
       
@@ -50,14 +50,14 @@ export const SubLinksBox = ({ subLinks, onLinkClick }) => {
                   onClick={() => handleLinkClick(index)}
                   className={`flex items-center px-6 py-4 transition-all duration-200 group relative overflow-hidden ${
                     isActive 
-                      ? 'text-orange-600 bg-gradient-to-r from-orange-50 to-red-50' 
-                      : 'text-gray-700 hover:text-orange-600'
+                      ? 'text-pitama-green-600 bg-gradient-to-r from-pitama-green-50 to-pitama-teal-50' 
+                      : 'text-gray-700 hover:text-pitama-green-600'
                   }`}
                 >
                   {/* Active Background */}
                   {isActive && (
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"
+                      className="absolute inset-0 bg-gradient-to-r from-pitama-green-500/10 to-pitama-teal-500/10"
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ duration: 0.2 }}
@@ -66,7 +66,7 @@ export const SubLinksBox = ({ subLinks, onLinkClick }) => {
                   
                   {/* Hover Background */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100"
+                    className="absolute inset-0 bg-gradient-to-r from-pitama-green-500/5 to-pitama-teal-500/5 opacity-0 group-hover:opacity-100"
                     initial={{ x: "-100%" }}
                     whileHover={{ x: 0 }}
                     transition={{ duration: 0.2 }}
@@ -77,8 +77,8 @@ export const SubLinksBox = ({ subLinks, onLinkClick }) => {
                     <motion.span 
                       className={`mr-4 text-xl transition-colors duration-200 relative z-10 ${
                         isActive 
-                          ? 'text-orange-500' 
-                          : 'text-gray-500 group-hover:text-orange-500'
+                          ? 'text-pitama-green-500' 
+                          : 'text-gray-500 group-hover:text-pitama-green-500'
                       }`}
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       whileTap={{ scale: 0.9 }}
@@ -91,8 +91,8 @@ export const SubLinksBox = ({ subLinks, onLinkClick }) => {
                   {/* Text */}
                   <span className={`text-sm font-semibold relative z-10 transition-colors duration-200 ${
                     isActive 
-                      ? 'text-orange-600' 
-                      : 'group-hover:text-orange-600'
+                      ? 'text-pitama-green-600' 
+                      : 'group-hover:text-pitama-green-600'
                   }`}>
                     {subLink.name}
                   </span>
@@ -100,7 +100,7 @@ export const SubLinksBox = ({ subLinks, onLinkClick }) => {
                   {/* Active Indicator */}
                   {isActive && (
                     <motion.div
-                      className="absolute left-0 top-1/2 w-1 h-6 bg-gradient-to-b from-orange-500 to-red-500 rounded-r-full"
+                      className="absolute left-0 top-1/2 w-1 h-6 bg-gradient-to-b from-pitama-green-500 to-pitama-teal-500 rounded-r-full"
                       initial={{ scaleY: 0 }}
                       animate={{ scaleY: 1 }}
                       transition={{ duration: 0.2 }}
@@ -111,7 +111,7 @@ export const SubLinksBox = ({ subLinks, onLinkClick }) => {
                   <motion.div
                     className={`ml-auto transition-all duration-200 ${
                       isActive 
-                        ? 'opacity-100 text-orange-500' 
+                        ? 'opacity-100 text-pitama-green-500' 
                         : 'opacity-0 group-hover:opacity-100'
                     }`}
                     initial={{ x: -10 }}

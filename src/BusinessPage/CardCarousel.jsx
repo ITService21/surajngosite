@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
 const AutoCardCarousel = () => {
   const [startIndex, setStartIndex] = useState(0);
   const intervalRef = useRef(null);
@@ -9,51 +10,51 @@ const AutoCardCarousel = () => {
   const cardData = [
     {
       id: 1,
-      title: 'Funding / Loans & Grants',
-      description: 'They help MSMEs get financing via loans (NBFC, unsecured business loans, etc.) and grants from government schemes.',
-      image: 'https://images.pexels.com/photos/4968656/pexels-photo-4968656.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      icon: '💰',
+      title: 'Environmental Conservation',
+      description: 'Join our cleanliness drives, tree plantation campaigns, and green initiatives to create a sustainable future for India.',
+      image: 'https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      icon: '🌳',
       navigate: '/services/funding',
     },
     {
       id: 2,
-      title: 'Certificate & Compliance Consultation',
-      description: 'They assist in getting certifications (e.g. MSME Certification, ZED Certification) and handling legal/compliance matters.',
-      image: 'https://images.pexels.com/photos/8112130/pexels-photo-8112130.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      icon: '📜',
+      title: 'Animal Welfare & Rescue',
+      description: 'We rescue, rehabilitate, and provide care for over 2 crore stray animals across India. Every life matters.',
+      image: 'https://images.pexels.com/photos/1904105/pexels-photo-1904105.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      icon: '🐾',
       navigate: '/services/certificate',
     },
     {
       id: 3,
-      title: 'Business Setup / Registrations',
-      description: 'Help with company registrations, setting up the business legally, business structure, etc.',
-      image: 'https://images.pexels.com/photos/8423864/pexels-photo-8423864.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      icon: '🏢',
-      navigate: '/services/all',
+      title: 'Women Empowerment',
+      description: 'Skill development, livelihood training, and empowerment programs for rural women to achieve financial independence.',
+      image: 'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      icon: '👩‍🦰',
+      navigate: '/services/marketing',
     },
     {
       id: 4,
-      title: 'Marketing Consultation / Digital Marketing',
-      description: 'Provide marketing support—digital marketing solutions to help MSMEs grow their reach and business.',
-      image: 'https://images.pexels.com/photos/5816291/pexels-photo-5816291.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      icon: '📈',
-      navigate: '/services/marketing',
+      title: 'Education for All',
+      description: 'Quality education access for underprivileged children. Lighting the path to a brighter future through knowledge.',
+      image: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      icon: '📚',
+      navigate: '/services/education',
     },
     {
       id: 5,
-      title: 'Compliance & Legal Support',
-      description: 'Comprehensive legal support and compliance management for sustainable business operations.',
-      image: 'https://images.pexels.com/photos/5816298/pexels-photo-5816298.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      icon: '⚖️',
-      navigate: '/services/legal',
+      title: 'Community Health',
+      description: 'Healthcare camps, awareness drives, and wellness programs for underserved communities across rural India.',
+      image: 'https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      icon: '💚',
+      navigate: '/services/all',
     },
     {
       id: 6,
-      title: 'Business Growth & Expansion Services',
-      description: 'Advisory for business expansion including mergers & acquisitions, business growth programmes, etc.',
-      image: 'https://images.pexels.com/photos/6802048/pexels-photo-6802048.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      icon: '🚀',
-      navigate: '/services/marketing',
+      title: 'Volunteer With Us',
+      description: 'Be a change-maker! Join our volunteer network and contribute to building a kinder, greener society.',
+      image: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      icon: '🤝',
+      navigate: '/contact-us',
     },
   ];
 
@@ -136,7 +137,7 @@ const AutoCardCarousel = () => {
   };
 
   return (
-    <div className="mt-[40px] md:mt-[50px] bg-gradient-to-br from-orange-50 to-orange-200 px-4 pt-[40px] pb-16 overflow-hidden relative">
+    <div className="mt-[40px] md:mt-[50px] bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100 px-4 pt-[40px] pb-16 overflow-hidden relative">
       {/* Background Object Animations */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated Mesh Background */}
@@ -144,17 +145,17 @@ const AutoCardCarousel = () => {
           className="absolute inset-0 opacity-30"
           animate={{
             background: [
-              "radial-gradient(circle at 20% 50%, rgba(249,115,22,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(251,146,60,0.2) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(253,87,16,0.2) 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 20%, rgba(251,146,60,0.2) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(253,87,16,0.2) 0%, transparent 50%), radial-gradient(circle at 20% 50%, rgba(249,115,22,0.2) 0%, transparent 50%)",
-              "radial-gradient(circle at 20% 50%, rgba(253,87,16,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(249,115,22,0.2) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(251,146,60,0.2) 0%, transparent 50%)"
+              "radial-gradient(circle at 20% 50%, rgba(34,197,94,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(20,184,166,0.2) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(16,185,129,0.2) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 20%, rgba(20,184,166,0.2) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(16,185,129,0.2) 0%, transparent 50%), radial-gradient(circle at 20% 50%, rgba(34,197,94,0.2) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 50%, rgba(16,185,129,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(34,197,94,0.2) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(20,184,166,0.2) 0%, transparent 50%)"
             ]
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         
-        {/* Floating Business Icons - Reduced for performance */}
+        {/* Floating Nature Icons */}
         {[...Array(3)].map((_, i) => {
-          const icons = ['💼', '📊', '🎯'];
+          const icons = ['🌿', '🌱', '🍃'];
           return (
             <motion.div
               key={`icon-${i}`}
@@ -179,13 +180,13 @@ const AutoCardCarousel = () => {
           );
         })}
         
-        {/* Floating Hexagons - Reduced for performance */}
+        {/* Floating Leaves */}
         {[...Array(2)].map((_, i) => (
           <motion.div
-            key={`hex-${i}`}
-            className="absolute w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-r from-orange-500/15 to-orange-600/15"
+            key={`leaf-${i}`}
+            className="absolute w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-r from-emerald-500/15 to-teal-500/15"
             style={{
-              clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)',
+              clipPath: 'ellipse(50% 30% at 50% 50%)',
               left: `${30 + i * 40}%`,
               top: `${30 + i * 30}%`,
             }}
@@ -202,42 +203,18 @@ const AutoCardCarousel = () => {
           />
         ))}
         
-        {/* Floating Stars - Reduced for performance */}
+        {/* Floating Hearts */}
         {[...Array(3)].map((_, i) => (
           <motion.div
-            key={`star-${i}`}
-            className="absolute w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-orange-500/12 to-orange-600/12"
-            style={{
-              clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
-              left: `${20 + i * 25}%`,
-              top: `${40 + i * 15}%`,
-            }}
-            animate={{
-              rotate: [0, 360],
-              scale: [0.8, 1.2, 0.8],
-            }}
-            transition={{
-              duration: 10 + i * 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 2,
-            }}
-          />
-        ))}
-        
-        {/* Floating Hearts - Reduced for performance */}
-        {[...Array(2)].map((_, i) => (
-          <motion.div
             key={`heart-${i}`}
-            className="absolute w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-orange-500/10 to-orange-600/10"
+            className="absolute text-xl opacity-15"
             style={{
-              clipPath: 'path("M12,21.35l-1.45-1.32C5.4,15.36,2,12.28,2,8.5 C2,5.42,4.42,3,7.5,3c1.74,0,3.41,0.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3 C19.58,3,22,5.42,22,8.5c0,3.78-3.4,6.86-8.55,11.54L12,21.35z")',
-              left: `${15 + i * 70}%`,
-              top: `${60 + i * 20}%`,
+              left: `${15 + i * 35}%`,
+              top: `${60 + i * 10}%`,
             }}
             animate={{
               scale: [0.8, 1.1, 0.8],
-              opacity: [0.3, 0.6, 0.3],
+              opacity: [0.1, 0.2, 0.1],
             }}
             transition={{
               duration: 8 + i * 2,
@@ -245,14 +222,16 @@ const AutoCardCarousel = () => {
               ease: "easeInOut",
               delay: i * 4,
             }}
-          />
+          >
+            💚
+          </motion.div>
         ))}
         
         {/* Simple floating elements for performance */}
         {[...Array(2)].map((_, i) => (
           <motion.div
             key={`simple-${i}`}
-            className="absolute w-4 h-4 sm:w-6 sm:h-6 bg-orange-500/20 rounded-full"
+            className="absolute w-4 h-4 sm:w-6 sm:h-6 bg-emerald-500/20 rounded-full"
             style={{
               left: `${25 + i * 50}%`,
               top: `${25 + i * 30}%`,
@@ -276,16 +255,14 @@ const AutoCardCarousel = () => {
       <div className="text-center mb-8 max-w-5xl mx-auto relative z-10">
         {/* Logo */}
         <div className="mb-6 flex justify-center">
-          <img 
-            src="/image/logo.png" 
-            alt="Grow Startup Logo" 
-            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover shadow-lg border-4 border-white/50"
-          />
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white shadow-lg border-4 border-emerald-500/50 flex items-center justify-center text-3xl sm:text-4xl">
+            🌿
+          </div>
         </div>
         
         <motion.h2 
           className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3" 
-          style={{color: '#000000', fontFamily: 'Poppins, sans-serif', fontWeight: '600'}}
+          style={{color: '#000000', fontFamily: 'Quicksand, sans-serif', fontWeight: '700'}}
           animate={{
             scale: [1, 1.02, 1],
             y: [0, -2, 0]
@@ -299,7 +276,7 @@ const AutoCardCarousel = () => {
           <motion.span
             animate={{
               scale: [1, 1.05, 1],
-              color: ['#000000', '#F85710', '#000000']
+              color: ['#000000', '#16a34a', '#000000']
             }}
             transition={{
               duration: 2.5,
@@ -308,13 +285,13 @@ const AutoCardCarousel = () => {
               delay: 0.5
             }}
           >
-            Jahan{" "}
+            Greening{" "}
           </motion.span>
           <motion.span 
-            style={{color: '#F85710', fontWeight: '700'}}
+            style={{color: '#16a34a', fontWeight: '700'}}
             animate={{
               scale: [1, 1.1, 1],
-              textShadow: ['0 0 0px rgba(248,87,16,0)', '0 0 10px rgba(248,87,16,0.3)', '0 0 0px rgba(248,87,16,0)']
+              textShadow: ['0 0 0px rgba(22,163,74,0)', '0 0 10px rgba(22,163,74,0.3)', '0 0 0px rgba(22,163,74,0)']
             }}
             transition={{
               duration: 2,
@@ -323,12 +300,12 @@ const AutoCardCarousel = () => {
               delay: 1
             }}
           >
-            Soch
+            India
           </motion.span>
           <motion.span
             animate={{
               scale: [1, 1.05, 1],
-              color: ['#000000', '#F85710', '#000000']
+              color: ['#000000', '#16a34a', '#000000']
             }}
             transition={{
               duration: 2.5,
@@ -337,13 +314,13 @@ const AutoCardCarousel = () => {
               delay: 1.5
             }}
           >
-            {" "}Banti Hai{" "}
+            {" "}Empowering{" "}
           </motion.span>
           <motion.span 
-            style={{color: '#F85710', fontWeight: '700'}}
+            style={{color: '#16a34a', fontWeight: '700'}}
             animate={{
               scale: [1, 1.1, 1],
-              textShadow: ['0 0 0px rgba(248,87,16,0)', '0 0 10px rgba(248,87,16,0.3)', '0 0 0px rgba(248,87,16,0)']
+              textShadow: ['0 0 0px rgba(22,163,74,0)', '0 0 10px rgba(22,163,74,0.3)', '0 0 0px rgba(22,163,74,0)']
             }}
             transition={{
               duration: 2,
@@ -352,13 +329,13 @@ const AutoCardCarousel = () => {
               delay: 2
             }}
           >
-            Business
+            Lives
           </motion.span>
         </motion.h2>
         
         <motion.p 
           className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-4" 
-          style={{fontFamily: 'Poppins, sans-serif', fontWeight: '400'}}
+          style={{fontFamily: 'Nunito, sans-serif', fontWeight: '400'}}
           animate={{
             scale: [1, 1.01, 1],
             y: [0, -1, 0]
@@ -370,15 +347,15 @@ const AutoCardCarousel = () => {
             delay: 0.5
           }}
         >
-          Comprehensive solutions for business growth and success
+          Creating a sustainable, compassionate, and equitable India 💚
         </motion.p>
         
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-gray-600 mt-4 sm:mt-6">
           {[
-            { text: "🚀 Setup", delay: 0, link: "/services/all" },
-            { text: "💰 Funding", delay: 0.5, link: "/services/funding" },
-            { text: "📜 Compliance", delay: 1, link: "/services/legal" },
-            { text: "📈 Growth", delay: 1.5, link: "/services/marketing" },
+            { text: "🌳 Environment", delay: 0, link: "/services/funding" },
+            { text: "🐾 Animals", delay: 0.5, link: "/services/certificate" },
+            { text: "👩 Women", delay: 1, link: "/services/marketing" },
+            { text: "📚 Education", delay: 1.5, link: "/services/education" },
           ].map((item, index) => (
             <motion.span 
               key={index}
@@ -388,7 +365,7 @@ const AutoCardCarousel = () => {
                 y: [0, -3, 0],
                 boxShadow: [
                   '0 2px 4px rgba(0,0,0,0.1)',
-                  '0 8px 20px rgba(248,87,16,0.2)',
+                  '0 8px 20px rgba(34,197,94,0.2)',
                   '0 2px 4px rgba(0,0,0,0.1)'
                 ]
               }}
@@ -399,7 +376,6 @@ const AutoCardCarousel = () => {
                 delay: item.delay
               }}
             >
-              {/* {item.text} */}
               <Link to={item.link} className=""> 
                 {item.text}
               </Link>
@@ -414,10 +390,10 @@ const AutoCardCarousel = () => {
         {!isMobile && (
           <button
             onClick={goToPrevious}
-            className="absolute left-0 z-20 bg-white/90 backdrop-blur-sm border border-orange-200 rounded-full p-3 shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+            className="absolute left-0 z-20 bg-white/90 backdrop-blur-sm border border-emerald-200 rounded-full p-3 shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:scale-110"
             aria-label="Previous slide"
           >
-            <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -427,10 +403,10 @@ const AutoCardCarousel = () => {
         {!isMobile && (
           <button
             onClick={goToNext}
-            className="absolute right-0 z-20 bg-white/90 backdrop-blur-sm border border-orange-200 rounded-full p-3 shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+            className="absolute right-0 z-20 bg-white/90 backdrop-blur-sm border border-emerald-200 rounded-full p-3 shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:scale-110"
             aria-label="Next slide"
           >
-            <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -463,9 +439,9 @@ const AutoCardCarousel = () => {
                     ) : 
                     'w-[260px] sm:w-[300px] md:w-[280px] lg:w-[320px] xl:w-[340px] h-[380px] sm:h-[420px] md:h-[400px] rounded-3xl'
                   }
-                  ${!isMobile && isCenter ? 'scale-110 shadow-3xl z-10 border-white/80 shadow-orange-500/20 animate-float' : ''}
+                  ${!isMobile && isCenter ? 'scale-110 shadow-3xl z-10 border-white/80 shadow-emerald-500/20 animate-float' : ''}
                   ${!isMobile && !isCenter ? 'scale-75 opacity-60 hover:opacity-80' : ''}
-                  ${!isMobile ? 'hover:scale-105 hover:shadow-3xl hover:shadow-orange-500/30' : ''}
+                  ${!isMobile ? 'hover:scale-105 hover:shadow-3xl hover:shadow-emerald-500/30' : ''}
               `}
               style={{
                 backgroundImage: `url(${card.image})`,
@@ -473,8 +449,6 @@ const AutoCardCarousel = () => {
                   backgroundPosition: 'center',
                 }}
               >
-                {/* Blur overlay for side preview cards on mobile - REMOVED */}
-
                 {/* Animated Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent group-hover:from-black/95 transition duration-700"></div>
                 
@@ -488,10 +462,10 @@ const AutoCardCarousel = () => {
                   </div>
                 )}
 
-                {/* Service Badge - Hidden on side previews in mobile */}
+                {/* Initiative Badge - Hidden on side previews in mobile */}
                 {!(isMobile && (isLeftPreview || isRightPreview)) && (
                   <div className="absolute top-6 right-6 bg-white/30 backdrop-blur-sm border border-white/40 rounded-full px-3 py-1 text-xs font-semibold text-white opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105">
-                    Service
+                    Initiative
                   </div>
                 )}
 
@@ -505,9 +479,9 @@ const AutoCardCarousel = () => {
                     {card.description}
                   </p>
                   
-                  {/* Enhanced Learn More Button - Always Visible */}
+                  {/* Enhanced Learn More Button */}
                   <div className="opacity-80 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-y-0">
-                    <button onClick={() => navigate(card?.navigate)} className="bg-gradient-to-r from-orange-500/70 to-orange-600/70 backdrop-blur-sm border border-white/40 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:from-orange-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <button onClick={() => navigate(card?.navigate)} className="bg-gradient-to-r from-emerald-500/70 to-teal-500/70 backdrop-blur-sm border border-white/40 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:from-emerald-500 hover:to-teal-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                       Learn More →
                     </button>
                   </div>
@@ -517,12 +491,12 @@ const AutoCardCarousel = () => {
                 {/* Enhanced Decorative Elements - Hidden on side previews in mobile */}
                 {!(isMobile && (isLeftPreview || isRightPreview)) && (
                   <>
-                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-transparent rounded-bl-3xl opacity-60 group-hover:opacity-100 transition duration-700"></div>
-                    <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-orange-500/15 to-transparent rounded-tr-3xl opacity-60 group-hover:opacity-100 transition duration-700"></div>
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-500/15 to-transparent rounded-bl-3xl opacity-60 group-hover:opacity-100 transition duration-700"></div>
+                    <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-emerald-500/15 to-transparent rounded-tr-3xl opacity-60 group-hover:opacity-100 transition duration-700"></div>
                     
                     {/* Corner Accents */}
-                    <div className="absolute top-4 right-4 w-2 h-2 bg-orange-500 rounded-full opacity-60 group-hover:opacity-100 transition duration-500"></div>
-                    <div className="absolute bottom-4 left-4 w-2 h-2 bg-orange-500 rounded-full opacity-60 group-hover:opacity-100 transition duration-500"></div>
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-emerald-500 rounded-full opacity-60 group-hover:opacity-100 transition duration-500"></div>
+                    <div className="absolute bottom-4 left-4 w-2 h-2 bg-emerald-500 rounded-full opacity-60 group-hover:opacity-100 transition duration-500"></div>
                   </>
                 )}
             </div>
@@ -543,8 +517,8 @@ const AutoCardCarousel = () => {
             {/* Main dot */}
             <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === startIndex
-                ? 'bg-orange-500 w-8 shadow-md'
-                : 'bg-orange-500/30 hover:bg-orange-500/50'
+                ? 'bg-emerald-500 w-8 shadow-md'
+                : 'bg-emerald-500/30 hover:bg-emerald-500/50'
             }`}>
             </div>
           </button>

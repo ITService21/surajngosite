@@ -22,9 +22,9 @@ const certificates = [
         issuer: "Ministry of Corporate Affairs",
         pdfUrl: "/image/COI- Growstartup Advisors.pdf",
         icon: "🏛️",
-        color: "from-orange-500 to-red-600",
-        bgColor: "from-orange-50 to-red-50",
-        borderColor: "border-orange-300",
+        color: "from-pitama-green-500 to-pitama-teal-600",
+        bgColor: "from-pitama-green-50 to-pitama-teal-50",
+        borderColor: "border-pitama-green-300",
     },
 ];
 
@@ -157,13 +157,13 @@ export default function Certifications({ className = "" }) {
             className={`w-full min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative overflow-hidden ${className}`} 
         >
             {/* Enhanced Background with Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-red-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-pitama-green-50 via-white to-pitama-teal-50"></div>
             
             {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {/* Floating Orbs */}
                 <motion.div 
-                    className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-orange-200 to-orange-300 rounded-full blur-3xl opacity-20"
+                    className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-pitama-green-200 to-pitama-green-300 rounded-full blur-3xl opacity-20"
                     animate={{
                         scale: [1, 1.3, 1],
                         x: [0, 50, 0],
@@ -211,7 +211,7 @@ export default function Certifications({ className = "" }) {
                 {[...Array(8)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="absolute w-2 h-2 bg-gradient-to-br from-orange-400 to-red-400 rounded-full"
+                        className="absolute w-2 h-2 bg-gradient-to-br from-pitama-green-400 to-pitama-teal-400 rounded-full"
                         animate={{
                             y: [0, -100, 0],
                             x: [0, Math.random() * 100 - 50, 0],
@@ -242,7 +242,7 @@ export default function Certifications({ className = "" }) {
             >
                 {/* Trophy Badge */}
                 <motion.div 
-                    className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-orange-100 via-orange-50 to-red-100 rounded-full mb-6 shadow-xl relative"
+                    className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-pitama-green-100 via-pitama-green-50 to-pitama-teal-100 rounded-full mb-6 shadow-xl relative"
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, type: "spring", bounce: 0.5 }}
@@ -250,7 +250,7 @@ export default function Certifications({ className = "" }) {
                 >
                     {/* Animated ring */}
                     <motion.div 
-                        className="absolute -inset-1 bg-gradient-to-br from-orange-400 to-red-500 rounded-full opacity-30"
+                        className="absolute -inset-1 bg-gradient-to-br from-pitama-green-400 to-pitama-teal-500 rounded-full opacity-30"
                         animate={{
                             scale: [1, 1.15, 1],
                         }}
@@ -285,19 +285,19 @@ export default function Certifications({ className = "" }) {
                 {/* Decorative Lines */}
                 <div className="flex items-center justify-center gap-3 mb-6">
                     <motion.div 
-                        className="h-1 bg-gradient-to-r from-transparent via-orange-400 to-orange-500 rounded-full"
+                        className="h-1 bg-gradient-to-r from-transparent via-pitama-green-400 to-pitama-green-500 rounded-full"
                         initial={{ width: 0 }}
                         whileInView={{ width: 80 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: false, amount: 0.3 }}
                     />
                     <motion.div 
-                        className="w-3 h-3 bg-gradient-to-br from-orange-400 to-red-500 rounded-full"
+                        className="w-3 h-3 bg-gradient-to-br from-pitama-green-400 to-pitama-teal-500 rounded-full"
                         animate={{ scale: [1, 1.5, 1], rotate: [0, 180, 360] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     />
                     <motion.div 
-                        className="h-1 bg-gradient-to-l from-transparent via-red-400 to-red-500 rounded-full"
+                        className="h-1 bg-gradient-to-l from-transparent via-red-400 to-pitama-teal-500 rounded-full"
                         initial={{ width: 0 }}
                         whileInView={{ width: 80 }}
                         transition={{ duration: 0.8, delay: 0.4 }}

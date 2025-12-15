@@ -13,7 +13,7 @@ export const HamburgerButton = ({ isOpen, onClick }) => {
     >
       {/* Animated Background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-xl"
+        className="absolute inset-0 bg-gradient-to-r from-pitama-green-500/20 to-pitama-teal-500/20 rounded-xl"
         animate={{ opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.2003 }}
       />
@@ -48,7 +48,7 @@ export const HamburgerButton = ({ isOpen, onClick }) => {
       
       {/* Ripple Effect */}
       <motion.div
-        className="absolute inset-0 rounded-xl border-2 border-orange-500/50"
+        className="absolute inset-0 rounded-xl border-2 border-pitama-green-500/50"
         animate={{
           scale: isOpen ? [1, 1.2, 1] : 1,
           opacity: isOpen ? [0.5, 0, 0.5] : 0,
