@@ -1,5 +1,155 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import { useState } from "react";
+
+// Certificate data
+const certificates = [
+    {
+        id: "gst-001",
+        name: "GST Registration Certificate",
+        description: "Official GST Registration Certificate issued by the Government of India, validating our compliance with Goods and Services Tax regulations.",
+        issuer: "Government of India",
+        pdfUrl: "/image/Grow-GST.pdf",
+        icon: "📋",
+        color: "from-emerald-500 to-teal-600",
+        bgColor: "from-emerald-50 to-teal-50",
+        borderColor: "border-emerald-300",
+    },
+    {
+        id: "coi-002",
+        name: "Certificate of Incorporation",
+        description: "Official Certificate of Incorporation for Growstartup Advisors, issued by the Ministry of Corporate Affairs, Government of India.",
+        issuer: "Ministry of Corporate Affairs",
+        pdfUrl: "/image/COI- Growstartup Advisors.pdf",
+        icon: "🏛️",
+        color: "from-orange-500 to-red-600",
+        bgColor: "from-orange-50 to-red-50",
+        borderColor: "border-orange-300",
+    },
+];
+
+// Certificate Card Component
+function CertificateCard({ certificate, index }) {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleView = () => {
+        window.open(certificate.pdfUrl, "_blank");
+    };
+
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = certificate.pdfUrl;
+        link.download = certificate.pdfUrl.split("/").pop();
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    return (
+        <motion.div
+            className={`relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl overflow-hidden border-2 ${certificate.borderColor} group`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            whileHover={{ y: -8, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)" }}
+        >
+            {/* Card Header with Gradient */}
+            <div className={`bg-gradient-to-r ${certificate.color} p-6 relative overflow-hidden`}>
+                {/* Animated Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute inset-0" style={{
+                        backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+                        backgroundSize: "20px 20px"
+                    }}></div>
+                </div>
+                
+                {/* Floating Badge */}
+                <motion.div 
+                    className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full"
+                    animate={isHovered ? { scale: 1.1, rotate: 3 } : { scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <span className="text-white font-semibold text-sm flex items-center gap-2">
+                        <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        Verified
+                    </span>
+                </motion.div>
+
+                {/* Icon */}
+                <motion.div 
+                    className="relative z-10 inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-4"
+                    animate={isHovered ? { rotate: [0, -5, 5, 0], scale: 1.1 } : { rotate: 0, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <span className="text-5xl">{certificate.icon}</span>
+                </motion.div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-white relative z-10 drop-shadow-sm">
+                    {certificate.name}
+                </h3>
+                <p className="text-white/80 text-sm mt-2 font-medium">
+                    Issued by: {certificate.issuer}
+                </p>
+            </div>
+
+            {/* Card Body */}
+            <div className={`p-6 bg-gradient-to-br ${certificate.bgColor}`}>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                    {certificate.description}
+                </p>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                    <motion.button
+                        onClick={handleView}
+                        className={`flex-1 flex items-center justify-center gap-2 py-3 px-5 bg-gradient-to-r ${certificate.color} text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        View PDF
+                    </motion.button>
+                    <motion.button
+                        onClick={handleDownload}
+                        className="flex items-center justify-center gap-2 py-3 px-5 bg-white border-2 border-gray-200 text-gray-700 font-semibold rounded-xl shadow-md hover:shadow-lg hover:border-gray-300 transition-all duration-300"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Download
+                    </motion.button>
+                </div>
+            </div>
+
+            {/* Decorative Corner */}
+            <div className={`absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br ${certificate.color} opacity-10 rounded-full blur-2xl`}></div>
+        </motion.div>
+    );
+}
+
+CertificateCard.propTypes = {
+    certificate: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        issuer: PropTypes.string.isRequired,
+        pdfUrl: PropTypes.string.isRequired,
+        icon: PropTypes.string.isRequired,
+        color: PropTypes.string.isRequired,
+        bgColor: PropTypes.string.isRequired,
+        borderColor: PropTypes.string.isRequired,
+    }).isRequired,
+    index: PropTypes.number.isRequired,
+};
 
 export default function Certifications({ className = "" }) {
     return (
@@ -42,7 +192,7 @@ export default function Certifications({ className = "" }) {
                     }}
                 />
                 <motion.div 
-                    className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-br from-yellow-200 to-orange-300 rounded-full blur-3xl opacity-15"
+                    className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-br from-emerald-200 to-teal-300 rounded-full blur-3xl opacity-15"
                     animate={{
                         scale: [1, 1.4, 1],
                         x: [0, -50, 0],
@@ -82,156 +232,126 @@ export default function Certifications({ className = "" }) {
                 ))}
             </div>
 
-            {/* Certifications Section */}
+            {/* Header Section */}
             <motion.div 
-                className="relative z-10 flex flex-col items-center justify-center text-center min-h-[60vh]"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.2004, delay: 0.2 }}
+                className="relative z-10 text-center mb-16"
+                initial={{ opacity: 0, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: false, amount: 0.3 }}
             >
-                <motion.div
-                    className="max-w-4xl mx-auto bg-white/80 backdrop-blur-xl rounded-[2.5rem] shadow-2xl p-12 md:p-20 border border-white/50 relative overflow-hidden"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
+                {/* Trophy Badge */}
+                <motion.div 
+                    className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-orange-100 via-orange-50 to-red-100 rounded-full mb-6 shadow-xl relative"
+                    initial={{ scale: 0, rotate: -180 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2, type: "spring", bounce: 0.5 }}
                     viewport={{ once: false, amount: 0.3 }}
                 >
-                    {/* Card Background Decoration */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-transparent to-red-50/50 pointer-events-none"></div>
-                    
-                    {/* Icon with enhanced design */}
+                    {/* Animated ring */}
                     <motion.div 
-                        className="relative inline-flex items-center justify-center w-40 h-40 mb-8"
-                        initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
-                        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                        transition={{ duration: 1, delay: 0.4, type: "spring", bounce: 0.5 }}
-                        viewport={{ once: false, amount: 0.3 }}
+                        className="absolute -inset-1 bg-gradient-to-br from-orange-400 to-red-500 rounded-full opacity-30"
+                        animate={{
+                            scale: [1, 1.15, 1],
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                    />
+                    <motion.span 
+                        className="text-5xl relative z-10"
+                        animate={{ scale: [1, 1.1, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     >
-                        {/* Animated ring */}
-                        <motion.div 
-                            className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-full"
-                            animate={{
-                                scale: [1, 1.1, 1],
-                                rotate: [0, 180, 360]
-                            }}
-                            transition={{
-                                duration: 20,
-                                repeat: Infinity,
-                                ease: "linear"
-                            }}
-                        />
-                        <div className="absolute inset-2 bg-white rounded-full"></div>
-                        <motion.div 
-                            className="relative z-10 bg-gradient-to-br from-orange-100 via-orange-50 to-red-100 rounded-full w-32 h-32 flex items-center justify-center"
-                            animate={{
-                                boxShadow: [
-                                    "0 0 20px rgba(251, 146, 60, 0.3)",
-                                    "0 0 40px rgba(239, 68, 68, 0.5)",
-                                    "0 0 20px rgba(251, 146, 60, 0.3)"
-                                ]
-                            }}
-                            transition={{
-                                duration: 3,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            }}
-                        >
-                            <motion.span 
-                                className="text-7xl"
-                                animate={{ scale: [1, 1.1, 1] }}
-                                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                            >
-                                🏆
-                            </motion.span>
-                        </motion.div>
-                    </motion.div>
-                    
-                    {/* Main Heading with enhanced gradient */}
-                    <motion.h1 
-                        className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6 relative"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2004, delay: 0.5 }}
-                        viewport={{ once: false, amount: 0.3 }}
-                    >
-                        <span className="bg-gradient-to-r from-gray-700 via-gray-500 to-gray-600 bg-clip-text text-transparent relative">
-                            Credentials Will Live Soon
-                            <motion.span 
-                                className="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 bg-clip-text text-transparent opacity-0"
-                                animate={{ opacity: [0, 0.3, 0] }}
-                                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                            >
-                                Credentials Will Live Soon
-                            </motion.span>
-                        </span>
-                    </motion.h1>
-                    
-                    {/* Animated decorative lines */}
-                    <div className="flex items-center justify-center gap-3 mb-8">
-                        <motion.div 
-                            className="h-1 bg-gradient-to-r from-transparent via-orange-400 to-orange-500 rounded-full"
-                            initial={{ width: 0 }}
-                            whileInView={{ width: 60 }}
-                            transition={{ duration: 1, delay: 0.6 }}
-                            viewport={{ once: false, amount: 0.3 }}
-                        />
-                        <motion.div 
-                            className="w-3 h-3 bg-gradient-to-br from-orange-400 to-red-500 rounded-full"
-                            animate={{ scale: [1, 1.5, 1], rotate: [0, 180, 360] }}
-                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                        />
-                        <motion.div 
-                            className="h-1 bg-gradient-to-l from-transparent via-red-400 to-red-500 rounded-full"
-                            initial={{ width: 0 }}
-                            whileInView={{ width: 60 }}
-                            transition={{ duration: 1, delay: 0.6 }}
-                            viewport={{ once: false, amount: 0.3 }}
-                        />
-                    </div>
-                    
-                    {/* Subtitle with better styling */}
-                    <motion.p 
-                        className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2004, delay: 0.7 }}
-                        viewport={{ once: false, amount: 0.3 }}
-                    >
-                        Our professional certifications and industry awards will be displayed here shortly. Stay tuned!
-                    </motion.p>
-
-                    {/* Enhanced Coming Soon Badge */}
-                    <motion.div 
-                        className="mt-10 inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-100 via-orange-50 to-red-100 border-2 border-orange-300 rounded-full shadow-lg relative overflow-hidden"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.2004, delay: 0.8 }}
-                        viewport={{ once: false, amount: 0.3 }}
-                        whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(251, 146, 60, 0.3)" }}
-                    >
-                        {/* Animated shimmer effect */}
-                        <motion.div 
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent"
-                            animate={{ x: [-200, 400] }}
-                            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                        />
-                        
-                        <motion.span 
-                            className="text-3xl relative z-10"
-                            animate={{ 
-                                rotate: [0, 10, -10, 0],
-                                scale: [1, 1.1, 1]
-                            }}
-                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        >
-                            ⏳
-                        </motion.span>
-                        <span className="text-base font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent relative z-10">
-                            Coming Soon
-                        </span>
-                    </motion.div>
+                        🏆
+                    </motion.span>
                 </motion.div>
+
+                {/* Main Heading */}
+                <motion.h1 
+                    className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-4"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                >
+                    <span className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-clip-text text-transparent">
+                        Our Certifications
+                    </span>
+                </motion.h1>
+
+                {/* Decorative Lines */}
+                <div className="flex items-center justify-center gap-3 mb-6">
+                    <motion.div 
+                        className="h-1 bg-gradient-to-r from-transparent via-orange-400 to-orange-500 rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 80 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                    />
+                    <motion.div 
+                        className="w-3 h-3 bg-gradient-to-br from-orange-400 to-red-500 rounded-full"
+                        animate={{ scale: [1, 1.5, 1], rotate: [0, 180, 360] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                    <motion.div 
+                        className="h-1 bg-gradient-to-l from-transparent via-red-400 to-red-500 rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 80 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                    />
+                </div>
+
+                {/* Subtitle */}
+                <motion.p 
+                    className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                >
+                    Trusted credentials that validate our commitment to excellence and legal compliance in business consulting.
+                </motion.p>
+            </motion.div>
+
+            {/* Certificates Grid */}
+            <div className="relative z-10 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {certificates.map((certificate, index) => (
+                    <CertificateCard 
+                        key={certificate.id} 
+                        certificate={certificate} 
+                        index={index} 
+                    />
+                ))}
+            </div>
+
+            {/* Trust Banner */}
+            <motion.div 
+                className="relative z-10 mt-16 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: false, amount: 0.3 }}
+            >
+                <div className="inline-flex items-center gap-4 px-8 py-4 bg-white/80 backdrop-blur-xl rounded-2xl shadow-lg border border-gray-100">
+                    <div className="flex items-center gap-2">
+                        <span className="text-2xl">✅</span>
+                        <span className="text-gray-700 font-medium">Government Verified</span>
+                    </div>
+                    <div className="w-px h-8 bg-gray-200"></div>
+                    <div className="flex items-center gap-2">
+                        <span className="text-2xl">🔒</span>
+                        <span className="text-gray-700 font-medium">Legally Compliant</span>
+                    </div>
+                    <div className="w-px h-8 bg-gray-200"></div>
+                    <div className="flex items-center gap-2">
+                        <span className="text-2xl">🌟</span>
+                        <span className="text-gray-700 font-medium">Trusted Partner</span>
+                    </div>
+                </div>
             </motion.div>
         </section>
     );
