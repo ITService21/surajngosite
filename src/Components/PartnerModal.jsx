@@ -478,7 +478,7 @@ export default function PartnerModal({ open, onClose }) {
                         </motion.button>
                     </form>
 
-                    <ToastContainer position="top-right" autoClose={5000} />
+                    <ToastContainer position="top-right" autoClose={100} />
                 </motion.div>
             </motion.div>
         </AnimatePresence>

@@ -14,7 +14,7 @@ const FAQ = () => {
     {
       question: "How can I volunteer with Pitama India?",
       answer:
-        "We welcome volunteers from all walks of life! You can join our initiatives by filling out the volunteer form on our website. Based on your interests and availability, we'll connect you with suitable programs. Whether it's tree plantation drives, animal rescue, teaching, or event organization - there's something for everyone.",
+        "We welcome volunteers from all walks of life! You can join our initiatives by filling out the volunteer form on our website. Based on your interests and availability, we'll connect you with suitable programs. Whether it's tree plantation drives, animal feeding, teaching, or event organization - there's something for everyone.",
     },
     {
       question: "Can I donate to support your initiatives?",
@@ -24,7 +24,7 @@ const FAQ = () => {
     {
       question: "Do you work with corporate partners for CSR?",
       answer:
-        "Absolutely! We partner with companies for CSR initiatives aligned with their values. Our programs in environmental conservation, education, and community development make excellent CSR projects. We provide comprehensive impact reports and can customize programs to meet your organization's goals.",
+        "Absolutely! We partner with companies for CSR initiatives aligned with their values. Our programs in environmental conservation, education, make excellent CSR projects. We provide comprehensive impact reports and can customize programs to meet your organization's goals.",
     },
     {
       question: "How do you ensure transparency and accountability?",
@@ -49,7 +49,7 @@ const FAQ = () => {
     {
       question: "Where are you currently operating?",
       answer:
-        "We're headquartered in New Delhi and have active programs across multiple states in India. Our initiatives span urban and rural areas. We're constantly expanding our reach and welcome volunteers and partners from all regions who want to create change in their communities.",
+        "We're headquartered in Dholpur and have active programs across multiple states in India. Our initiatives span urban and rural areas. We're constantly expanding our reach and welcome volunteers and partners from all regions who want to create change in their communities.",
     },
     {
       question: "How can I stay updated on your activities?",
@@ -64,7 +64,7 @@ const FAQ = () => {
     {
       question: "How can I contact Pitama India?",
       answer:
-        "You can reach us through our website contact form, email us at info@pitamaindia.org, or call us at +91 98765 43210. For animal rescue emergencies, we have a dedicated helpline. You can also visit our office in New Delhi. We respond to all inquiries within 24-48 hours.",
+        "You can reach us through our website contact form, email us at info@pitamaindia.org, or call us at +91 7065999599. For animal feeding assistance, we have a dedicated helpline. You can also visit our office in Dholpur. We respond to all inquiries within 24-48 hours.",
     },
   ];
 

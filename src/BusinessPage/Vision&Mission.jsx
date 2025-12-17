@@ -237,10 +237,10 @@ function VisionMission() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { icon: "🌳", stat: "1.5 lakh tonnes", text: "of waste generated daily in India - we're changing that" },
-                            { icon: "🐾", stat: "2+ crore", text: "stray animals need care and compassion" },
+                            { icon: "🌳", stat: "100+ tonnes", text: "of waste generated daily in India - we're changing that" },
+                            { icon: "🐾", stat: "100+", text: "stray animals need care and compassion" },
                             { icon: "👩", stat: "50%", text: "of rural women lack steady livelihood opportunities" },
-                            { icon: "📚", stat: "Millions", text: "of children still struggle for quality education" }
+                            { icon: "📚", stat: "150+", text: "of children still struggle for quality education" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}

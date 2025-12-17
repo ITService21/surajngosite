@@ -8,30 +8,35 @@ import { useModal } from "../Context/ModalContext";
 const myData = {
     company: {
         name: "Pitama India",
-        tagline: "Greening India, Empowering Lives 💚",
-        description: "Pitama India is a non-profit organization dedicated to creating a sustainable, compassionate, and equitable India. We believe that when communities grow, nature heals. When women rise, families rise. When animals are protected, society becomes humane. Join us in building a greener, kinder tomorrow.",
+        tagline: "Greening India, Empowering Lives",
+        description: `At Pitama India, we believe in building a world where every individual, every animal, and every community can thrive. Guided by our four pillars, Environmental Conservation, Education, Animal Welfare, and Community & Women Empowerment. we work to create meaningful and lasting impact.
+
+We empower women and underserved communities through education, skill development, health, and nutrition initiatives. We protect and restore our environment through tree plantation, water conservation, and cleanliness drives. We rescue, rehabilitate, and care for animals while spreading awareness about their welfare.
+
+Driven by compassion, sustainability, and a commitment to positive change, we aim to foster a society that is educated, equitable, and environmentally conscious.
+
+We warmly welcome collaboration with CSR teams, institutions, organizations, and individuals who share our vision to create sustainable social and environmental impact. Together, we can amplify our efforts and build a greener, kinder, and more empowered world.`,
         heroImage: "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1400&h=800&fit=crop",
         email: "info@pitamaindia.org",
         website: "https://pitamaindia.org",
-        founded: "2024",
-        location: "New Delhi, India",
-        teamSize: "100+ Volunteers"
+        founded: "2025",
+        location: "Dholpur, Rajasthan",
+        teamSize: "50+ Volunteers"
     },
     vision: { 
         title: "Our Vision", 
-        text: "A greener planet, a kinder society, a brighter future, and empowered communities. We envision an India where every tree is valued, every animal is treated with dignity, and every person has the opportunity to thrive through education and empowerment." 
+        text: `To build a world where every individual, animal, and community thrives in a healthy, educated, and sustainable environment, where opportunities are accessible to all, nature is preserved, and compassion guides every action.` 
     },
     mission: { 
         title: "Our Mission", 
-        text: "To create a sustainable, compassionate, and equitable India by protecting the environment, rescuing and caring for animals, empowering women through skill development, and providing quality education to underprivileged children. Every action we take is guided by compassion and driven by hope." 
+        text: `Our mission is to create lasting impact by empowering women and communities through education and skill development, protecting and conserving the environment, ensuring the welfare of animals, and supporting underserved populations with initiatives that improve health, nutrition, and opportunities for growth.`
     },
     stats: [
-        { label: "Trees Planted", value: 10000 },
-        { label: "Animals Rescued", value: 5000 },
-        { label: "Women Empowered", value: 2000 },
-        { label: "Children Educated", value: 1500 },
-        { label: "Active Volunteers", value: 500 },
-        { label: "Communities Served", value: 50 }
+        { label: "Trees Planted", value: 400 },
+        { label: "Animals  Feeding", value: 100 },
+        { label: "Women Empowered", value: 100 },
+        { label: "Active Volunteers", value: 50 },
+        // { label: "Communities Served", value: 50 }
     ],
     services: [
         {
@@ -41,7 +46,7 @@ const myData = {
         },
         {
             title: "Animal Welfare",
-            description: "24/7 animal rescue, veterinary care camps, shelter homes, adoption programs, and sterilization drives for stray animals.",
+            description: "Daily animal feeding programs, community feeding stations, veterinary care camps, nutrition programs for stray animals.",
             icon: "🐾"
         },
         {
@@ -54,24 +59,14 @@ const myData = {
             description: "Free tuition centers, digital literacy programs, scholarship support, and career counseling for underprivileged children.",
             icon: "📚"
         },
-        {
-            title: "Community Health",
-            description: "Health check-up camps, blood donation drives, mental health support, and nutrition programs for underserved communities.",
-            icon: "💚"
-        },
-        {
-            title: "Disaster Relief",
-            description: "Emergency response, food distribution, clothing drives, and rehabilitation support during natural calamities.",
-            icon: "🆘"
-        }
     ],
     achievements: [
-        "Planted 10,000+ trees across 20 cities in India",
-        "Rescued and rehabilitated 5,000+ stray animals",
-        "Empowered 2,000+ rural women with livelihood skills",
-        "Provided free education to 1,500+ underprivileged children",
-        "Organized 100+ cleanliness and awareness campaigns",
-        "Built partnerships with 50+ corporate CSR programs"
+        "Planted 400+ trees across 5 cities in India",
+        " Feeding 100+ stray animals",
+        "Empowered 200+ rural women with livelihood skills",  
+        "Provided free education to 150+ underprivileged children",
+        "Organized 10+ cleanliness and awareness campaigns",
+        "Built partnerships with 10+ corporate CSR programs"
     ],
     team: [
         {
@@ -90,7 +85,7 @@ const myData = {
             name: "Dr. Sneha Gupta",
             position: "Animal Welfare Lead",
             experience: "8+ years as veterinarian",
-            expertise: "Animal Rescue, Veterinary Care"
+            expertise: "Animal Feeding, Veterinary Care"
         },
         {
             name: "Kavita Singh",
@@ -438,28 +433,7 @@ export default function CompanyOverview({ data = myData, onContactClick = null, 
                     <motion.div 
                         className="grid grid-cols-1 lg:grid-cols-2 gap-8"
                     >
-                        {data.vision && (
-                            <motion.div
-                                initial={{ opacity: 0, x: -120, y: 30 }}
-                                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.4, ease: [0.05, 0.46, 0.45, 0.94] }}
-                                viewport={{ once: false, amount: 0.2 }}
-                                className="relative bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 overflow-hidden group"
-                                whileHover={{ 
-                                    scale: 1.02,
-                                    y: -5,
-                                    transition: { duration: 0.3 }
-                                }}
-                            >
-                                <div className="relative z-10">
-                                    <div className="text-5xl mb-6">👁️</div>
-                                    <h3 className="text-2xl font-bold text-gray-800 mb-4" style={{fontFamily: 'Quicksand, sans-serif'}}>{data.vision.title || "Vision"}</h3>
-                                    <p className="text-gray-700 leading-relaxed" style={{fontFamily: 'Nunito, sans-serif'}}>{data.vision.text}</p>
-                                </div>
-                            </motion.div>
-                        )}
-
-                        {data.mission && (
+                      {data?.mission && (
                             <motion.div
                                 initial={{ opacity: 0, x: 120, y: 30 }}
                                 whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -479,6 +453,118 @@ export default function CompanyOverview({ data = myData, onContactClick = null, 
                                 </div>
                             </motion.div>
                         )}
+                        {data?.vision && (
+                            <motion.div
+                                initial={{ opacity: 0, x: -120, y: 30 }}
+                                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.4, ease: [0.05, 0.46, 0.45, 0.94] }}
+                                viewport={{ once: false, amount: 0.2 }}
+                                className="relative bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 overflow-hidden group"
+                                whileHover={{ 
+                                    scale: 1.02,
+                                    y: -5,
+                                    transition: { duration: 0.3 }
+                                }}
+                            >
+                                <div className="relative z-10">
+                                    <div className="text-5xl mb-6">👁️</div>
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-4" style={{fontFamily: 'Quicksand, sans-serif'}}>{data.vision.title || "Vision"}</h3>
+                                    <p className="text-gray-700 leading-relaxed" style={{fontFamily: 'Nunito, sans-serif'}}>{data.vision.text}</p>
+                                </div>
+                            </motion.div>
+                        )}
+                    </motion.div>
+                </div>
+            </motion.div>
+
+            {/* Founder's Message Section */}
+            <motion.div 
+                className="mb-20 relative"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: false, amount: 0.15 }}
+            >
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/40 via-white to-teal-50/40 rounded-3xl"></div>
+                
+                <div className="relative z-10 p-8 md:p-12">
+                    <motion.div
+                        className="text-center mb-10"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                    >
+                        <motion.h2 
+                            className="text-3xl sm:text-4xl font-bold mb-4"
+                            style={{fontFamily: 'Quicksand, sans-serif'}}
+                        >
+                            <motion.span className="text-gray-900">Founder&apos;s</motion.span>
+                            <motion.span className="bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 bg-clip-text text-transparent">
+                                {" "}Message 💌
+                            </motion.span>
+                        </motion.h2>
+                    </motion.div>
+
+                    <motion.div 
+                        className="max-w-4xl mx-auto"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                    >
+                        <div className="relative bg-white p-8 md:p-10 rounded-3xl shadow-2xl border border-emerald-100 overflow-hidden">
+                            {/* Quote decoration */}
+                            <div className="absolute top-4 left-4 text-6xl text-emerald-100 font-serif">&ldquo;</div>
+                            <div className="absolute bottom-4 right-4 text-6xl text-emerald-100 font-serif">&rdquo;</div>
+                            
+                            <div className="relative z-10 space-y-5 text-gray-700 leading-relaxed" style={{fontFamily: 'Nunito, sans-serif'}}>
+                                <p className="text-lg font-semibold text-emerald-700 italic">
+                                    We&apos;re not a big organization - yet.<br />
+                                    We don&apos;t have grand success stories - yet.<br />
+                                    We haven&apos;t planted a thousand trees or served a hundred communities - not yet.<br />
+                                    <span className="text-emerald-600 font-bold">But what we do have is a clear intention.</span><br />
+                                    And that&apos;s where all meaningful change begins.
+                                </p>
+                                
+                                <p>
+                                    <strong className="text-emerald-600">PITAMA INDIA</strong> was born out of a simple truth: that even one small act - feeding a stray, planting a sapling, teaching a child, supporting a woman - can change the course of someone&apos;s life. And if we multiply those small acts with the right support, care, and structure, we can change entire communities.
+                                </p>
+                                
+                                <p>
+                                    Right now, we are at the very beginning. We&apos;ve laid the foundation - legally, structurally, and thoughtfully. Our values are clear. Our objectives are aligned. Our heart is in the right place.
+                                </p>
+                                
+                                <p className="font-medium text-gray-800">
+                                    What we need now are hands and hearts who believe in starting something good, not because it&apos;s already proven, but because it&apos;s deeply needed.
+                                </p>
+                                
+                                <p>
+                                    If you&apos;re someone who believes in grassroots impact, in doing good quietly and honestly, in growing something from the ground up - <span className="text-emerald-600 font-semibold">I invite you to stand with us.</span>
+                                </p>
+                                
+                                <p className="text-lg font-bold text-emerald-700 pt-2">
+                                    We are just getting started. And this is your chance to be part of it from day one. 🌱
+                                </p>
+                            </div>
+                            
+                            {/* Founder signature */}
+                            <motion.div 
+                                className="mt-8 pt-6 border-t border-emerald-100 flex items-center gap-4"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 0.6, delay: 0.5 }}
+                                viewport={{ once: false, amount: 0.3 }}
+                            >
+                                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                    SS
+                                </div>
+                                <div>
+                                    <p className="font-bold text-gray-800 text-lg" style={{fontFamily: 'Quicksand, sans-serif'}}>Suraj Singh</p>
+                                    <p className="text-emerald-600 font-medium">Founder, Pitama India</p>
+                                </div>
+                            </motion.div>
+                        </div>
                     </motion.div>
                 </div>
             </motion.div>
@@ -610,7 +696,7 @@ export default function CompanyOverview({ data = myData, onContactClick = null, 
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
+                                    viewport={{ once: true, amount: 0.1 }}
                 variants={fadeUp}
                 transition={{ duration: 0.6 }}
                 className="relative bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-600 rounded-3xl p-12 text-center text-white overflow-hidden"

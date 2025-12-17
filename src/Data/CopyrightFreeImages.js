@@ -52,15 +52,7 @@ export const copyrightFreeImages = {
         "https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_1280.jpg",
         "https://cdn.pixabay.com/photo/2017/08/01/00/57/books-2562331_1280.jpg"
     ],
-
-    // Community Development Images
-    communityDevelopment: [
-        "https://cdn.pexels.com/photos/3225527/pexels-photo-3225527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://cdn.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://cdn.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://cdn.pexels.com/photos/5029859/pexels-photo-5029859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396_1280.jpg"
-    ],
+ 
 
     // Volunteering Images
     volunteering: [

@@ -13,17 +13,17 @@ const AllServices = () => {
       description: "Tree plantation drives, cleanliness campaigns, waste recycling programs, water conservation, and climate awareness initiatives.",
       programs: ["Tree Plantation Drives", "Cleanliness Campaigns", "Waste Recycling", "Green Campus Initiative", "Water Conservation", "Climate Awareness"],
       image: "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "/services/funding",
+      link: "/services/environment",
       color: "from-emerald-500 to-emerald-600"
     },
     {
       id: 2,
-      title: "Animal Welfare & Rescue",
+      title: "Animal Welfare & Feeding",
       icon: "🐾",
-      description: "24/7 animal rescue operations, veterinary care camps, shelter homes, adoption programs, and animal rights awareness.",
-      programs: ["Animal Rescue Operations", "Veterinary Care Camps", "Shelter & Rehabilitation", "Adoption Programs", "Sterilization Drives", "Animal Rights Awareness"],
+      description: "Daily animal feeding programs, community feeding stations, veterinary care camps, nutrition programs and animal welfare awareness.",
+      programs: ["Daily Animal Feeding", "Community Feeding Stations", "Veterinary Care Camps", "Emergency Feeding Drives", "Animal Nutrition Programs", "Animal Welfare Awareness"],
       image: "https://images.pexels.com/photos/1904105/pexels-photo-1904105.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "/services/certificate",
+      link: "/services/animal-feeding",
       color: "from-teal-500 to-teal-600"
     },
     {
@@ -45,26 +45,6 @@ const AllServices = () => {
       image: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800",
       link: "/services/education",
       color: "from-blue-500 to-blue-600"
-    },
-    {
-      id: 5,
-      title: "Community Health",
-      icon: "💚",
-      description: "Health check-up camps, blood donation drives, mental health support, nutrition programs, and vaccination awareness.",
-      programs: ["Health Check-up Camps", "Blood Donation Drives", "Mental Health Support", "Nutrition Programs", "Vaccination Awareness", "First Aid Training"],
-      image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "/services/all",
-      color: "from-green-500 to-green-600"
-    },
-    {
-      id: 6,
-      title: "Community Development",
-      icon: "🤝",
-      description: "Disaster relief, food distribution, clothing drives, elderly care, rural development, and youth volunteer network.",
-      programs: ["Disaster Relief", "Food Distribution", "Clothing Drives", "Elderly Care Programs", "Rural Development", "Youth Volunteer Network"],
-      image: "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "/contact-us",
-      color: "from-amber-500 to-amber-600"
     },
                     ];
                     

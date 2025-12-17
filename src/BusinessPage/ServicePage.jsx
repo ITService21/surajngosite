@@ -69,7 +69,7 @@ const ServicePage = () => {
       color: "from-teal-500 to-teal-600",
       services: [
         {
-          name: "Animal Rescue Operations",
+          name: "Daily Animal Feeding",
           description: "24/7 rescue service for injured and distressed animals",
           icon: "🚑",
         },
@@ -178,85 +178,7 @@ const ServicePage = () => {
         },
       ],
     },
-
-    {
-      id: 4,
-      name: "AROGYA",
-      title: "Community Health",
-      icon: "💚",
-      color: "from-green-500 to-green-600",
-      services: [
-        {
-          name: "Health Check-up Camps",
-          description: "Free medical check-ups in underserved communities",
-          icon: "🩺",
-        },
-        {
-          name: "Blood Donation Drives",
-          description: "Organizing regular blood donation camps across regions",
-          icon: "🩸",
-        },
-        {
-          name: "Mental Health Support",
-          description: "Counseling services and mental health awareness programs",
-          icon: "🧠",
-        },
-        {
-          name: "Nutrition Programs",
-          description: "Providing nutritious meals to malnourished children",
-          icon: "🥗",
-        },
-        {
-          name: "Vaccination Awareness",
-          description: "Campaigns promoting childhood and adult vaccinations",
-          icon: "💉",
-        },
-        {
-          name: "First Aid Training",
-          description: "Basic first aid and emergency response training for communities",
-          icon: "🏥",
-        },
-      ],
-    },
-    {
-      id: 5,
-      name: "SAHAYOG",
-      title: "Community Development",
-      icon: "🤝",
-      color: "from-amber-500 to-amber-600",
-      services: [
-        {
-          name: "Disaster Relief",
-          description: "Emergency response and relief during natural calamities",
-          icon: "🆘",
-        },
-        {
-          name: "Food Distribution",
-          description: "Regular meal distribution to homeless and needy families",
-          icon: "🍲",
-        },
-        {
-          name: "Clothing Drives",
-          description: "Collecting and distributing clothes to those in need",
-          icon: "👕",
-        },
-        {
-          name: "Elderly Care Programs",
-          description: "Support and companionship for senior citizens",
-          icon: "👴",
-        },
-        {
-          name: "Rural Development",
-          description: "Infrastructure and livelihood projects in villages",
-          icon: "🏘️",
-        },
-        {
-          name: "Youth Volunteer Network",
-          description: "Engaging and training youth for community service",
-          icon: "🌟",
-        },
-      ],
-    },
+ 
   ];
 
 
@@ -424,8 +346,8 @@ const ServicePage = () => {
             viewport={{ once: false, amount: 0.3 }}
           >
             {[
-              { icon: "🌳", text: "Environment", link: "/services/funding" },
-              { icon: "🐾", text: "Animals", link: "/services/certificate" },
+              { icon: "🌳", text: "Environment", link: "/services/environment" },
+              { icon: "🐾", text: "Animals", link: "/services/animal-feeding" },
               { icon: "👩", text: "Women", link: "/services/marketing" },
               { icon: "📚", text: "Education", link: "/services/education" },
             ].map((item, index) => {

@@ -17,7 +17,7 @@ const educationPrograms = [
             "Bridge education for dropouts"
         ],
         icon: "🏫",
-        impact: "5,000+ children enrolled",
+        impact: "0 Still figuring it out",
     },
     {
         title: "After-School Tutoring",
@@ -31,7 +31,7 @@ const educationPrograms = [
             "Peer learning groups"
         ],
         icon: "✏️",
-        impact: "8,000+ children supported",
+        impact: "0 Still figuring it out",
     },
     {
         title: "Digital Literacy Program",
@@ -45,7 +45,7 @@ const educationPrograms = [
             "Online learning resources access"
         ],
         icon: "💻",
-        impact: "3,000+ children trained",
+        impact: "0 Still figuring it out",
     },
     {
         title: "Scholarship Programs",
@@ -59,7 +59,7 @@ const educationPrograms = [
             "Career counseling"
         ],
         icon: "🎓",
-        impact: "1,000+ scholarships awarded",
+        impact: "0 Still figuring it out",
     },
     {
         title: "Creative Learning Workshops",
@@ -73,7 +73,7 @@ const educationPrograms = [
             "Cultural programs"
         ],
         icon: "🎨",
-        impact: "200+ workshops conducted",
+        impact: "0 Still figuring it out",
     },
     {
         title: "Learning Resource Distribution",
@@ -87,7 +87,7 @@ const educationPrograms = [
             "Science lab materials"
         ],
         icon: "📚",
-        impact: "50,000+ items distributed",
+        impact: "0 Still figuring it out",
     }
 ];
 

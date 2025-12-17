@@ -26,7 +26,7 @@ const visionPoints = [
 
 const futureGoals = [
   { year: "2025", goal: "Plant 100,000 trees across India", icon: "🌱" },
-  { year: "2026", goal: "Empower 10,000 women through skill development", icon: "👩‍💼" },
+  { year: "2026", goal: "Empower 100 women through skill development", icon: "👩‍💼" },
   { year: "2027", goal: "Establish 50 animal welfare centers", icon: "🏥" },
   { year: "2028", goal: "Provide education support to 25,000 children", icon: "📖" },
   { year: "2030", goal: "Create a sustainable impact in 100 communities", icon: "🌍" }
@@ -140,9 +140,7 @@ export default function Vision({ className = "" }) {
           </motion.div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">The Future We Envision</h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We dream of an India where forests are abundant, rivers run clean, women lead with confidence, 
-            animals are protected, and every child has the opportunity to learn and grow. 
-            Our vision is not just a dream—it&apos;s a roadmap for action, guiding every initiative we undertake.
+          To build a world where every individual, animal, and community thrives in a healthy, educated, and sustainable environment, where opportunities are accessible to all, nature is preserved, and compassion guides every action.
           </p>
         </div>
       </motion.div>

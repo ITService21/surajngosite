@@ -181,7 +181,7 @@ export default function TermsOfAgreement({ className = "" }) {
         viewport={{ once: false, amount: 0.2 }}
       >
         <p className="text-gray-500 text-sm">
-          Last Updated: December 2024
+          Last Updated: December 2025
         </p>
         <p className="text-gray-600 mt-4">
           By using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Agreement.

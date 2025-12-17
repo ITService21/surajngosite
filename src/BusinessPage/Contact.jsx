@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { API_ENDPOINTS } from "../config/api";
 
 const INITIATIVE_OPTIONS = [
-    "Environmental Conservation", "Animal Welfare", "Women Empowerment", "Education", "Community Health", "Volunteer"
+    "Environmental Conservation", "Animal Welfare", "Women Empowerment", "Education", "Volunteer"
 ];
 
 const ContactSection = () => {
@@ -244,7 +244,7 @@ const ContactSection = () => {
                                         {
                                             icon: "📍",
                                             title: "Location",
-                                            details: ["New Delhi, India"],
+                                            details: ["Dholpur, Rajasthan"],
                                             color: "from-emerald-500 to-teal-500"
                                         },
                                         {
@@ -256,7 +256,7 @@ const ContactSection = () => {
                                         {
                                             icon: "📞",
                                             title: "Call",
-                                            details: ["+91 98765 43210"],
+                                            details: ["+91 7065999599"],
                                             color: "from-emerald-500 to-green-500"
                                         }
                                     ].map((item, index) => (

@@ -213,7 +213,7 @@ export default function BlogPage({ initialPosts = null }) {
                         transition={{ duration: 0.2002, delay: 0.5 }}
                         viewport={{ once: false, amount: 0.3 }}
                     >
-                        Inspiring articles, guides, and stories about environmental conservation, community development, and empowerment initiatives across India.
+                        Inspiring articles, guides, and stories about environmental conservation, and empowerment initiatives across India.
                     </motion.p>
 
                     {/* Search Bar */}

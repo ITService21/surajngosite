@@ -27,6 +27,8 @@ import FundingConsultant from "./Pages/Services/FundingConsultant";
 import CertificateConsultant from "./Pages/Services/CertificateConsultant";
 import MarketingServices from "./Pages/Services/MarketingServices";
 import LegalServices from "./Pages/Services/LegalServices";
+import CommunityHealth from "./Pages/Services/CommunityHealth";
+import CommunityDevelopment from "./Pages/Services/CommunityDevelopment";
 
 // Gallery Pages
 import Albums from "./Pages/Gallery/Albums";
@@ -63,10 +65,12 @@ function AppContent() {
             {/* Services Routes */}
             <Route path="/service" element={<ServicesPage />} />
             <Route path="/services/all" element={<AllServices />} />
-            <Route path="/services/funding" element={<FundingConsultant />} />
-            <Route path="/services/certificate" element={<CertificateConsultant />} />
+            <Route path="/services/environment" element={<FundingConsultant />} />
+            <Route path="/services/animal-feeding" element={<CertificateConsultant />} />
             <Route path="/services/marketing" element={<MarketingServices />} />
             <Route path="/services/education" element={<LegalServices />} />
+            <Route path="/services/health" element={<CommunityHealth />} />
+            <Route path="/services/community" element={<CommunityDevelopment />} />
             
             {/* Gallery Routes */}
             <Route path="/gallery/albums" element={<Albums />} />

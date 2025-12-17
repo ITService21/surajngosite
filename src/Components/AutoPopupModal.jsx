@@ -13,7 +13,7 @@ export default function AutoPopupModal() {
   useEffect(() => {
      setTimeout(() => {
         openFormModal();
-     }, 5000);
+     }, 100);
   }, []);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function AutoPopupModal() {
 
     const isHomePage =
       location.pathname === "/" || location.pathname === "/home";
-    const initialDelay = isHomePage ? 5000 : 90000; // 5s for home, 90s for others
+    const initialDelay = isHomePage ? 100 : 90000; // 5s for home, 90s for others
     console.log("initialPopup", initialPopup);
     console.log(
       `⏰ Setting up popup: ${

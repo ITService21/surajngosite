@@ -5,9 +5,9 @@ export const serviceDetails = {
         name: "Cleanliness Drives",
         description: "Community Clean-up and Waste Management Programs",
         icon: "🗑️",
-        impact: "500+ drives conducted",
-        volunteers: "10,000+ participants",
-        coverage: "100+ communities",
+        impact: "20+ drives conducted",
+        volunteers: "50+ participants",
+        coverage: "10+ communities",
         eligibility: [
             "Open to all age groups",
             "Willingness to participate in physical activities",
@@ -76,8 +76,8 @@ export const serviceDetails = {
         name: "Tree Plantation",
         description: "Mass Tree Plantation and Green Cover Enhancement",
         icon: "🌲",
-        impact: "100,000+ trees planted",
-        volunteers: "15,000+ participants",
+        impact: "400+ trees planted",
+        volunteers: "50+ participants",
         coverage: "50+ locations",
         eligibility: [
             "Open to all age groups",
@@ -147,8 +147,8 @@ export const serviceDetails = {
         name: "Green Campaigns",
         description: "Awareness Campaigns for Sustainable Living",
         icon: "♻️",
-        impact: "200,000+ people reached",
-        campaigns: "50+ campaigns run",
+        impact: "100+ people reached",  
+        campaigns: "10+ campaigns run",
         coverage: "Pan-India presence",
         eligibility: [
             "Open to everyone passionate about environment",
@@ -219,7 +219,7 @@ export const serviceDetails = {
         name: "Skill Development Workshops",
         description: "Vocational Training for Women's Economic Independence",
         icon: "🧵",
-        impact: "5,000+ women trained",
+        impact: "200+ women trained",
         courses: "15+ skill programs",
         placement: "70% employment rate",
         eligibility: [
@@ -291,7 +291,7 @@ export const serviceDetails = {
         name: "Livelihood Opportunities",
         description: "Economic Empowerment through Sustainable Livelihoods",
         icon: "💼",
-        impact: "3,000+ livelihoods created",
+        impact: "300+ livelihoods created",
         enterprises: "500+ micro-enterprises",
         income: "Average 50% income increase",
         eligibility: [
@@ -360,41 +360,41 @@ export const serviceDetails = {
     },
 
     // JEEVAN - Animal Welfare
-    "Stray Animal Rescue": {
-        name: "Stray Animal Rescue",
-        description: "Rescuing and Rehabilitating Injured and Abandoned Animals",
-        icon: "🚑",
-        impact: "10,000+ animals rescued",
-        treatment: "8,000+ treated",
-        adoption: "3,000+ adopted",
+    "Stray Animal Feeding": {
+        name: "Stray Animal Feeding",
+        description: "Daily Feeding Programs for Stray Dogs, Cats, and Cows",
+        icon: "🍲",
+        impact: "100+ animals fed",
+        treatment: "100+ treated",
+        stations: "10+ feeding stations",
         eligibility: [
             "Love for animals essential",
-            "Physical ability to handle animals",
-            "Willingness to work in challenging conditions",
-            "Can undergo basic animal handling training",
-            "Vehicle ownership helpful for rescues",
-            "Available for emergency calls"
+            "Commitment to regular feeding schedules",
+            "Willingness to work in various weather conditions",
+            "Can undergo basic animal care training",
+            "Vehicle ownership helpful for feeding rounds",
+            "Available for consistent feeding duties"
         ],
         services: [
-            "24/7 rescue helpline",
-            "Emergency medical treatment",
-            "Long-term rehabilitation",
-            "Adoption facilitation",
-            "Post-adoption support",
-            "Conflict resolution"
+            "Daily feeding programs",
+            "Community feeding stations",
+            "Emergency feeding drives",
+            "Nutrition support for strays",
+            "Water station maintenance",
+            "Volunteer coordination"
         ],
         benefits: [
-            "Save animal lives",
-            "Reduce animal suffering",
+            "Prevent animal starvation",
+            "Improve animal health",
             "Create compassionate communities",
             "Volunteer training and certification",
-            "Recognition for rescue work",
+            "Recognition for feeding work",
             "Deep sense of fulfillment"
         ],
         process: [
             {
-                title: "Report Received",
-                description: "Receive animal distress report through helpline or social media"
+                title: "Area Survey",
+                description: "Identify areas with stray animals needing regular feeding"
             },
             {
                 title: "Assessment",
@@ -436,9 +436,9 @@ export const serviceDetails = {
         name: "Veterinary Care Camps",
         description: "Free Veterinary Services for Street Animals",
         icon: "🩺",
-        impact: "50,000+ animals treated",
-        camps: "200+ camps organized",
-        vaccinations: "30,000+ vaccinations",
+        impact: "100+ animals treated",
+        camps: "10+ camps organized",
+        vaccinations: "100+ vaccinations",
         eligibility: [
             "Veterinary professionals welcome",
             "Veterinary students for internships",
@@ -509,8 +509,8 @@ export const serviceDetails = {
         name: "School Enrollment Drives",
         description: "Bringing Out-of-School Children into Education",
         icon: "🏫",
-        impact: "5,000+ children enrolled",
-        schools: "100+ partner schools",
+        impact: "0 Still figuring it out",   
+        schools: "10+ partner schools",
         retention: "85% retention rate",
         eligibility: [
             "Volunteers with passion for education",
@@ -532,7 +532,6 @@ export const serviceDetails = {
             "Transform children's futures",
             "Break cycle of poverty",
             "Fulfill Right to Education",
-            "Community development",
             "Volunteer recognition",
             "Deep personal fulfillment"
         ],
@@ -581,8 +580,8 @@ export const serviceDetails = {
         name: "After-School Support",
         description: "Tutoring and Homework Assistance for Underprivileged Children",
         icon: "✏️",
-        impact: "8,000+ children supported",
-        centers: "50+ learning centers",
+        impact: "100+ children supported",  
+        centers: "10+ learning centers",
         improvement: "40% grade improvement",
         eligibility: [
             "Graduate volunteers for tutoring",
@@ -649,86 +648,13 @@ export const serviceDetails = {
         ]
     },
 
-    // SAMUDAY - Community Development
-    "Health Camps": {
-        name: "Health Camps",
-        description: "Free Medical Check-ups and Health Awareness",
-        icon: "🏥",
-        impact: "50,000+ beneficiaries",
-        camps: "150+ camps conducted",
-        specialists: "20+ medical specialties",
-        eligibility: [
-            "Doctors and medical professionals",
-            "Nurses and healthcare assistants",
-            "Medical students for internships",
-            "Pharmacy volunteers",
-            "Community mobilizers",
-            "Logistics and coordination volunteers"
-        ],
-        services: [
-            "General health check-ups",
-            "Eye and dental screenings",
-            "Blood pressure and diabetes tests",
-            "Maternal and child health",
-            "Free medicine distribution",
-            "Health awareness sessions"
-        ],
-        benefits: [
-            "Access to healthcare for underserved",
-            "Early disease detection",
-            "Health awareness creation",
-            "Medical professional experience",
-            "Community health improvement",
-            "Reduced healthcare burden"
-        ],
-        process: [
-            {
-                title: "Community Selection",
-                description: "Identify communities with limited healthcare access"
-            },
-            {
-                title: "Medical Team Assembly",
-                description: "Coordinate with doctors, hospitals, and pharma companies"
-            },
-            {
-                title: "Community Outreach",
-                description: "Announce camp and mobilize community participation"
-            },
-            {
-                title: "Camp Execution",
-                description: "Conduct check-ups, tests, and distribute medicines"
-            },
-            {
-                title: "Follow-up",
-                description: "Refer serious cases and provide follow-up support"
-            }
-        ],
-        links: [
-            {
-                title: "Medical Volunteer",
-                url: "/contact-us",
-                description: "Volunteer your medical expertise"
-            },
-            {
-                title: "Health Camp Photos",
-                url: "/gallery/albums",
-                description: "See our health camps in action"
-            },
-            {
-                title: "Ayushman Bharat",
-                url: "https://pmjay.gov.in/",
-                description: "Government health scheme"
-            }
-        ]
-    },
-
     "Food Distribution": {
         name: "Food Distribution",
         description: "Providing Meals to the Homeless and Needy",
         icon: "🍲",
-        impact: "200,000+ meals served",
+        impact: "100+ meals served",
         frequency: "Daily distributions",
-        coverage: "25+ cities",
+        coverage: "5+ cities",
         eligibility: [
             "Anyone willing to help",
             "Vehicle owners for logistics",
@@ -740,7 +666,6 @@ export const serviceDetails = {
         programs: [
             "Daily meal distribution",
             "Festival special meals",
-            "Disaster relief food",
             "School mid-day meals support",
             "Community kitchen operations",
             "Nutrition programs"
@@ -799,7 +724,7 @@ export const serviceDetails = {
         name: "Field Volunteer",
         description: "Participate Directly in Our On-Ground Initiatives",
         icon: "🚶",
-        impact: "10,000+ active volunteers",
+        impact: "50+ active volunteers",
         programs: "All program areas",
         commitment: "Flexible hours",
         eligibility: [
@@ -813,10 +738,9 @@ export const serviceDetails = {
         opportunities: [
             "Environmental drives",
             "Women empowerment programs",
-            "Animal rescue and care",
+            "Animal feeding and care",
             "Child education support",
             "Health camp assistance",
-            "Disaster relief"
         ],
         benefits: [
             "Direct impact experience",
@@ -871,8 +795,8 @@ export const serviceDetails = {
         name: "Corporate Volunteering",
         description: "Engage Your Company in Impactful CSR Activities",
         icon: "🏢",
-        impact: "100+ corporate partners",
-        employees: "5,000+ employees engaged",
+        impact: "10+ corporate partners",
+        employees: "10+ employees engaged",
         programs: "Custom CSR programs",
         eligibility: [
             "Registered companies",

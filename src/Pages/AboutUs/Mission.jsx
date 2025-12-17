@@ -23,11 +23,6 @@ const missionPoints = [
     description: "Ensuring access to education for underprivileged children through school enrollment drives, tutoring, and scholarship programs."
   },
   {
-    icon: "🤝",
-    title: "Community Development",
-    description: "Building stronger communities through collaborative efforts, volunteer programs, and grassroots initiatives."
-  },
-  {
     icon: "🌍",
     title: "Sustainable Living",
     description: "Promoting eco-friendly practices and sustainable living habits to reduce environmental impact."
@@ -123,7 +118,7 @@ export default function Mission({ className = "" }) {
 
       {/* Mission Statement */}
       <motion.div 
-        className="relative z-10 bg-gradient-to-r from-pitama-green-500 to-pitama-teal-500 rounded-3xl p-8 md:p-12 mb-16 text-white text-center"
+        className="relative z-10 bg-white rounded-3xl p-8 md:p-12 mb-16 text-center shadow-2xl border-2 border-pitama-green-200"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -134,13 +129,11 @@ export default function Mission({ className = "" }) {
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          💚
+          🎯
         </motion.div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Greening India, Empowering Lives</h2>
-        <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-          At Pitama India, we believe in the power of collective action. Our mission is to transform communities 
-          through environmental conservation, women empowerment, animal welfare, and quality education. 
-          Every initiative we undertake is a step towards a more sustainable and compassionate future.
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-pitama-green-600 to-pitama-teal-600 bg-clip-text text-transparent">Greening India, Empowering Lives</h2>
+        <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+        Our mission is to create lasting impact by empowering women and communities through education and skill development, protecting and conserving the environment, ensuring the welfare of animals, and supporting underserved populations with initiatives that improve health, nutrition, and opportunities for growth.
         </p>
       </motion.div>
 

@@ -73,40 +73,8 @@ export const CompanyLogo = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Slogan ABOVE the logo name */}
-        <motion.p 
-          className="text-[8px] sm:text-[10px] md:text-xs text-emerald-400 font-medium tracking-wide group-hover:text-emerald-300 transition-colors duration-300 leading-tight mb-0.5"
-          whileHover={{ 
-            scale: 1.02,
-            color: "#6ee7b7"
-          }}
-          animate={{
-            y: [0, -1, 0]
-          }}
-          transition={{
-            y: {
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }
-          }}
-        >
-          <motion.span
-            animate={{
-              opacity: [0.8, 1, 0.8]
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            Greening India, Empowering Lives 💚
-          </motion.span>
-        </motion.p>
-        
-        {/* Organization Name with Advanced Animation */}
-        <motion.h1 
+              {/* Organization Name with Advanced Animation */}
+              <motion.h1 
           className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white group-hover:text-emerald-300 transition-colors duration-300 leading-tight"
           whileHover={{ 
             scale: 1.05,
@@ -147,6 +115,38 @@ export const CompanyLogo = () => {
             Pitama India
           </motion.span>
         </motion.h1>
+
+        {/* Slogan ABOVE the logo name */}
+        <motion.p 
+          className="text-[8px] sm:text-[10px] md:text-xs text-emerald-400 font-medium tracking-wide group-hover:text-emerald-300 transition-colors duration-300 leading-tight mb-0.5"
+          whileHover={{ 
+            scale: 1.02,
+            color: "#6ee7b7"
+          }}
+          animate={{
+            y: [0, -1, 0]
+          }}
+          transition={{
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
+        >
+          <motion.span
+            animate={{
+              opacity: [0.8, 1, 0.8]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            Greening India, Empowering Lives
+          </motion.span>
+        </motion.p>
       </motion.div>
     </Link>
   );

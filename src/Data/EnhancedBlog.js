@@ -72,13 +72,13 @@ export default [
     // Animal Welfare Category
     {
         id: 7,
-        title: "Complete Guide to Rescuing and Rehabilitating Stray Animals",
-        excerpt: "Step-by-step guide on how to safely rescue stray animals and provide them with proper care and rehabilitation.",
-        body: "Every year, thousands of stray animals suffer from injuries, illness, and neglect on our streets. Pitama India's animal welfare program works tirelessly to rescue and rehabilitate these animals. This comprehensive guide covers everything from identifying animals in distress, safe rescue techniques, immediate first aid, and long-term rehabilitation. We discuss how to work with local veterinarians, animal shelters, and authorities. We also cover the legal aspects of animal rescue and the responsibilities involved. Whether you want to volunteer with our rescue team or help animals independently, this guide provides essential knowledge and resources.",
+        title: "Complete Guide to Feeding and Caring for Stray Animals",
+        excerpt: "Step-by-step guide on how to properly feed stray animals and provide them with nutrition and care.",
+        body: "Every year, thousands of stray animals suffer from hunger and malnutrition on our streets. Pitama India's animal welfare program works tirelessly to feed and care for these animals. This comprehensive guide covers everything from setting up feeding stations, proper nutrition for different animals, establishing feeding schedules, and organizing community feeding drives. We discuss how to work with local communities, authorities, and other animal welfare organizations. We also cover the best practices for feeding strays safely and the importance of consistency. Whether you want to volunteer with our feeding team or start your own feeding program, this guide provides essential knowledge and resources.",
         author: "Animal Welfare Expert",
         date: "2024-01-20",
         category: "Animal Welfare",
-        tags: ["Animal Rescue", "Stray Animals", "Rehabilitation", "Animal Care"],
+        tags: ["Animal Feeding", "Stray Animals", "Nutrition", "Animal Care"],
         image: "https://images.pexels.com/photos/1378849/pexels-photo-1378849.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
     {
@@ -173,39 +173,4 @@ export default [
         tags: ["Student Volunteering", "Internships", "Youth", "Learning"],
         image: "https://images.pexels.com/photos/6646852/pexels-photo-6646852.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
     },
-
-    // Community Development Category
-    {
-        id: 16,
-        title: "Building Resilient Communities Through Collective Action",
-        excerpt: "How communities can organize and work together to address local challenges and create sustainable solutions.",
-        body: "Strong communities are the foundation of a healthy society. When people work together, they can address local challenges more effectively than individuals alone. This comprehensive guide covers community organizing strategies, including how to identify common issues, build consensus, mobilize resources, and implement solutions. We discuss Pitama India's community development model, which empowers local leaders and creates sustainable structures for ongoing improvement. We also cover case studies of communities that have transformed through collective action, addressing issues from sanitation and healthcare to education and livelihood. Learn how you can help build a more resilient community.",
-        author: "Community Development Lead",
-        date: "2024-01-01",
-        category: "Community Development",
-        tags: ["Community", "Collective Action", "Resilience", "Development"],
-        image: "https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
-    },
-    {
-        id: 17,
-        title: "Health Camps: Bringing Healthcare to Underserved Communities",
-        excerpt: "How health camps bridge the healthcare gap and provide essential medical services to those who need them most.",
-        body: "Access to healthcare remains a significant challenge for many communities in India, particularly in rural and underserved areas. Pitama India organizes regular health camps to bring free medical services to those who need them most. This guide covers how health camps are organized, the services typically provided, and how you can help. We discuss our partnerships with hospitals, doctors, and healthcare volunteers who make these camps possible. We also cover follow-up care and how we help patients access ongoing treatment when needed. Whether you're a healthcare professional looking to volunteer or someone who wants to support our health initiatives, this guide provides all the information you need.",
-        author: "Health Programs Coordinator",
-        date: "2023-12-30",
-        category: "Community Development",
-        tags: ["Health Camps", "Healthcare", "Underserved Communities", "Medical"],
-        image: "https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
-    },
-    {
-        id: 18,
-        title: "Disaster Relief and Preparedness: Community Resilience in Crisis",
-        excerpt: "How communities can prepare for disasters and how NGOs respond when crisis strikes.",
-        body: "Natural disasters can devastate communities, leaving people without homes, food, or essential services. Pitama India's disaster relief program responds quickly to provide immediate assistance and supports long-term recovery. This guide covers both disaster preparedness and response. We discuss how communities can prepare for common disasters like floods, cyclones, and droughts through early warning systems, emergency planning, and resource stockpiling. We also cover our disaster response protocols, including needs assessment, resource mobilization, distribution of relief materials, and coordination with government and other agencies. Learn how you can help communities become more resilient and support our disaster relief efforts.",
-        author: "Disaster Relief Coordinator",
-        date: "2023-12-28",
-        category: "Community Development",
-        tags: ["Disaster Relief", "Preparedness", "Community Resilience", "Emergency"],
-        image: "https://images.pexels.com/photos/5029859/pexels-photo-5029859.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
-    }
 ];

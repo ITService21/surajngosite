@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 const ScrollingText = () => {
   const scrollingItems = [
     { text: "🌳 Environmental Conservation", highlight: true },
-    { text: "🐾 Animal Welfare & Rescue", highlight: false },
+    { text: "🐾 Animal Welfare & Feeding", highlight: false },
     { text: "👩 Women Empowerment", highlight: true },
     { text: "📚 Education for All", highlight: false },
-    { text: "💚 Community Health", highlight: true },
     { text: "🤝 Volunteer Network", highlight: false },
     { text: "🌱 Tree Plantation Drives", highlight: true },
     { text: "♻️ Waste Recycling Programs", highlight: false },

@@ -1,7 +1,6 @@
 import {
   FaHome,
   FaInfoCircle,
-  FaImages,
   FaEnvelope,
   FaBuilding,
   FaHandHoldingHeart,
@@ -13,9 +12,10 @@ import {
   FaHeart,
   FaBullseye,
   FaEye,
-  FaUserFriends,
   FaFileContract,
   FaDonate,
+  FaHeartbeat,
+  FaHandsHelping,
 } from "react-icons/fa";
 
 export const NavbarLinks = [
@@ -43,8 +43,8 @@ export const NavbarLinks = [
     icon: FaHandHoldingHeart,
     subLinks: [
       { name: "All Programs", link: "/services/all", icon: FaHeart },
-      { name: "Environmental Conservation", link: "/services/funding", icon: FaLeaf },
-      { name: "Animal Welfare", link: "/services/certificate", icon: FaPaw },
+      { name: "Environmental Conservation", link: "/services/environment", icon: FaLeaf },
+      { name: "Animal Welfare", link: "/services/animal-feeding", icon: FaPaw },
       { name: "Women Empowerment", link: "/services/marketing", icon: FaUsers },
       { name: "Education", link: "/services/education", icon: FaGraduationCap },
     ],

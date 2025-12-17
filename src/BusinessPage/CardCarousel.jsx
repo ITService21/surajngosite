@@ -14,15 +14,15 @@ const AutoCardCarousel = () => {
       description: 'Join our cleanliness drives, tree plantation campaigns, and green initiatives to create a sustainable future for India.',
       image: 'https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       icon: '🌳',
-      navigate: '/services/funding',
+      navigate: '/services/environment',
     },
     {
       id: 2,
-      title: 'Animal Welfare & Rescue',
-      description: 'We rescue, rehabilitate, and provide care for over 2 crore stray animals across India. Every life matters.',
+      title: 'Animal Welfare & Feeding',
+      description: 'We feed, care for, and provide care for over 100 stray animals across India. Every life matters.',
       image: 'https://images.pexels.com/photos/1904105/pexels-photo-1904105.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       icon: '🐾',
-      navigate: '/services/certificate',
+      navigate: '/services/animal-feeding',
     },
     {
       id: 3,
@@ -39,14 +39,6 @@ const AutoCardCarousel = () => {
       image: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       icon: '📚',
       navigate: '/services/education',
-    },
-    {
-      id: 5,
-      title: 'Community Health',
-      description: 'Healthcare camps, awareness drives, and wellness programs for underserved communities across rural India.',
-      image: 'https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      icon: '💚',
-      navigate: '/services/all',
     },
     {
       id: 6,
@@ -352,8 +344,8 @@ const AutoCardCarousel = () => {
         
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-gray-600 mt-4 sm:mt-6">
           {[
-            { text: "🌳 Environment", delay: 0, link: "/services/funding" },
-            { text: "🐾 Animals", delay: 0.5, link: "/services/certificate" },
+            { text: "🌳 Environment", delay: 0, link: "/services/environment" },
+            { text: "🐾 Animals", delay: 0.5, link: "/services/animal-feeding" },
             { text: "👩 Women", delay: 1, link: "/services/marketing" },
             { text: "📚 Education", delay: 1.5, link: "/services/education" },
           ].map((item, index) => (

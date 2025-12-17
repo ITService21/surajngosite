@@ -33,10 +33,10 @@ const Overview = () => {
         }, stepDuration);
       };
 
-      animateCount(10000, 'trees');
-      animateCount(5000, 'animals');
-      animateCount(2000, 'women');
-      animateCount(500, 'volunteers');
+      animateCount(400, 'trees');
+      animateCount(100, 'animals');
+      animateCount(200, 'women');
+      animateCount(50, 'volunteers');
     }
   }, [isInView]);
 
@@ -45,13 +45,13 @@ const Overview = () => {
       icon: "🌳",
       title: "Environmental Conservation",
       description: "Tree plantation drives, cleanliness campaigns, and green initiatives for a sustainable India",
-      link: "/services/funding"
+      link: "/services/environment"
     },
     {
       icon: "🐾",
-      title: "Animal Welfare & Rescue",
-      description: "Rescue, rehabilitation, and care for stray animals with compassion and dignity",
-      link: "/services/certificate"
+      title: "Animal Welfare & Feeding",
+      description: "Daily feeding programs and care for stray animals with compassion and dignity",
+      link: "/services/animal-feeding"
     },
     {
       icon: "👩",
@@ -454,10 +454,10 @@ const Overview = () => {
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { key: 'trees', number: 10000, suffix: '+', label: "Trees Planted", icon: "🌳" },
-                { key: 'animals', number: 5000, suffix: '+', label: "Animals Rescued", icon: "🐾" },
-                { key: 'women', number: 2000, suffix: '+', label: "Women Empowered", icon: "👩" },
-                { key: 'volunteers', number: 500, suffix: '+', label: "Active Volunteers", icon: "🤝" }
+                { key: 'trees', number: 400, suffix: '+', label: "Trees Planted", icon: "🌳" },
+                { key: 'animals', number: 50, suffix: '+', label: "Animals  Feeding", icon: "🐾" },
+                { key: 'women', number: 100, suffix: '+', label: "Women Empowered", icon: "👩" },
+                { key: 'volunteers', number: 50, suffix: '+', label: "Active Volunteers", icon: "🤝" }
               ].map((stat, index) => {
                 return (
                   <div

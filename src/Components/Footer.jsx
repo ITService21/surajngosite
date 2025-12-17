@@ -133,8 +133,8 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Our Initiatives</h3>
                     <ul className="space-y-2 text-gray-400 text-sm">
-                        <li><Link to="/services/funding" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>🌳 Environment</Link></li>
-                        <li><Link to="/services/certificate" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>🐾 Animal Welfare</Link></li>
+                        <li><Link to="/services/environment" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>🌳 Environment</Link></li>
+                        <li><Link to="/services/animal-feeding" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>🐾 Animal Welfare</Link></li>
                         <li><Link to="/services/marketing" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>👩 Women Empowerment</Link></li>
                         <li><Link to="/services/education" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>📚 Education</Link></li>
                     </ul>
@@ -146,7 +146,7 @@ export default function Footer() {
                     <ul className="space-y-2 text-gray-400 text-sm">
                         <li><Link to="/about-us/mission" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>🎯 Mission</Link></li>
                         <li><Link to="/about-us/vision" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>🔭 Vision</Link></li>
-                        <li><Link to="/about-us/team" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>👥 Our Team</Link></li>
+                        {/* <li><Link to="/about-us/team" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>👥 Our Team</Link></li> */}
                         <li><Link to="/donate" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>💖 Donate</Link></li>
                         <li><Link to="/about-us/terms" className="hover:text-emerald-400 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>📜 Terms</Link></li>
                     </ul>
@@ -156,10 +156,10 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Contact</h3>
                     <ul className="space-y-2 text-gray-400 text-sm">
-                        <li className="flex items-start gap-2">
+                        {/* <li className="flex items-start gap-2">
                             <FaWhatsapp className="mt-1 flex-shrink-0 text-green-400" /> 
                             <a href="https://wa.me/917065999599" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">+91 7065999599</a>
-                        </li>
+                        </li> */}
                         <li className="flex items-start gap-2">
                             <FaPhoneAlt className="mt-1 flex-shrink-0" /> 
                             <a href="tel:+917065999599" className="hover:text-emerald-400 transition-colors">+91 7065999599</a>
@@ -170,7 +170,7 @@ export default function Footer() {
                         </li>
                         <li className="flex items-start gap-2">
                             <FaMapMarkerAlt className="mt-1 flex-shrink-0" /> 
-                            <span>New Delhi, India</span>
+                            <span>Dholpur, Rajasthan</span>
                         </li>
                     </ul>
                     <div className="mt-4">
@@ -192,7 +192,7 @@ export default function Footer() {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500 text-sm">
-                <p>© {new Date().getFullYear()} Pitama India — Greening India, Empowering Lives 💚</p>
+                <p>© {new Date().getFullYear()} Pitama India — Greening India, Empowering Lives</p>
                 <p className="mt-2 text-xs">Making a difference, one life at a time.</p>
             </div>
         </footer>

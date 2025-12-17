@@ -10,13 +10,13 @@ const EnvironmentalConservation = () => {
       title: "Tree Plantation Drives",
       description: "Large-scale tree plantation campaigns across urban and rural areas. We plant native species to restore biodiversity and combat climate change.",
       icon: "🌱",
-      stats: "10,000+ Trees Planted"
+      stats: "400+ Trees Planted"
     },
     {
       title: "Cleanliness Campaigns",
       description: "Community-driven cleanliness drives in public spaces, water bodies, and residential areas. We organize regular clean-up events with local volunteers.",
       icon: "🧹",
-      stats: "100+ Drives Conducted"
+      stats: "10+ Drives Conducted"
     },
     {
       title: "Waste Recycling Programs",
@@ -28,7 +28,7 @@ const EnvironmentalConservation = () => {
       title: "Green Campus Initiative",
       description: "Transforming schools and colleges into eco-friendly spaces with gardens, recycling systems, and sustainable practices.",
       icon: "🏫",
-      stats: "25+ Campuses Greened"
+      stats: "0 Still figuring it out"
     },
     {
       title: "Water Conservation",
@@ -40,7 +40,7 @@ const EnvironmentalConservation = () => {
       title: "Climate Awareness",
       description: "Educational workshops, seminars, and campaigns on climate change, sustainability, and eco-friendly lifestyle choices.",
       icon: "🌍",
-      stats: "5,000+ People Educated"
+      stats: "100+ People Educated"
     },
                     ];
                     
@@ -82,10 +82,10 @@ const EnvironmentalConservation = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {[
-            { value: "10,000+", label: "Trees Planted", icon: "🌳" },
-            { value: "100+", label: "Clean-up Drives", icon: "🧹" },
-            { value: "25+", label: "Green Campuses", icon: "🏫" },
-            { value: "5,000+", label: "Volunteers", icon: "🤝" },
+            { value: "400+", label: "Trees Planted", icon: "🌳" },
+            { value: "10+", label: "Clean-up Drives", icon: "🧹" },
+            { value: "5+", label: "Green Campuses", icon: "🏫" },
+            { value: "50+", label: "Volunteers", icon: "🤝" },
           ].map((stat, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 text-center shadow-lg border border-emerald-100">
               <span className="text-3xl mb-2 block">{stat.icon}</span>

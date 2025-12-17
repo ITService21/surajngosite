@@ -10,7 +10,6 @@ const INITIATIVE_OPTIONS = [
   "Animal Welfare",
   "Women Empowerment",
   "Education",
-  "Community Health",
   "Volunteer",
   "Corporate Partnership",
   "Donate"
@@ -85,14 +84,14 @@ export default function ContactUs() {
   };
 
   const contactInfo = [
-    { icon: FaPhone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
+    { icon: FaPhone, label: "Phone", value: "+91 7065999599", href: "tel:+917065999599" },
     { icon: FaEnvelope, label: "Email", value: "info@pitamaindia.org", href: "mailto:info@pitamaindia.org" },
-    { icon: FaMapMarkerAlt, label: "Address", value: "New Delhi, India", href: null },
+    { icon: FaMapMarkerAlt, label: "Address", value: "Dholpur, Rajasthan", href: null },
   ];
 
   const socialLinks = [
     { icon: FaFacebook, href: "https://facebook.com/pitamaindia", label: "Facebook" },
-    { icon: FaInstagram, href: "https://instagram.com/pitamaindia", label: "Instagram" },
+    { icon: FaInstagram, href: "https://www.instagram.com/pitama_india/?igsh=Ynk1dDQ3cTN3eXJm&utm_source=qr#", label: "Instagram" },
     { icon: FaTwitter, href: "https://twitter.com/pitamaindia", label: "Twitter" },
     { icon: FaYoutube, href: "https://youtube.com/@pitamaindia", label: "YouTube" },
   ];

@@ -11,7 +11,7 @@ const donationImpact = [
 ];
 
 const bankDetails = {
-  accountName: "PITAMA PLANTATION AND SOCIAL EMPOWERMENT COUNCIL",
+  accountName: "PITAMA PLANTATION AND SOCIAL EMPOWERMENT COUNCIL OF INDIA",
   bank: "IDFC FIRST Bank",
   upiId: "pitamaplantation1@idfcbank"
 };

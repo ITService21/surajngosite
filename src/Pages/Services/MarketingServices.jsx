@@ -10,13 +10,13 @@ const WomenEmpowerment = () => {
       title: "Skill Development Training",
       description: "Vocational training in tailoring, embroidery, handicrafts, beauty services, and other marketable skills for self-employment.",
       icon: "✂️",
-      stats: "1,500+ Women Trained"
+      stats: "100+ Women Trained"
     },
     {
       title: "Financial Literacy Programs",
       description: "Teaching savings, banking, budgeting, and investment basics to help women manage finances and plan for the future.",
       icon: "💰",
-      stats: "2,000+ Women Educated"
+      stats: "100+ Women Educated"
     },
     {
       title: "Self-Help Groups (SHGs)",
@@ -24,23 +24,23 @@ const WomenEmpowerment = () => {
       icon: "👭",
       stats: "100+ SHGs Formed"
     },
-    {
-      title: "Entrepreneurship Support",
-      description: "Mentoring, training, and seed support for women to start their own small businesses and micro-enterprises.",
-      icon: "🏪",
-      stats: "300+ Businesses Started"
-    },
+    // {
+    //   title: "Entrepreneurship Support",
+    //   description: "Mentoring, training, and seed support for women to start their own small businesses and micro-enterprises.",
+    //   icon: "🏪",
+    //   stats: "10+ Businesses Started"
+    // },
     {
       title: "Health & Hygiene Awareness",
       description: "Women's health education, menstrual hygiene awareness, and reproductive health programs in rural areas.",
       icon: "🩺",
-      stats: "5,000+ Women Reached"
+      stats: "100+ Women Reached"
     },
     {
       title: "Legal Rights Education",
       description: "Awareness about legal rights, domestic violence laws, property rights, and protection mechanisms for women.",
       icon: "⚖️",
-      stats: "1,000+ Women Empowered"
+      stats: "100+ Women Empowered"
     },
                     ];
                     
@@ -82,10 +82,10 @@ const WomenEmpowerment = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {[
-            { value: "2,000+", label: "Women Empowered", icon: "👩" },
+            { value: "100+", label: "Women Empowered", icon: "👩" },
             { value: "100+", label: "Self-Help Groups", icon: "👭" },
-            { value: "300+", label: "Businesses Started", icon: "🏪" },
-            { value: "50+", label: "Villages Reached", icon: "🏘️" },
+            { value: "100+", label: "Businesses Started", icon: "🏪" },
+            { value: "100+", label: "Villages Reached", icon: "🏘️" },
           ].map((stat, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 text-center shadow-lg border border-pink-100">
               <span className="text-3xl mb-2 block">{stat.icon}</span>
@@ -133,9 +133,9 @@ const WomenEmpowerment = () => {
                 <p className="text-gray-600 text-sm mb-4" style={{ fontFamily: "Nunito, sans-serif" }}>
                   {program.description}
                 </p>
-                <div className="bg-pink-50 text-pink-700 px-3 py-2 rounded-lg text-sm font-semibold inline-block">
+                {/* <div className="bg-pink-50 text-pink-700 px-3 py-2 rounded-lg text-sm font-semibold inline-block">
                   {program.stats}
-                                    </div>
+                                    </div> */}
               </motion.div>
                                 ))}
                             </div>

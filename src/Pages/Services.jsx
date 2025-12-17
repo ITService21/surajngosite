@@ -241,7 +241,7 @@ export default function ServicesPage({ services = demoServices }) {
                                     <ul className="mt-3 grid grid-cols-2 gap-2 text-sm text-blue-100/90">
                                         <li>Gandhinagar (HQ)</li>
                                         <li>Vadodara</li>
-                                        <li>Delhi</li>
+                                        <li>Dholpur</li>
                                         <li>Chennai</li>
                                         <li>Pune</li>
                                         <li>Bengaluru</li>

@@ -19,7 +19,7 @@ const teamMembers = [
   {
     name: "Aman",
     role: "Leading Animal Welfare & Plantation",
-    description: "Champion of animal rights and environmental conservation, spearheading plantation drives and animal rescue operations.",
+    description: "Champion of animal rights and environmental conservation, spearheading plantation drives and animal feeding operations.",
     icon: "🌳",
     color: "from-pitama-green-600 to-pitama-teal-400"
   },
