@@ -9,12 +9,11 @@ const myData = {
     company: {
         name: "Pitama India",
         tagline: "Greening India, Empowering Lives",
-        description: `At Pitama India, we believe in building a world where every individual, every animal, and every community can thrive. Guided by our four pillars, Environmental Conservation, Education, Animal Welfare, and Community & Women Empowerment. we work to create meaningful and lasting impact.
-
+        description: `At PITAMA INDIA, we believe in building a world where every individual, every animal, and every community can thrive.
+Guided by our four pillars - Environmental Conservation, Education, Animal Welfare, and Community & Women Empowerment - we work to create meaningful and lasting impact.
 We empower women and underserved communities through education, skill development, health, and nutrition initiatives. We protect and restore our environment through tree plantation, water conservation, and cleanliness drives. We rescue, rehabilitate, and care for animals while spreading awareness about their welfare.
-
+Currently, our operations are active in Agra, Dholpur, Jaipur and Delhi NCR, where we are initiating grassroots programs and partnerships to lay the foundation for long-term change.
 Driven by compassion, sustainability, and a commitment to positive change, we aim to foster a society that is educated, equitable, and environmentally conscious.
-
 We warmly welcome collaboration with CSR teams, institutions, organizations, and individuals who share our vision to create sustainable social and environmental impact. Together, we can amplify our efforts and build a greener, kinder, and more empowered world.`,
         heroImage: "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1400&h=800&fit=crop",
         email: "info@pitamaindia.org",
